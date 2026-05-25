@@ -1,0 +1,3632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Private Scale Strategy Session for coaches, healers and consultants ready to scale with funnels, AI and automation systems." />
+  <title>Private Scale Strategy Session | HEAL Growth System™</title>
+
+  <style>
+    /* =========================================================
+       GLOBAL VARIABLES CSS START
+    ========================================================= */
+    :root {
+      --black: #030303;
+      --black-soft: #0b0a07;
+      --black-warm: #130d04;
+      --black-card: rgba(255, 255, 255, 0.058);
+      --black-card-strong: rgba(255, 255, 255, 0.095);
+      --gold: #d7a84d;
+      --gold-light: #ffe2a1;
+      --gold-soft: #f3c86b;
+      --gold-deep: #8f651f;
+      --cream: #fff7e8;
+      --muted: #c9b995;
+      --muted-2: #8f8066;
+      --danger: #ff6b6b;
+      --success: #ffd98b;
+      --border: rgba(255, 226, 161, 0.16);
+      --border-strong: rgba(255, 226, 161, 0.36);
+      --shadow: 0 28px 90px rgba(0, 0, 0, 0.58);
+      --gold-shadow: 0 0 45px rgba(215, 168, 77, 0.18);
+      --radius: 28px;
+      --radius-sm: 18px;
+      --max: 1180px;
+      --ease: cubic-bezier(.2, .8, .2, 1);
+    }
+
+    /* =========================================================
+       GLOBAL VARIABLES CSS END
+    ========================================================= */
+
+
+    /* =========================================================
+       RESET + BASE CSS START
+    ========================================================= */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--cream);
+      background:
+        radial-gradient(circle at 14% 4%, rgba(215, 168, 77, 0.24), transparent 25%),
+        radial-gradient(circle at 86% 11%, rgba(255, 226, 161, 0.12), transparent 27%),
+        radial-gradient(circle at 50% 115%, rgba(143, 101, 31, 0.18), transparent 36%),
+        linear-gradient(180deg, #050402 0%, #0b0905 42%, #030303 100%);
+      overflow-x: hidden;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255, 226, 161, 0.026) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 226, 161, 0.026) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.82), transparent 88%);
+      animation: gridDrift 18s linear infinite;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1.2px);
+      background-size: 30px 30px;
+      opacity: 0.18;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    ::selection {
+      color: #140d03;
+      background: var(--gold-light);
+    }
+
+    /* =========================================================
+       RESET + BASE CSS END
+    ========================================================= */
+
+
+    /* =========================================================
+       GLOBAL LAYOUT CSS START
+    ========================================================= */
+    .container {
+      width: min(var(--max), calc(100% - 36px));
+      margin-inline: auto;
+    }
+
+    .section {
+      position: relative;
+      padding: 104px 0;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .section-sm {
+      position: relative;
+      padding: 74px 0;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .section::before,
+    .section-sm::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 14% 18%, rgba(215, 168, 77, 0.11), transparent 32%),
+        radial-gradient(circle at 86% 76%, rgba(255, 226, 161, 0.07), transparent 34%),
+        linear-gradient(180deg, rgba(3, 3, 3, 0.95), rgba(11, 10, 7, 0.98));
+    }
+
+    .section::after,
+    .section-sm::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        linear-gradient(rgba(255, 226, 161, 0.023) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 226, 161, 0.023) 1px, transparent 1px);
+      background-size: 62px 62px;
+      mask-image: linear-gradient(to bottom, transparent, #000 18%, #000 82%, transparent);
+      opacity: 0.8;
+    }
+
+    .split-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      gap: clamp(34px, 5vw, 66px);
+      align-items: center;
+    }
+
+    .two-grid,
+    .three-grid,
+    .four-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .two-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .three-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .four-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .section-head {
+      display: grid;
+      gap: 18px;
+      margin-bottom: 42px;
+    }
+
+    .section-head.center {
+      text-align: center;
+      justify-items: center;
+      margin-inline: auto;
+    }
+
+    .section-head p {
+      max-width: 760px;
+    }
+
+    /* =========================================================
+       GLOBAL LAYOUT CSS END
+    ========================================================= */
+
+
+    /* =========================================================
+       TYPOGRAPHY + COMMON COMPONENTS CSS START
+    ========================================================= */
+    .eyebrow,
+    .mini-eyebrow {
+      width: fit-content;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 14px;
+      border: 1px solid rgba(255, 226, 161, 0.22);
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(255, 226, 161, 0.09), rgba(215, 168, 77, 0.04));
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      box-shadow: inset 0 0 20px rgba(255, 226, 161, 0.04), 0 0 24px rgba(215, 168, 77, 0.07);
+    }
+
+    .eyebrow::before,
+    .mini-eyebrow::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold-light);
+      box-shadow: 0 0 20px rgba(255, 226, 161, 0.78);
+      animation: dotPulse 2s ease-in-out infinite;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.04;
+      letter-spacing: -0.055em;
+    }
+
+    h1 {
+      max-width: 1060px;
+      font-size: clamp(42px, 7vw, 84px);
+      font-weight: 950;
+    }
+
+    h2 {
+      max-width: 950px;
+      font-size: clamp(34px, 5vw, 62px);
+      font-weight: 930;
+    }
+
+    h3 {
+      font-size: clamp(22px, 2.7vw, 34px);
+      font-weight: 880;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .lead {
+      max-width: 900px;
+      color: #e8d7b7;
+      font-size: clamp(19px, 2.2vw, 24px);
+      font-weight: 700;
+    }
+
+    .gold-text {
+      color: transparent;
+      background: linear-gradient(135deg, #fff1c8 0%, #d7a84d 42%, #fff2c9 72%, #b9812f 100%);
+      background-size: 230% 230%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      animation: goldMove 4.8s ease-in-out infinite;
+    }
+
+    .btn,
+    .clarity-cta-btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 58px;
+      padding: 17px 26px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 226, 161, 0.3);
+      color: #171003;
+      background: linear-gradient(135deg, #fff0bd 0%, #d7a84d 42%, #8f651f 100%);
+      box-shadow: 0 22px 70px rgba(215, 168, 77, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.56);
+      font-weight: 950;
+      font-size: 14px;
+      letter-spacing: 0.055em;
+      text-transform: uppercase;
+      overflow: hidden;
+      isolation: isolate;
+      transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), border-color 0.35s var(--ease);
+      animation: ctaPulse 2.4s ease-in-out infinite;
+    }
+
+    .btn::after,
+    .clarity-cta-btn::after {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      z-index: -1;
+      background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.52) 45%, transparent 68%);
+      transform: translateX(-120%);
+      animation: shine 3.8s ease-in-out infinite;
+    }
+
+    .btn:hover,
+    .clarity-cta-btn:hover {
+      transform: translateY(-4px) scale(1.025);
+      border-color: rgba(255, 226, 161, 0.62);
+      box-shadow: 0 28px 86px rgba(215, 168, 77, 0.34);
+    }
+
+    .center-cta {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 34px;
+    }
+
+    .card {
+      position: relative;
+      border: 1px solid rgba(255, 226, 161, 0.15);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.026)),
+        radial-gradient(circle at 15% 0%, rgba(255, 226, 161, 0.09), transparent 42%);
+      box-shadow: 0 20px 65px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(18px);
+      overflow: hidden;
+      transition: transform .35s var(--ease), border-color .35s var(--ease), box-shadow .35s var(--ease), background .35s var(--ease);
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(255, 242, 201, 0.36), transparent 38%, rgba(215, 168, 77, 0.22));
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255, 226, 161, 0.36);
+      box-shadow: 0 28px 86px rgba(0, 0, 0, 0.36), 0 0 36px rgba(215, 168, 77, 0.10);
+    }
+
+    .icon-box {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      color: #130c03;
+      background: linear-gradient(135deg, #fff1c8, #d7a84d 58%, #9b6c22);
+      box-shadow: 0 14px 34px rgba(215, 168, 77, 0.22);
+      font-weight: 950;
+      flex: 0 0 auto;
+    }
+
+    .check-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .check-item,
+    .cross-item,
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px;
+      border: 1px solid rgba(255, 226, 161, 0.13);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.035);
+      color: #decca2;
+      font-weight: 760;
+    }
+
+    .check-item span:first-child,
+    .feature-item span:first-child {
+      color: var(--gold-light);
+      font-weight: 950;
+    }
+
+    .cross-item span:first-child {
+      color: var(--danger);
+      font-weight: 950;
+    }
+
+    /* =========================================================
+       TYPOGRAPHY + COMMON COMPONENTS CSS END
+    ========================================================= */
+
+
+    /* =========================================================
+       SOCIAL PROOF NOTIFICATION CSS START
+    ========================================================= */
+    .csn-card {
+      position: fixed;
+      left: 18px;
+      bottom: 18px;
+      z-index: 60;
+      width: min(328px, calc(100% - 36px));
+      display: grid;
+      grid-template-columns: 46px 1fr;
+      gap: 12px;
+      padding: 14px;
+      border: 1px solid rgba(255, 226, 161, 0.18);
+      border-radius: 22px;
+      background: rgba(7, 6, 4, 0.78);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, .42), 0 0 34px rgba(215, 168, 77, .08);
+      transform: translateY(0);
+      animation: toastIn .75s var(--ease) .35s both, toastFloat 4s ease-in-out infinite 1.2s;
+    }
+
+    .csn-avatar {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      color: #150e03;
+      background: linear-gradient(135deg, #fff2c6, #d7a84d 62%, #8f651f);
+      font-weight: 950;
+    }
+
+    .csn-name {
+      color: var(--cream);
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .csn-msg,
+    .csn-time {
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    .csn-msg strong {
+      color: var(--gold-light);
+    }
+
+    .csn-live {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 6px;
+      padding: 6px 9px;
+      border-radius: 999px;
+      background: rgba(255, 226, 161, 0.06);
+      color: rgba(255, 255, 255, .7);
+      font-size: 11px;
+    }
+
+    .csn-live::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold-light);
+      box-shadow: 0 0 0 2px rgba(255, 226, 161, .12), 0 0 14px rgba(255, 226, 161, .5);
+      animation: dotPulse 1.8s ease-in-out infinite;
+    }
+
+    /* =========================================================
+       SOCIAL PROOF NOTIFICATION CSS END
+    ========================================================= */
+
+
+    /* =========================================================
+       HEADER / NAVBAR CSS START
+    ========================================================= */
+    /* =========================================================
+   CSS SECTION 13: NAVBAR - WRAPPER
+========================================================= */
+
+    .nav-wrapper-xyz-ikjo {
+      position: fixed;
+      top: 14px;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      width: 100%;
+      padding: 0 22px;
+      background: transparent;
+      pointer-events: none;
+    }
+
+    .nav-wrapper-xyz-ikjo,
+    .nav-wrapper-xyz-ikjo * {
+      box-sizing: border-box;
+    }
+
+    /* =========================================================
+   CSS SECTION 14: NAVBAR - INNER GLASS BAR
+========================================================= */
+
+    .nav-inner-xyz-ikjo {
+      position: relative;
+      width: min(1180px, 100%);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+      padding: 12px 16px 12px 22px;
+      border-radius: 999px;
+      pointer-events: auto;
+      overflow: hidden;
+
+      background:
+        radial-gradient(circle at 10% 0%, rgba(34, 211, 238, 0.22), transparent 34%),
+        radial-gradient(circle at 88% 115%, rgba(251, 113, 133, 0.20), transparent 36%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.105), rgba(255, 255, 255, 0.025)),
+        linear-gradient(135deg, rgba(7, 8, 23, 0.96), rgba(22, 17, 47, 0.91) 46%, rgba(13, 20, 48, 0.94));
+
+      border: 1px solid rgba(125, 211, 252, 0.26);
+
+      box-shadow:
+        0 24px 60px rgba(2, 6, 23, 0.52),
+        0 0 0 1px rgba(255, 255, 255, 0.045),
+        inset 0 1px 0 rgba(255, 255, 255, 0.16),
+        inset 0 -1px 0 rgba(34, 211, 238, 0.10);
+
+      backdrop-filter: blur(20px) saturate(135%);
+      -webkit-backdrop-filter: blur(20px) saturate(135%);
+    }
+
+    .nav-inner-xyz-ikjo::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background:
+        linear-gradient(90deg,
+          transparent,
+          rgba(34, 211, 238, 0.10),
+          rgba(251, 113, 133, 0.075),
+          transparent);
+      opacity: 0.88;
+      pointer-events: none;
+    }
+
+    .nav-inner-xyz-ikjo::after {
+      content: "";
+      position: absolute;
+      top: -55%;
+      left: -8%;
+      width: 310px;
+      height: 310px;
+      background:
+        radial-gradient(circle, rgba(109, 93, 252, 0.20), rgba(34, 211, 238, 0.11), transparent 68%);
+      filter: blur(42px);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    /* =========================================================
+   CSS SECTION 15: NAVBAR - LOGO
+========================================================= */
+
+    .nav-logo-xyz-ikjo {
+      position: relative;
+      z-index: 1;
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      font-family: var(--serif, Georgia, serif);
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.4px;
+      white-space: nowrap;
+      text-align: left;
+
+      color: var(--xyz-soft-white);
+      text-shadow:
+        0 2px 18px rgba(0, 0, 0, 0.46),
+        0 0 22px rgba(34, 211, 238, 0.12);
+
+      transition:
+        transform 0.25s ease,
+        opacity 0.25s ease,
+        filter 0.25s ease;
+    }
+
+    .nav-logo-xyz-ikjo:hover {
+      transform: translateY(-1px);
+      opacity: 0.96;
+      filter: drop-shadow(0 0 12px rgba(34, 211, 238, 0.18));
+    }
+
+    .nav-logo-xyz-ikjo span {
+      color: #67e8f9;
+      background: linear-gradient(135deg, #e0f2fe 0%, #67e8f9 32%, #a78bfa 66%, #fb7185 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: none;
+    }
+
+    /* =========================================================
+   CSS SECTION 16: NAVBAR - RIGHT SIDE GROUP
+========================================================= */
+
+    .okij-ikjo {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    /* =========================================================
+   CSS SECTION 17: NAVBAR - TIMER BLOCK
+========================================================= */
+
+    .nav-timer-block-xyz-ikjo {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      max-width: 100%;
+      padding: 8px 12px 8px 14px;
+      border-radius: 999px;
+
+      background:
+        radial-gradient(circle at 12% 0%, rgba(215, 168, 77, 0.22), transparent 45%),
+        linear-gradient(135deg, rgba(255, 226, 161, 0.12), rgba(255, 255, 255, 0.035)),
+        linear-gradient(135deg, rgba(11, 10, 7, 0.94), rgba(3, 3, 3, 0.86));
+
+      border: 1px solid var(--border);
+
+      box-shadow:
+        inset 0 1px 0 rgba(255, 226, 161, 0.18),
+        0 12px 30px rgba(0, 0, 0, 0.38),
+        var(--gold-shadow);
+
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .nav-timer-block-xyz-ikjo:hover {
+      transform: translateY(-1px);
+      border-color: var(--border-strong);
+
+      background:
+        radial-gradient(circle at 12% 0%, rgba(255, 226, 161, 0.28), transparent 45%),
+        linear-gradient(135deg, rgba(255, 226, 161, 0.16), rgba(255, 255, 255, 0.045)),
+        linear-gradient(135deg, rgba(20, 16, 8, 0.96), rgba(3, 3, 3, 0.90));
+
+      box-shadow:
+        inset 0 1px 0 rgba(255, 226, 161, 0.22),
+        0 14px 34px rgba(0, 0, 0, 0.48),
+        0 0 34px rgba(215, 168, 77, 0.24);
+    }
+
+    /* Timer Pulse */
+
+    .nav-timer-pulse-xyz-ikjo {
+      width: 10px;
+      height: 10px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: var(--gold-light);
+
+      box-shadow:
+        0 0 0 5px rgba(215, 168, 77, 0.15),
+        0 0 18px rgba(255, 226, 161, 0.95);
+
+      animation: pulseAnimXyzIkjo 1.45s ease-in-out infinite;
+    }
+
+    @keyframes pulseAnimXyzIkjo {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1;
+        box-shadow:
+          0 0 0 5px rgba(215, 168, 77, 0.16),
+          0 0 18px rgba(255, 226, 161, 0.95);
+      }
+
+      50% {
+        transform: scale(0.74);
+        opacity: 0.72;
+        box-shadow:
+          0 0 0 8px rgba(255, 107, 107, 0.13),
+          0 0 24px rgba(215, 168, 77, 0.82);
+      }
+    }
+
+    /* Timer Label */
+
+    .nav-timer-label-xyz-ikjo {
+      font-family: var(--sans, Arial, sans-serif);
+      font-size: 12px;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+      color: var(--cream);
+      white-space: nowrap;
+      text-shadow: 0 0 16px rgba(215, 168, 77, 0.22);
+    }
+
+    /* Timer Digits */
+
+    .nav-timer-digits-xyz-ikjo {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      max-width: 100%;
+      padding: 4px 9px;
+      border-radius: 999px;
+
+      background:
+        linear-gradient(180deg, rgba(3, 3, 3, 0.82), rgba(11, 10, 7, 0.58));
+
+      border: 1px solid rgba(255, 226, 161, 0.22);
+
+      box-shadow:
+        inset 0 1px 9px rgba(0, 0, 0, 0.52),
+        0 1px 0 rgba(255, 226, 161, 0.10),
+        0 0 14px rgba(215, 168, 77, 0.10);
+    }
+
+    .nav-timer-unit-xyz-ikjo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .nav-timer-num-xyz-ikjo {
+      min-width: 22px;
+      font-family: var(--sans, Arial, sans-serif);
+      font-size: 17px;
+      font-weight: 950;
+      line-height: 1;
+      text-align: center;
+      color: var(--gold-light);
+      letter-spacing: 0.3px;
+
+      text-shadow:
+        0 0 10px rgba(255, 226, 161, 0.44),
+        0 0 18px rgba(215, 168, 77, 0.18);
+    }
+
+    .nav-timer-unitlbl-xyz-ikjo {
+      font-family: var(--sans, Arial, sans-serif);
+      font-size: 7px;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: 0.9px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .nav-timer-colon-xyz-ikjo {
+      margin-bottom: 5px;
+      font-size: 17px;
+      font-weight: 950;
+      line-height: 1;
+      color: var(--gold-light);
+      text-shadow: 0 0 12px rgba(255, 226, 161, 0.68);
+      animation: colonBlinkXyzIkjo 1s step-end infinite;
+    }
+
+    @keyframes colonBlinkXyzIkjo {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.25;
+      }
+    }
+
+    .nav-timer-expired-xyz-ikjo {
+      font-family: var(--sans, Arial, sans-serif);
+      font-size: 13px;
+      font-weight: 950;
+      line-height: 1;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+      color: var(--gold-light);
+
+      text-shadow:
+        0 0 12px rgba(255, 226, 161, 0.45),
+        0 0 18px rgba(215, 168, 77, 0.20);
+    }
+
+    /* =========================================================
+   CSS SECTION 18: NAVBAR - CTA BUTTON
+========================================================= */
+
+    .nav-cta-xyz-ikjo {
+      position: relative;
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 100%;
+      padding: 13px 25px;
+      border-radius: 999px;
+      border: 0;
+      overflow: hidden;
+      text-decoration: none;
+      white-space: nowrap;
+
+      font-family: var(--sans, Arial, sans-serif);
+      font-size: 16px;
+      font-weight: 950;
+      line-height: 1;
+      letter-spacing: 0.2px;
+      color: var(--black);
+
+      background:
+        linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 48%, var(--gold-deep) 100%);
+
+      box-shadow:
+        0 15px 34px rgba(215, 168, 77, 0.30),
+        0 12px 34px rgba(143, 101, 31, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.42),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.24);
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        filter 0.25s ease;
+
+      animation:
+        ctaBreathXyzIkjo 2.8s ease-in-out infinite,
+        smoothShakeIkjo 2.2s ease-in-out infinite;
+    }
+
+    .nav-cta-xyz-ikjo::before {
+      content: "";
+      position: absolute;
+      top: -20%;
+      left: -80%;
+      width: 52%;
+      height: 140%;
+
+      background:
+        linear-gradient(90deg,
+          transparent,
+          rgba(255, 255, 255, 0.68),
+          transparent);
+
+      transform: skewX(-22deg);
+      transition: left 0.65s ease;
+    }
+
+    .nav-cta-xyz-ikjo::after {
+      content: "";
+      position: absolute;
+      inset: 2px;
+      border-radius: inherit;
+      border: 1px solid rgba(255, 247, 232, 0.28);
+      box-shadow: inset 0 0 18px rgba(255, 255, 255, 0.10);
+      pointer-events: none;
+    }
+
+    .nav-cta-xyz-ikjo:hover::before {
+      left: 132%;
+    }
+
+    .nav-cta-xyz-ikjo:hover {
+      transform: translateY(-2px) scale(1.035);
+      filter: brightness(1.08) saturate(1.08);
+
+      box-shadow:
+        0 20px 46px rgba(215, 168, 77, 0.40),
+        0 16px 44px rgba(143, 101, 31, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.50),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.18);
+    }
+
+    @keyframes ctaBreathXyzIkjo {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.035);
+      }
+    }
+
+    @keyframes smoothShakeIkjo {
+
+      0%,
+      100% {
+        translate: 0 0;
+      }
+
+      45% {
+        translate: 0 0;
+      }
+
+      50% {
+        translate: -1px 0;
+      }
+
+      55% {
+        translate: 1px 0;
+      }
+
+      60% {
+        translate: 0 0;
+      }
+    }
+
+    /* Page Body Offset */
+
+    .page-body-offset-xyz-ikjo {
+      padding-top: 92px;
+    }
+
+    /* =========================================================
+   CSS SECTION 19: RESPONSIVE NAVBAR - TABLET
+========================================================= */
+
+    @media (max-width: 900px) {
+      .nav-wrapper-xyz-ikjo {
+        top: 10px;
+        padding: 0 14px;
+      }
+
+      .nav-inner-xyz-ikjo {
+        padding: 10px 12px 10px 16px;
+        gap: 12px;
+      }
+
+      .nav-logo-xyz-ikjo {
+        font-size: clamp(20px, 2.7vw, 23px);
+        gap: 8px;
+      }
+
+      .okij-ikjo {
+        gap: 8px;
+      }
+
+      .nav-timer-block-xyz-ikjo {
+        padding: 7px 9px;
+        gap: 8px;
+      }
+
+      .nav-timer-pulse-xyz-ikjo {
+        display: none;
+      }
+
+      .nav-timer-label-xyz-ikjo {
+        font-size: 10px;
+        letter-spacing: 0.7px;
+      }
+
+      .nav-timer-digits-xyz-ikjo {
+        padding: 4px 8px;
+      }
+
+      .nav-timer-num-xyz-ikjo,
+      .nav-timer-colon-xyz-ikjo {
+        font-size: 15px;
+      }
+
+      .nav-timer-num-xyz-ikjo {
+        min-width: 20px;
+      }
+
+      .nav-cta-xyz-ikjo {
+        padding: 11px 17px;
+        font-size: 15px;
+      }
+
+      .page-body-offset-xyz-ikjo {
+        padding-top: 84px;
+      }
+    }
+
+    /* =========================================================
+   CSS SECTION 20: RESPONSIVE NAVBAR - MOBILE
+========================================================= */
+
+    @media (max-width: 700px) {
+      .nav-wrapper-xyz-ikjo {
+        top: 8px;
+        padding: 0 9px;
+      }
+
+      .nav-inner-xyz-ikjo {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 11px 10px;
+        gap: 10px;
+        border-radius: 24px;
+
+        background:
+          radial-gradient(circle at 50% -15%, rgba(215, 168, 77, 0.24), transparent 36%),
+          radial-gradient(circle at 92% 105%, rgba(255, 226, 161, 0.13), transparent 40%),
+          linear-gradient(145deg, rgba(11, 10, 7, 0.96), rgba(3, 3, 3, 0.94));
+      }
+
+      .nav-logo-xyz-ikjo {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        font-size: 21px;
+      }
+
+      .okij-ikjo {
+        width: 100%;
+        justify-content: center;
+        gap: 8px;
+        flex-wrap: nowrap;
+      }
+
+      .nav-timer-block-xyz-ikjo {
+        min-width: 0;
+        padding: 6px 8px;
+        gap: 6px;
+        border-radius: 999px;
+      }
+
+      .nav-timer-label-xyz-ikjo {
+        display: block;
+        font-size: clamp(8px, 2.6vw, 10px);
+        letter-spacing: 0.45px;
+      }
+
+      .nav-timer-digits-xyz-ikjo {
+        padding: 4px 7px;
+        gap: 3px;
+      }
+
+      .nav-timer-num-xyz-ikjo,
+      .nav-timer-colon-xyz-ikjo {
+        font-size: clamp(13px, 3.8vw, 15px);
+      }
+
+      .nav-timer-num-xyz-ikjo {
+        min-width: clamp(17px, 4.8vw, 20px);
+      }
+
+      .nav-timer-unitlbl-xyz-ikjo {
+        font-size: 6px;
+        letter-spacing: 0.5px;
+      }
+
+      .nav-timer-colon-xyz-ikjo {
+        margin-bottom: 4px;
+      }
+
+      .nav-cta-xyz-ikjo {
+        flex: 0 0 auto;
+        padding: 10px 13px;
+        font-size: clamp(13px, 3.8vw, 15px);
+        letter-spacing: 0.1px;
+      }
+
+      .page-body-offset-xyz-ikjo {
+        padding-top: 132px;
+      }
+    }
+
+    /* =========================================================
+   CSS SECTION 21: RESPONSIVE NAVBAR - SMALL PHONES
+========================================================= */
+
+    @media (max-width: 380px) {
+      .nav-wrapper-xyz-ikjo {
+        padding: 0 7px;
+      }
+
+      .nav-inner-xyz-ikjo {
+        padding: 9px 7px;
+        gap: 8px;
+        border-radius: 20px;
+      }
+
+      .nav-logo-xyz-ikjo {
+        font-size: clamp(18px, 5.5vw, 18px);
+        gap: 7px;
+      }
+
+      .okij-ikjo {
+        gap: 5px;
+      }
+
+      .nav-timer-block-xyz-ikjo {
+        padding: 5px 6px;
+        gap: 4px;
+      }
+
+      .nav-timer-label-xyz-ikjo {
+        font-size: 8px;
+      }
+
+      .nav-timer-digits-xyz-ikjo {
+        padding: 3px 5px;
+        gap: 2px;
+      }
+
+      .nav-timer-unitlbl-xyz-ikjo {
+        display: none;
+      }
+
+      .nav-timer-num-xyz-ikjo,
+      .nav-timer-colon-xyz-ikjo {
+        font-size: 12px;
+      }
+
+      .nav-timer-num-xyz-ikjo {
+        min-width: 15px;
+      }
+
+      .nav-timer-colon-xyz-ikjo {
+        margin-bottom: 0;
+      }
+
+      .nav-cta-xyz-ikjo {
+        padding: 9px 9px;
+        font-size: 12px;
+      }
+
+      .page-body-offset-xyz-ikjo {
+        padding-top: 120px;
+      }
+    }
+
+    /* =========================================================
+   HEADER / NAVBAR CSS END
+========================================================= */
+
+
+    /* =========================================================
+       HERO SECTION CSS START
+    ========================================================= */
+    .hero {
+      position: relative;
+      min-height: calc(100vh - 78px);
+      display: grid;
+      align-items: center;
+      padding: 98px 0 86px;
+      overflow: hidden;
+      isolation: isolate;
+      background:
+        radial-gradient(circle at 16% 14%, rgba(217, 170, 79, 0.15), transparent 31%),
+        radial-gradient(circle at 84% 22%, rgba(255, 230, 173, 0.09), transparent 30%),
+        radial-gradient(circle at 50% 96%, rgba(143, 100, 31, 0.14), transparent 40%),
+        linear-gradient(135deg, #020202 0%, #090704 44%, #120d05 72%, #050403 100%);
+      background-size: 130% 130%;
+      animation: heroBgMove 10s ease-in-out infinite alternate;
+      text-align: center;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(rgba(255, 230, 173, 0.032) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 230, 173, 0.032) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent 80%);
+      animation: gridDrift 18s linear infinite;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 190px;
+      z-index: -1;
+      background: linear-gradient(to top, rgba(3, 3, 3, 0.96), transparent);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.04fr) minmax(390px, 0.96fr);
+      gap: clamp(34px, 5vw, 64px);
+      align-items: center;
+    }
+
+    .hero-copy {
+      max-width: 760px;
+    }
+
+    .hero h1 {
+      margin: 24px 0 20px;
+    }
+
+    .hero-description {
+      max-width: 710px;
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .hero-point {
+      min-height: 54px;
+      padding: 13px 14px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      border: 1px solid rgba(255, 230, 173, 0.13);
+      border-radius: 18px;
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.026)),
+        radial-gradient(circle at 0% 0%, rgba(217, 170, 79, 0.075), transparent 48%);
+      color: #decca2;
+      font-size: 14px;
+      font-weight: 850;
+      transition: transform .32s var(--ease), border-color .32s var(--ease), background .32s var(--ease);
+    }
+
+    .hero-point:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 230, 173, 0.32);
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.095), rgba(255, 255, 255, 0.038)),
+        radial-gradient(circle at 0% 0%, rgba(217, 170, 79, 0.13), transparent 52%);
+    }
+
+    .point-icon {
+      color: var(--gold-light);
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 590px;
+    }
+
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(2px);
+      opacity: 0.78;
+      animation: orbFloat 7s ease-in-out infinite;
+    }
+
+    .orb-one {
+      width: 340px;
+      height: 340px;
+      top: 18px;
+      right: 5%;
+      background: radial-gradient(circle at 35% 30%, rgba(255, 242, 201, 0.68), rgba(217, 170, 79, 0.22) 38%, transparent 70%);
+    }
+
+    .orb-two {
+      width: 210px;
+      height: 210px;
+      left: 0;
+      bottom: 72px;
+      background: radial-gradient(circle at 35% 30%, rgba(217, 170, 79, 0.32), transparent 67%);
+      animation-delay: -2s;
+    }
+
+    .luxury-card {
+      position: absolute;
+      top: 58px;
+      right: 0;
+      width: min(500px, 100%);
+      padding: 30px;
+      border-radius: 36px;
+    }
+
+    .scale-panel {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      gap: 22px;
+    }
+
+    .panel-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .label {
+      margin-bottom: 10px;
+      color: var(--muted-2);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .big-number {
+      font-size: clamp(48px, 5vw, 64px);
+      line-height: 0.92;
+      font-weight: 950;
+      letter-spacing: -0.075em;
+    }
+
+    .mini-badge {
+      padding: 9px 13px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--gold-light);
+      background: rgba(255, 226, 161, 0.08);
+      font-size: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .growth-bars {
+      display: grid;
+      gap: 15px;
+    }
+
+    .bar-row {
+      display: grid;
+      gap: 8px;
+    }
+
+    .bar-meta {
+      display: flex;
+      justify-content: space-between;
+      color: #dcc79b;
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .bar {
+      height: 11px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.085);
+      overflow: hidden;
+    }
+
+    .bar span {
+      display: block;
+      width: var(--bar-width, 72%);
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, #8f641f, #d9aa4f, #fff0bd);
+      box-shadow: 0 0 24px rgba(217, 170, 79, 0.34);
+      animation: barFill 1.3s ease-out both;
+    }
+
+    .calendar-card {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 14px;
+      border: 1px solid rgba(255, 230, 173, 0.14);
+      border-radius: 24px;
+      background:
+        linear-gradient(145deg, rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.18)),
+        radial-gradient(circle at 0% 0%, rgba(255, 230, 173, 0.08), transparent 46%);
+    }
+
+    .calendar-card h4 {
+      margin-bottom: 8px;
+      color: var(--cream);
+      font-size: 17px;
+      font-weight: 900;
+    }
+
+    .calendar-card p {
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .floating-chip {
+      position: absolute;
+      left: 0;
+      top: 415px;
+      width: 286px;
+      padding: 20px;
+      border-radius: 24px;
+    }
+
+    .floating-chip strong {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 32px;
+      line-height: 1;
+      font-weight: 950;
+    }
+
+    .floating-chip span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+      font-weight: 750;
+    }
+
+    /* =========================================================
+       HERO SECTION CSS END
+    ========================================================= */
+
+
+    /* =========================================================
+       OFFER TIMER CSS START
+    ========================================================= */
+    .offer-timer-wrap {
+      width: min(480px, calc(100% - 36px));
+      margin: 38px auto 0;
+      text-align: center;
+      padding: 20px;
+      border: 1px solid rgba(255, 226, 161, 0.18);
+      border-radius: 26px;
+      background: rgba(255, 255, 255, .045);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 20px 64px rgba(0, 0, 0, .24);
+    }
+
+    .offer-timer-wrap h5 {
+      margin-bottom: 14px;
+      color: var(--gold-light);
+      font-size: 13px;
+      font-weight: 950;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .premium-timer {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .time-box {
+      min-width: 74px;
+      padding: 12px 13px;
+      border: 1px solid rgba(255, 226, 161, 0.18);
+      border-radius: 18px;
+      background: linear-gradient(145deg, rgba(255, 255, 255, .08), rgba(255, 255, 255, .025));
+    }
+
+    .time-value {
+      display: block;
+      color: var(--cream);
+      font-size: 30px;
+      line-height: 1;
+      font-weight: 950;
+      letter-spacing: -.05em;
+    }
+
+    .time-label {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted-2);
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .colon {
+      color: var(--gold-light);
+      font-size: 30px;
+      font-weight: 950;
+      animation: blink 1s steps(2) infinite;
+    }
+
+    /* =========================================================
+       OFFER TIMER CSS END
+    ========================================================= */
+
+
+    /* =========================================================
+       PAGE SECTION SPECIFIC CSS START
+    ========================================================= */
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .trust-card {
+      min-height: 148px;
+      padding: 22px;
+      display: grid;
+      align-content: center;
+      gap: 14px;
+    }
+
+    .trust-card strong {
+      position: relative;
+      z-index: 2;
+      color: var(--cream);
+      font-size: 15.5px;
+      line-height: 1.35;
+      font-weight: 900;
+    }
+
+    .problem-note,
+    .system-note,
+    .value-note,
+    .important-note {
+      margin-top: 26px;
+      padding: 18px;
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 14px;
+      align-items: flex-start;
+      border: 1px solid rgba(255, 226, 161, 0.16);
+      border-radius: 24px;
+      background: linear-gradient(145deg, rgba(255, 255, 255, .065), rgba(255, 255, 255, .025)), radial-gradient(circle at 0 0, rgba(255, 226, 161, .1), transparent 44%);
+      backdrop-filter: blur(16px);
+    }
+
+    .problem-card,
+    .system-card,
+    .qualification-panel,
+    .mentor-card,
+    .final-card {
+      padding: clamp(24px, 3vw, 34px);
+    }
+
+    .problem-card-top,
+    .panel-top-line,
+    .qualification-panel-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+
+    .small-label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 950;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .system-step {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 14px;
+      align-items: center;
+      padding: 17px;
+      border: 1px solid rgba(255, 226, 161, 0.14);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, .035);
+    }
+
+    .step-num,
+    .heal-letter {
+      width: 56px;
+      height: 56px;
+      display: grid;
+      place-items: center;
+      border-radius: 20px;
+      color: #150e03;
+      background: linear-gradient(135deg, #fff1c8, #d7a84d 58%, #9b6c22);
+      box-shadow: 0 14px 34px rgba(215, 168, 77, 0.22);
+      font-weight: 950;
+      font-size: 20px;
+    }
+
+    .heal-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .heal-card {
+      min-height: 318px;
+      padding: 24px;
+    }
+
+    .heal-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 22px;
+    }
+
+    .heal-number {
+      color: rgba(255, 226, 161, .34);
+      font-size: 30px;
+      line-height: 1;
+      font-weight: 950;
+    }
+
+    .heal-card h3,
+    .testimonial h3 {
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .vision-grid,
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .vision-item,
+    .value-item {
+      min-height: 132px;
+      padding: 20px;
+      display: grid;
+      align-content: center;
+      gap: 12px;
+    }
+
+    .qualification-panels {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .testimonial {
+      padding: 24px;
+    }
+
+    .stars {
+      color: var(--gold-light);
+      letter-spacing: .12em;
+      margin-bottom: 18px;
+    }
+
+    .quote {
+      color: #ecdcbf;
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.65;
+      margin-bottom: 22px;
+    }
+
+    .person {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 226, 161, 0.12);
+    }
+
+    .person-avatar {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      color: #150e03;
+      background: linear-gradient(135deg, #fff1c8, #d7a84d 58%, #9b6c22);
+      font-weight: 950;
+    }
+
+    .person strong {
+      display: block;
+      color: var(--cream);
+      font-weight: 900;
+    }
+
+    .person span {
+      display: block;
+      color: var(--muted-2);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .mentor-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+      gap: 34px;
+      align-items: center;
+    }
+
+    .mentor-avatar {
+      min-height: 360px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 34px;
+    }
+
+    .mentor-initials {
+      width: 142px;
+      height: 142px;
+      display: grid;
+      place-items: center;
+      margin-inline: auto;
+      border-radius: 44px;
+      color: #150e03;
+      background: linear-gradient(135deg, #fff1c8, #d7a84d 58%, #9b6c22);
+      box-shadow: 0 26px 80px rgba(215, 168, 77, .28);
+      font-size: 44px;
+      font-weight: 950;
+    }
+
+    .final-card {
+      max-width: 980px;
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .final-card .check-list {
+      max-width: 780px;
+      margin-inline: auto;
+      text-align: left;
+    }
+
+    /* =========================================================
+       PAGE SECTION SPECIFIC CSS END
+    ========================================================= */
+
+
+    /* =========================================================
+       FOOTER CSS START
+    ========================================================= */
+    footer {
+      padding: 34px 0 98px;
+      border-top: 1px solid rgba(255, 226, 161, .12);
+      background: rgba(3, 3, 3, .92);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      color: var(--muted-2);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    /* =========================================================
+       FOOTER CSS END
+    ========================================================= */
+
+
+    /* =========================================================
+       MODAL FORM CSS START
+    ========================================================= */
+    #kc-modal-shell {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      background: rgba(0, 0, 0, 0.72);
+      backdrop-filter: blur(14px);
+      z-index: 1000;
+    }
+
+    #kc-modal-shell.kc-visibleABM {
+      display: flex;
+    }
+
+    #kc-modal-card {
+      width: min(520px, 100%);
+      max-height: calc(100vh - 36px);
+      overflow: auto;
+      border: 1px solid rgba(255, 226, 161, 0.22);
+      border-radius: 30px;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(255, 226, 161, 0.13), transparent 34%),
+        linear-gradient(180deg, rgba(20, 14, 5, 0.98), rgba(5, 4, 3, 0.98));
+      box-shadow: 0 30px 100px rgba(0, 0, 0, .62), 0 0 50px rgba(215, 168, 77, .12);
+      animation: modalIn .38s var(--ease) both;
+    }
+
+    #kc-modal-head {
+      position: relative;
+      padding: 36px 28px 24px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 226, 161, 0.12);
+    }
+
+    #kc-modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255, 226, 161, .18);
+      border-radius: 13px;
+      color: var(--cream);
+      background: rgba(255, 255, 255, .05);
+      transition: transform .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease);
+    }
+
+    #kc-modal-close:hover {
+      transform: rotate(90deg);
+      color: var(--gold-light);
+      border-color: rgba(255, 226, 161, .4);
+    }
+
+    #kc-modal-title {
+      margin-top: 12px;
+      font-size: 31px;
+      font-weight: 950;
+      letter-spacing: -.045em;
+    }
+
+    #kc-modal-sub {
+      color: var(--muted);
+      font-size: 16px;
+      margin-top: 8px;
+    }
+
+    #kc-modal-body {
+      padding: 26px 28px 30px;
+    }
+
+    #kc-clarity-form {
+      display: grid;
+      gap: 16px;
+    }
+
+    .kc-fieldABM {
+      display: grid;
+      gap: 8px;
+    }
+
+    .kc-field-labelABM {
+      color: var(--gold-light);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .kc-inputABM {
+      width: 100%;
+      min-height: 54px;
+      padding: 14px 15px;
+      border: 1px solid rgba(255, 226, 161, .16);
+      border-radius: 16px;
+      outline: none;
+      color: var(--cream);
+      background: rgba(255, 255, 255, .055);
+      transition: border-color .25s var(--ease), box-shadow .25s var(--ease), background .25s var(--ease);
+    }
+
+    .kc-inputABM::placeholder {
+      color: rgba(255, 247, 232, .42);
+    }
+
+    .kc-inputABM:focus {
+      border-color: rgba(255, 226, 161, .48);
+      background: rgba(255, 255, 255, .075);
+      box-shadow: 0 0 0 4px rgba(215, 168, 77, .10);
+    }
+
+    .kc-error-msgABM {
+      display: none;
+      color: var(--danger);
+      font-size: 12px;
+      font-weight: 760;
+    }
+
+    .kc-has-errorABM .kc-inputABM {
+      border-color: rgba(255, 107, 107, .65);
+      box-shadow: 0 0 0 4px rgba(255, 107, 107, .08);
+    }
+
+    .kc-has-errorABM .kc-error-msgABM {
+      display: block;
+    }
+
+    #kc-submit-btn {
+      min-height: 58px;
+      margin-top: 8px;
+      border: 1px solid rgba(255, 226, 161, .36);
+      border-radius: 999px;
+      color: #171003;
+      background: linear-gradient(135deg, #fff0bd, #d7a84d 55%, #8f651f);
+      font-weight: 950;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      box-shadow: 0 20px 56px rgba(215, 168, 77, .25);
+    }
+
+    #kc-submit-btn:disabled {
+      cursor: not-allowed;
+      opacity: .82;
+    }
+
+    .kc-btn-innerABM {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    #kc-btn-spinner {
+      width: 18px;
+      height: 18px;
+      border: 2px solid rgba(20, 13, 3, .25);
+      border-top-color: #140d03;
+      border-radius: 50%;
+      animation: spin .75s linear infinite;
+    }
+
+    #kc-privacy-note {
+      text-align: center;
+      color: rgba(255, 247, 232, .62);
+      font-size: 13px;
+    }
+
+    #kc-success-screen {
+      padding: 38px 28px 42px;
+      text-align: center;
+    }
+
+    #kc-success-icon {
+      width: 72px;
+      height: 72px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 18px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #fff1c8, #d7a84d 58%, #9b6c22);
+      box-shadow: 0 22px 65px rgba(215, 168, 77, .28);
+    }
+
+    #kc-success-title {
+      font-size: 32px;
+      font-weight: 950;
+      letter-spacing: -.045em;
+    }
+
+    #kc-success-sub {
+      margin-top: 8px;
+    }
+
+    #kc-redirect-dots {
+      display: flex;
+      justify-content: center;
+      gap: 7px;
+      margin-top: 18px;
+    }
+
+    #kc-redirect-dots span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold-light);
+      animation: dotBounce .8s ease-in-out infinite alternate;
+    }
+
+    #kc-redirect-dots span:nth-child(2) {
+      animation-delay: .15s;
+    }
+
+    #kc-redirect-dots span:nth-child(3) {
+      animation-delay: .3s;
+    }
+
+    /* =========================================================
+       MODAL FORM CSS END
+    ========================================================= */
+
+
+    /* =========================================================
+       ANIMATION KEYFRAMES START
+    ========================================================= */
+    .reveal {
+      opacity: 1;
+      transform: translateY(28px);
+      transition: opacity .75s var(--ease), transform .75s var(--ease);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes heroBgMove {
+      from {
+        background-position: 0% 50%;
+      }
+
+      to {
+        background-position: 100% 50%;
+      }
+    }
+
+    @keyframes gridDrift {
+      from {
+        background-position: 0 0, 0 0;
+      }
+
+      to {
+        background-position: 72px 72px, 72px 72px;
+      }
+    }
+
+    @keyframes goldMove {
+
+      0%,
+      100% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+    }
+
+    @keyframes ctaPulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.028);
+      }
+    }
+
+    @keyframes shine {
+      0% {
+        transform: translateX(-130%);
+      }
+
+      45%,
+      100% {
+        transform: translateX(130%);
+      }
+    }
+
+    @keyframes dotPulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1.35);
+        opacity: .72;
+      }
+    }
+
+    @keyframes orbFloat {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(0deg) scale(1);
+      }
+
+      50% {
+        transform: translateY(-18px) rotate(4deg) scale(1.04);
+      }
+    }
+
+    @keyframes barFill {
+      from {
+        width: 0%;
+      }
+
+      to {
+        width: var(--bar-width, 72%);
+      }
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: .32;
+      }
+    }
+
+    @keyframes toastIn {
+      from {
+        opacity: 0;
+        transform: translateY(18px) scale(.94);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes toastFloat {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-7px);
+      }
+    }
+
+    @keyframes modalIn {
+      from {
+        opacity: 0;
+        transform: translateY(18px) scale(.96);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes dotBounce {
+      from {
+        transform: translateY(0);
+        opacity: .45;
+      }
+
+      to {
+        transform: translateY(-7px);
+        opacity: 1;
+      }
+    }
+
+    /* =========================================================
+       ANIMATION KEYFRAMES END
+    ========================================================= */
+
+
+    /* =========================================================
+       RESPONSIVE CSS START
+    ========================================================= */
+    @media (max-width: 1120px) {
+      .trust-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .heal-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 980px) {
+      .hero {
+        min-height: auto;
+        padding: 86px 0 64px;
+
+        text-align: center;
+      }
+
+      .hero-grid,
+      .split-grid,
+      .mentor-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy {
+        max-width: 900px;
+      }
+
+      .hero-visual {
+        min-height: auto;
+        display: grid;
+        gap: 18px;
+      }
+
+      .luxury-card,
+      .floating-chip {
+        position: relative;
+        top: auto;
+        right: auto;
+        left: auto;
+        width: 100%;
+        max-width: 640px;
+        margin-inline: auto;
+      }
+
+      .floating-chip {
+        text-align: center;
+      }
+
+      .two-grid,
+      .three-grid,
+      .four-grid,
+      .vision-grid,
+      .value-grid,
+      .testimonials-grid,
+      .qualification-panels {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+
+      .container,
+      .nav-inner-xyz {
+        width: min(100% - 28px, var(--max));
+      }
+
+      .section {
+        padding: 76px 0;
+      }
+
+      .section-sm {
+        padding: 58px 0;
+      }
+
+      .nav-inner-xyz {
+        min-height: auto;
+        padding: 12px 0;
+      }
+
+      .nav-logo-xyz span {
+        display: none;
+      }
+
+      .nav-actions {
+        gap: 8px;
+      }
+
+      .nav-timer-block-xyz {
+        padding: 8px 10px;
+        gap: 7px;
+      }
+
+      .nav-timer-label-xyz {
+        display: none;
+      }
+
+      .nav-cta-xyz {
+        min-height: 40px;
+        padding: 9px 13px;
+        font-size: 13px;
+      }
+
+      .csn-card {
+        display: none;
+      }
+
+      h1 {
+        font-size: clamp(36px, 11vw, 52px);
+        line-height: .98;
+      }
+
+      h2 {
+        font-size: clamp(30px, 9vw, 42px);
+      }
+
+      p,
+      .lead {
+        font-size: 16px;
+      }
+
+      .hero {
+        padding: 64px 0 46px;
+        text-align: center;
+      }
+
+      .hero-points {
+        grid-template-columns: 1fr;
+      }
+
+      .clarity-cta-btn,
+      .btn {
+        width: 90%;
+        font-size: 13px;
+        min-height: 54px;
+      }
+
+      .center-cta {
+        margin-top: 26px;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-card {
+        min-height: auto;
+        display: flex;
+        align-items: center;
+      }
+
+      .heal-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .heal-card {
+        min-height: auto;
+      }
+
+      .problem-card-top,
+      .panel-top-line,
+      .qualification-panel-top,
+      .panel-top {
+        flex-direction: column;
+      }
+
+      .problem-note,
+      .system-note,
+      .value-note,
+      .important-note,
+      .calendar-card {
+        grid-template-columns: 1fr;
+      }
+
+      .offer-timer-wrap {
+        width: min(100% - 28px, 480px);
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      #kc-modal-head {
+        padding: 34px 20px 22px;
+      }
+
+      #kc-modal-body {
+        padding: 24px 20px 28px;
+      }
+
+      #kc-modal-title {
+        font-size: 26px;
+      }
+    }
+
+    @media (max-width: 430px) {
+
+      .container,
+      .nav-inner-xyz {
+        width: min(100% - 22px, var(--max));
+      }
+
+      .hero {
+        padding-top: 29%;
+        text-align: center;
+      }
+
+      .eyebrow,
+      .mini-eyebrow {
+        font-size: 10px;
+        letter-spacing: .1em;
+      }
+
+      .time-box {
+        min-width: 66px;
+      }
+
+      .time-value {
+        font-size: 26px;
+      }
+
+      .luxury-card,
+      .floating-chip,
+      .card {
+        border-radius: 23px;
+      }
+
+      .luxury-card,
+      .problem-card,
+      .system-card,
+      .qualification-panel,
+      .mentor-card,
+      .final-card {
+        padding: 20px;
+      }
+
+      #kc-modal-shell {
+        padding: 12px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+
+    /* =========================================================
+       RESPONSIVE CSS END
+    ========================================================= */
+  </style>
+</head>
+
+<body>
+  <!-- =========================================================
+       SOCIAL PROOF NOTIFICATION HTML START
+  ========================================================= -->
+  <div class="csn-card" id="csnCard" role="status" aria-live="polite">
+    <div class="csn-avatar" id="csnAvatar">JD</div>
+    <div class="csn-body">
+      <p class="csn-name" id="csnName">James D.</p>
+      <p class="csn-msg">booked a <strong>Discovery Call</strong> 🎉</p>
+      <span class="csn-live"><strong id="csnTime">2 minutes ago</strong></span>
+    </div>
+  </div>
+  <!-- =========================================================
+       SOCIAL PROOF NOTIFICATION HTML END
+  ========================================================= -->
+
+
+  <!-- =========================================================
+       HEADER HTML START
+  ========================================================= -->
+  <!-- =========================================================
+     HEADER HTML START
+========================================================= -->
+  <div class="nav-wrapper-xyz-ikjo">
+    <div class="nav-inner-xyz-ikjo">
+      <!-- Logo -->
+      <div class="nav-logo-xyz-ikjo">
+        <span>For Coaches, </span>
+        <span>Healers & Consultants</span>
+      </div>
+
+      <div class="okij-ikjo">
+        <!-- Timer block inside nav -->
+        <div class="nav-timer-block-xyz-ikjo" id="navBlockXyz-ikjo">
+          <span style="text-align: center;" class="nav-timer-label-xyz-ikjo">
+            FREE SLOTS CLOSING IN
+          </span>
+
+          <div class="nav-timer-digits-xyz-ikjo" id="navDigitsXyz-ikjo">
+            <div class="nav-timer-unit-xyz-ikjo">
+              <span class="nav-timer-num-xyz-ikjo" id="navMinsXyz-ikjo">05</span>
+              <span class="nav-timer-unitlbl-xyz-ikjo">Min</span>
+            </div>
+
+            <span class="nav-timer-colon-xyz-ikjo">:</span>
+
+            <div class="nav-timer-unit-xyz-ikjo">
+              <span class="nav-timer-num-xyz-ikjo" id="navSecsXyz-ikjo">00</span>
+              <span class="nav-timer-unitlbl-xyz-ikjo">Sec</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Button -->
+        <button type="button" class="nav-cta-xyz-ikjo" onclick="openModal()">
+          Book Now
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- =========================================================
+     HEADER HTML END
+========================================================= -->
+  <!-- =========================================================
+       HEADER HTML END
+  ========================================================= -->
+
+
+  <main id="top">
+    <!-- =========================================================
+         HERO SECTION HTML START
+    ========================================================= -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">Private Scale Strategy Session</div>
+          <h1>
+            For Coaches, Healers & Consultants Already Earning
+            <span class="gold-text">₹2L+/Month</span>
+          </h1>
+          <p class="lead">
+            Feeling stuck at ₹2–5L/month? Scale to ₹15–20L/month without more sessions,
+            more content, more webinars or working longer hours.
+          </p>
+          <p class="hero-description">
+            Whether you're an Occult Coach, Fitness Coach, Women’s Health Expert, Nutrition Coach,
+            Gut Health Expert, Emotional Wellness Coach, Therapist, Business Coach, Manifestation Coach
+            or Consultant — this private strategy session is designed to identify exactly what's stopping
+            your next breakthrough.
+          </p>
+
+          <div class="hero-points">
+            <div class="hero-point"><span class="point-icon">◆</span><span>No random strategies.</span></div>
+            <div class="hero-point"><span class="point-icon">◆</span><span>No guesswork.</span></div>
+            <div class="hero-point"><span class="point-icon">◆</span><span>No hustle marketing.</span></div>
+            <div class="hero-point"><span class="point-icon">◆</span><span>Just systems that create predictable
+                growth.</span></div>
+          </div>
+
+          <div class="center-cta">
+            <button type="button" class="clarity-cta-btn" onclick="openModal()">
+              Book Your Clarity Call Now <span>→</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="orb orb-one"></div>
+          <div class="orb orb-two"></div>
+
+          <div class="luxury-card card">
+            <div class="scale-panel">
+              <div class="panel-top">
+                <div>
+                  <div class="label">Revenue Scale Target</div>
+                  <div class="big-number gold-text">₹15–20L</div>
+                </div>
+                <div class="mini-badge">Premium Growth</div>
+              </div>
+
+              <div class="growth-bars">
+                <div class="bar-row">
+                  <div class="bar-meta"><span>Positioning</span><span>92%</span></div>
+                  <div class="bar"><span style="--bar-width:92%"></span></div>
+                </div>
+                <div class="bar-row">
+                  <div class="bar-meta"><span>Automation</span><span>87%</span></div>
+                  <div class="bar"><span style="--bar-width:87%"></span></div>
+                </div>
+                <div class="bar-row">
+                  <div class="bar-meta"><span>Client Attraction</span><span>94%</span></div>
+                  <div class="bar"><span style="--bar-width:94%"></span></div>
+                </div>
+              </div>
+
+              <div class="calendar-card">
+                <div class="icon-box">✦</div>
+                <div>
+                  <h4>Private Strategy Session</h4>
+                  <p>Identify bottlenecks, revenue leaks, positioning gaps, automation opportunities and your next
+                    90-day growth roadmap.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="floating-chip card">
+            <strong class="gold-text">600+</strong>
+            <span>Businesses consulted with AI, funnels and automation systems</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =========================================================
+         HERO SECTION HTML END
+    ========================================================= -->
+
+
+    <!-- =========================================================
+         TRUST SECTION HTML START
+    ========================================================= -->
+    <section class="section-sm" id="trust">
+      <div class="container">
+        <div class="section-head center reveal">
+          <div class="eyebrow">Why This Session Is Different</div>
+          <h2>Built On Real Business Experience, <span class="gold-text">Not Random Advice</span></h2>
+          <p>A premium strategy session designed around systems, positioning, funnels, automation and scalable growth —
+            without adding more workload.</p>
+        </div>
+
+        <div class="trust-grid reveal">
+          <div class="trust-card card">
+            <div class="icon-box">✓</div><strong>10+ Years Industry Experience</strong>
+          </div>
+          <div class="trust-card card">
+            <div class="icon-box">✓</div><strong>600+ Businesses Consulted</strong>
+          </div>
+          <div class="trust-card card">
+            <div class="icon-box">✓</div><strong>AI + Funnels + Automation Systems</strong>
+          </div>
+          <div class="trust-card card">
+            <div class="icon-box">✓</div><strong>Scale Without Burnout</strong>
+          </div>
+          <div class="trust-card card">
+            <div class="icon-box">✓</div><strong>Premium Positioning Frameworks</strong>
+          </div>
+        </div>
+
+        <div class="offer-timer-wrap reveal">
+          <h5>Offer Closing Fast</h5>
+          <div class="premium-timer">
+            <div class="time-box"><span class="time-value js-min">05</span><span class="time-label">Min</span></div>
+            <div class="colon">:</div>
+            <div class="time-box"><span class="time-value js-sec">00</span><span class="time-label">Sec</span></div>
+          </div>
+        </div>
+
+        <div class="center-cta reveal">
+          <button type="button" class="clarity-cta-btn" onclick="openModal()">Book Your Clarity Call Now
+            <span>→</span></button>
+        </div>
+      </div>
+    </section>
+    <!-- =========================================================
+         TRUST SECTION HTML END
+    ========================================================= -->
+
+
+    <!-- =========================================================
+         PROBLEM SECTION HTML START
+    ========================================================= -->
+    <section class="section" id="problem">
+      <div class="container split-grid">
+        <div class="reveal">
+          <div class="eyebrow">The Real Growth Problem</div>
+          <h2 style="margin-top:22px;">You Help Others Transform… <span class="gold-text">But What About Your Own
+              Growth?</span></h2>
+          <p class="lead" style="margin-top:18px;">You've already built expertise, credibility and income. But deep
+            down, something feels off.</p>
+
+          <div class="problem-note">
+            <div class="icon-box">⚡</div>
+            <p>The issue is usually not your knowledge. It is the lack of a scalable growth system behind your
+              expertise.</p>
+          </div>
+        </div>
+
+        <div class="problem-card card reveal">
+          <div class="problem-card-top">
+            <div>
+              <span class="small-label">Common Bottlenecks</span>
+              <h3>These questions keep growth stuck</h3>
+            </div>
+            <div class="icon-box">!</div>
+          </div>
+
+          <div class="check-list">
+            <div class="cross-item"><span>✕</span><span>“Why am I still stuck despite years of experience?”</span></div>
+            <div class="cross-item"><span>✕</span><span>“Why does revenue go up and down every month?”</span></div>
+            <div class="cross-item"><span>✕</span><span>“Why do I still depend on referrals?”</span></div>
+            <div class="cross-item"><span>✕</span><span>“Why do leads come only when I post consistently?”</span></div>
+            <div class="cross-item"><span>✕</span><span>“Why does growth stop when I stop working?”</span></div>
+            <div class="cross-item"><span>✕</span><span>“Why am I doing more work but not making significantly more
+                money?”</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="center-cta reveal">
+        <button type="button" class="clarity-cta-btn" onclick="openModal()">Book Your Clarity Call Now
+          <span>→</span></button>
+      </div>
+    </section>
+    <!-- =========================================================
+         PROBLEM SECTION HTML END
+    ========================================================= -->
+
+
+    <!-- =========================================================
+         SYSTEM ISSUE SECTION HTML START
+    ========================================================= -->
+    <section class="section-sm" id="system-issue">
+      <div class="container split-grid">
+        <div class="system-card card reveal">
+          <span class="small-label">The Real Bottleneck</span>
+          <h2>The issue isn't your expertise. <span class="gold-text">The issue is your business system.</span></h2>
+          <div class="check-list">
+            <div class="system-step">
+              <div class="step-num">01</div>
+              <p><strong style="color:var(--cream);">Expertise gets you results.</strong></p>
+            </div>
+            <div class="system-step">
+              <div class="step-num">02</div>
+              <p><strong style="color:var(--cream);">Systems help you scale those results.</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="eyebrow">What Most Experts Miss</div>
+          <h2 style="margin-top:22px;">Most Experts Don't Need More Skills. They Need A <span class="gold-text">Scalable
+              Growth Machine.</span></h2>
+          <p class="lead" style="margin-top:18px;">Most healers, coaches and consultants try more Instagram posting,
+            more webinars, more certifications, more content, more random ads and more hustle.</p>
+          <p style="margin-top:14px;">But none of these solve the real issue: lack of systems. Because scaling doesn't
+            happen from doing more. Scaling happens from building infrastructure.</p>
+          <div class="system-note">
+            <div class="icon-box">✦</div>
+            <p>Your growth needs a backend machine — positioning, funnel, follow-up, automation and predictable client
+              acquisition.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="center-cta reveal">
+        <button type="button" class="clarity-cta-btn" onclick="openModal()">Book Your Clarity Call Now
+          <span>→</span></button>
+      </div>
+    </section>
+    <!-- =========================================================
+         SYSTEM ISSUE SECTION HTML END
+    ========================================================= -->
+
+
+    <!-- =========================================================
+         FRAMEWORK SECTION HTML START
+    ========================================================= -->
+    <section class="section" id="framework">
+      <div class="container">
+        <div class="section-head center reveal">
+          <div class="eyebrow">Introducing</div>
+          <h2><span class="gold-text">HEAL Growth System™</span></h2>
+          <p class="lead">A complete growth ecosystem designed specifically for premium experts ready for their next
+            level.</p>
+          <p>This is NOT another course. This is NOT generic coaching. This is NOT random YouTube strategies. This is a
+            proven growth framework.</p>
+        </div>
+
+        <div class="heal-grid reveal">
+          <div class="heal-card card">
+            <div class="heal-card-top">
+              <div class="heal-letter">H</div><span class="heal-number">01</span>
+            </div>
+            <h3>High Ticket Positioning</h3>
+            <p>Become the obvious premium choice. Stop competing on pricing and attract clients willing to pay premium
+              fees.</p>
+          </div>
+          <div class="heal-card card">
+            <div class="heal-card-top">
+              <div class="heal-letter">E</div><span class="heal-number">02</span>
+            </div>
+            <h3>Elite Client Attraction</h3>
+            <p>Get consistent qualified applications through highly targeted systems. No dependency on referrals. No
+              random lead generation.</p>
+          </div>
+          <div class="heal-card card">
+            <div class="heal-card-top">
+              <div class="heal-letter">A</div><span class="heal-number">03</span>
+            </div>
+            <h3>Automated Client Journey</h3>
+            <p>Funnels, follow-ups, bookings and nurturing systems working for you 24×7 — even when you're offline.</p>
+          </div>
+          <div class="heal-card card">
+            <div class="heal-card-top">
+              <div class="heal-letter">L</div><span class="heal-number">04</span>
+            </div>
+            <h3>Luxury Conversion Framework</h3>
+            <p>Convert premium clients without sounding pushy or salesy, using positioning-led conversations.</p>
+          </div>
+        </div>
+
+        <div class="offer-timer-wrap reveal">
+          <h5>Offer Closing Fast</h5>
+          <div class="premium-timer">
+            <div class="time-box"><span class="time-value js-min">05</span><span class="time-label">Min</span></div>
+            <div class="colon">:</div>
+            <div class="time-box"><span class="time-value js-sec">00</span><span class="time-label">Sec</span></div>
+          </div>
+        </div>
+
+        <div class="center-cta reveal">
+          <button type="button" class="clarity-cta-btn" onclick="openModal()">Book Your Clarity Call Now
+            <span>→</span></button>
+        </div>
+      </div>
+    </section>
+    <!-- =========================================================
+         FRAMEWORK SECTION HTML END
+    ========================================================= -->
+
+
+    <!-- =========================================================
+         VISION SECTION HTML START
+    ========================================================= -->
+    <section class="section-sm" id="vision">
+      <div class="container">
+        <div class="section-head center reveal">
+          <div class="eyebrow">Imagine This Instead</div>
+          <h2>You stop chasing clients and start operating like a <span class="gold-text">premium business owner.</span>
+          </h2>
+          <p>A business where trust, applications, bookings and follow-ups happen through a structured growth system —
+            not daily pressure.</p>
+        </div>
+
+        <div class="vision-grid reveal">
+          <div class="vision-item card">
+            <div class="icon-box">✦</div>
+            <p>You wake up to qualified applications.</p>
+          </div>
+          <div class="vision-item card">
+            <div class="icon-box">✦</div>
+            <p>People already trust you before speaking with you.</p>
+          </div>
+          <div class="vision-item card">
+            <div class="icon-box">✦</div>
+            <p>Your calendar fills automatically.</p>
+          </div>
+          <div class="vision-item card">
+            <div class="icon-box">✦</div>
+            <p>You confidently charge ₹50K–₹2L+ programs.</p>
+          </div>
+          <div class="vision-item card">
+            <div class="icon-box">✦</div>
+            <p>You stop chasing clients.</p>
+          </div>
+          <div class="vision-item card">
+            <div class="icon-box">✦</div>
+            <p>You work less and impact more people.</p>
+          </div>
+        </div>
+
+        <div class="center-cta reveal">
+          <button type="button" class="clarity-cta-btn" onclick="openModal()">Book Your Clarity Call Now
+            <span>→</span></button>
+        </div>
+      </div>
+    </section>
+    <!-- =========================================================
+         VISION SECTION HTML END
+    ========================================================= -->
+
+
+    <!-- =========================================================
+         QUALIFICATION SECTION HTML START
+    ========================================================= -->
+    <section class="section" id="who">
+      <div class="container">
+        <div class="section-head center reveal">
+          <div class="eyebrow">Application Fit</div>
+          <h2>This Session Is Only For <span class="gold-text">Serious Growth-Ready Experts</span></h2>
+          <p>This private session is designed for experts who already have traction and now want a scalable system to
+            reach their next level.</p>
+        </div>
+
+        <div class="qualification-panels reveal">
+          <div class="qualification-panel card">
+            <div class="qualification-panel-top">
+              <div class="icon-box">✓</div>
+              <div><span class="small-label">You Are A Fit</span>
+                <h3>This Session Is ONLY For You If:</h3>
+              </div>
+            </div>
+            <div class="check-list">
+              <div class="check-item"><span>✓</span><span>You're already earning ₹2L+/month</span></div>
+              <div class="check-item"><span>✓</span><span>You already have paying clients</span></div>
+              <div class="check-item"><span>✓</span><span>You know your expertise creates transformation</span></div>
+              <div class="check-item"><span>✓</span><span>You want predictable systems</span></div>
+              <div class="check-item"><span>✓</span><span>You're serious about scaling</span></div>
+              <div class="check-item"><span>✓</span><span>You're ready for ₹15–20L months</span></div>
+              <div class="check-item"><span>✓</span><span>You're open to investing into growth</span></div>
+            </div>
+          </div>
+
+          <div class="qualification-panel card">
+            <div class="qualification-panel-top">
+              <div class="icon-box">✕</div>
+              <div><span class="small-label">You Are Not A Fit</span>
+                <h3>This Is NOT For You If:</h3>
+              </div>
+            </div>
+            <div class="check-list">
+              <div class="cross-item"><span>✕</span><span>You're a beginner</span></div>
+              <div class="cross-item"><span>✕</span><span>You're looking for free consulting</span></div>
+              <div class="cross-item"><span>✕</span><span>You're still validating your offer</span></div>
+              <div class="cross-item"><span>✕</span><span>You want hacks instead of systems</span></div>
+              <div class="cross-item"><span>✕</span><span>You're not ready to invest into scaling</span></div>
+              <div class="cross-item"><span>✕</span><span>You're looking for overnight results</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="offer-timer-wrap reveal">
+          <h5>Offer Closing Fast</h5>
+          <div class="premium-timer">
+            <div class="time-box"><span class="time-value js-min">05</span><span class="time-label">Min</span></div>
+            <div class="colon">:</div>
+            <div class="time-box"><span class="time-value js-sec">00</span><span class="time-label">Sec</span></div>
+          </div>
+        </div>
+
+        <div class="center-cta reveal">
+          <button type="button" class="clarity-cta-btn" onclick="openModal()">Book Your Clarity Call Now
+            <span>→</span></button>
+        </div>
+      </div>
+    </section>
+    <!-- =========================================================
+         QUALIFICATION SECTION HTML END
+    ========================================================= -->
+
+
+    <!-- =========================================================
+         STRATEGY VALUE SECTION HTML START
+    ========================================================= -->
+    <section class="section-sm" id="strategy-value">
+      <div class="container split-grid">
+        <div class="reveal">
+          <div class="eyebrow">Strategy Value</div>
+          <h2 style="margin-top:22px;"><span class="gold-text">₹49,999+</span> Worth of insights during your private
+            strategy session.</h2>
+          <div class="value-note">
+            <div class="icon-box">✦</div>
+            <p>A focused private session to identify what is blocking your next level of growth.</p>
+          </div>
+        </div>
+
+        <div class="card problem-card reveal">
+          <span class="small-label">What We'll Identify During Your Private Strategy Session</span>
+          <h3>We'll Identify:</h3>
+          <div class="check-list">
+            <div class="check-item"><span>✓</span><span>Hidden bottlenecks limiting growth</span></div>
+            <div class="check-item"><span>✓</span><span>Revenue leaks costing opportunities</span></div>
+            <div class="check-item"><span>✓</span><span>Premium offer opportunities</span></div>
+            <div class="check-item"><span>✓</span><span>Positioning improvements</span></div>
+            <div class="check-item"><span>✓</span><span>Lead generation gaps</span></div>
+            <div class="check-item"><span>✓</span><span>Client acquisition systems</span></div>
+            <div class="check-item"><span>✓</span><span>Growth roadmap for next 90 days</span></div>
+            <div class="check-item"><span>✓</span><span>AI & automation opportunities</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="center-cta reveal">
+        <button type="button" class="clarity-cta-btn" onclick="openModal()">Book Your Clarity Call Now
+          <span>→</span></button>
+      </div>
+    </section>
+    <!-- =========================================================
+         STRATEGY VALUE SECTION HTML END
+    ========================================================= -->
+
+
+    <!-- =========================================================
+         TESTIMONIALS SECTION HTML START
+    ========================================================= -->
+    <section class="section" id="results">
+      <div class="container">
+        <div class="section-head center reveal">
+          <div class="eyebrow">Real Experts. Real Results.</div>
+          <h2>Premium experts are building <span class="gold-text">predictable growth systems.</span></h2>
+          <p>These experts stopped relying on random growth and started building systems that support consistent client
+            acquisition, follow-up and bookings.</p>
+        </div>
+
+        <div class="testimonials-grid reveal">
+          <div class="testimonial card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">“Earlier I was depending completely on referrals. Within a few months I had a structured
+              system generating qualified appointments regularly.”</p>
+            <div class="person">
+              <div class="person-avatar">W</div>
+              <div><strong>Wellness Coach</strong><span>Qualified appointments system</span></div>
+            </div>
+          </div>
+          <div class="testimonial card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">“I was exhausted managing everything manually. Today my systems run in the background while
+              I focus on clients.”</p>
+            <div class="person">
+              <div class="person-avatar">R</div>
+              <div><strong>Reiki Expert</strong><span>Automation-backed client journey</span></div>
+            </div>
+          </div>
+          <div class="testimonial card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">“My business finally feels predictable instead of stressful.”</p>
+            <div class="person">
+              <div class="person-avatar">C</div>
+              <div><strong>Consultant</strong><span>Predictable growth structure</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="offer-timer-wrap reveal">
+          <h5>Offer Closing Fast</h5>
+          <div class="premium-timer">
+            <div class="time-box"><span class="time-value js-min">05</span><span class="time-label">Min</span></div>
+            <div class="colon">:</div>
+            <div class="time-box"><span class="time-value js-sec">00</span><span class="time-label">Sec</span></div>
+          </div>
+        </div>
+
+        <div class="center-cta reveal">
+          <button type="button" class="clarity-cta-btn" onclick="openModal()">Book Your Clarity Call Now
+            <span>→</span></button>
+        </div>
+      </div>
+    </section>
+    <!-- =========================================================
+         TESTIMONIALS SECTION HTML END
+    ========================================================= -->
+
+
+    <!-- =========================================================
+         MENTOR SECTION HTML START
+    ========================================================= -->
+    <section class="section-sm" id="mentor">
+      <div class="container mentor-grid">
+        <div class="mentor-avatar card reveal">
+          <div>
+            <div class="mentor-initials">SC</div>
+            <p style="margin-top:18px; color:var(--gold-light); font-weight:900;">10+ Years Experience</p>
+          </div>
+        </div>
+
+        <div class="mentor-card card reveal">
+          <div class="eyebrow">Meet Your Mentor</div>
+          <h2 style="margin-top:22px;">Meet <span class="gold-text">Sumit Singh Chauhan</span></h2>
+          <p class="lead" style="margin-top:18px;">Over the last 10+ years, I’ve worked with coaches, healers and
+            service professionals to build scalable client acquisition systems.</p>
+          <p style="margin-top:14px;">I noticed one thing: most experts don't stay stuck because of lack of skill. They
+            stay stuck because they lack business infrastructure.</p>
+          <p style="margin-top:14px;">That's why we created HEAL Growth System — helping experts stop chasing clients
+            and start building scalable businesses.</p>
+          <div class="check-list">
+            <div class="check-item"><span>✓</span><span>Funnels + Automation Systems</span></div>
+            <div class="check-item"><span>✓</span><span>Premium Positioning Strategy</span></div>
+            <div class="check-item"><span>✓</span><span>Client Acquisition Infrastructure</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="center-cta reveal">
+        <button type="button" class="clarity-cta-btn" onclick="openModal()">Book Your Clarity Call Now
+          <span>→</span></button>
+      </div>
+    </section>
+    <!-- =========================================================
+         MENTOR SECTION HTML END
+    ========================================================= -->
+
+
+    <!-- =========================================================
+         IMPORTANT NOTE SECTION HTML START
+    ========================================================= -->
+    <section class="section-sm" id="important-note">
+      <div class="container">
+        <div class="final-card card reveal">
+          <div class="eyebrow">Important Before You Apply</div>
+          <h2 style="margin:22px auto 0;">This is a serious growth conversation, <span class="gold-text">not a free
+              consulting session.</span></h2>
+          <p class="lead" style="margin:18px auto 0; max-width:780px;">This is NOT for collecting strategies. It is
+            designed to see whether our systems are the right fit for your next level.</p>
+          <p style="margin:14px auto 0; max-width:780px;">If approved, we'll identify exactly what’s stopping your
+            growth and show you a clear path forward.</p>
+          <div class="check-list">
+            <div class="check-item"><span>✓</span><span>For serious experts who are ready to scale with systems</span>
+            </div>
+            <div class="check-item"><span>✓</span><span>Not for people looking for random tips, hacks or free
+                advice</span></div>
+          </div>
+        </div>
+
+        <div class="offer-timer-wrap reveal">
+          <h5>Offer Closing Fast</h5>
+          <div class="premium-timer">
+            <div class="time-box"><span class="time-value js-min">05</span><span class="time-label">Min</span></div>
+            <div class="colon">:</div>
+            <div class="time-box"><span class="time-value js-sec">00</span><span class="time-label">Sec</span></div>
+          </div>
+        </div>
+
+        <div class="center-cta reveal">
+          <button type="button" class="clarity-cta-btn" onclick="openModal()">Book Your Clarity Call Now
+            <span>→</span></button>
+        </div>
+      </div>
+    </section>
+    <!-- =========================================================
+         IMPORTANT NOTE SECTION HTML END
+    ========================================================= -->
+
+
+    <!-- =========================================================
+         FINAL CTA SECTION HTML START
+    ========================================================= -->
+    <section class="section-sm" id="final-cta">
+      <div class="container">
+        <div class="final-card card reveal">
+          <div class="eyebrow">Final Invitation</div>
+          <h2 style="margin:22px auto 0;">Your Expertise Built The Foundation. <span class="gold-text">Now Build The
+              Business That Matches It.</span></h2>
+          <p class="lead" style="margin:18px auto 0; max-width:760px;">Stop operating like a self-employed expert. Start
+            building a business designed to scale.</p>
+          <div class="check-list">
+            <div class="check-item"><span>✓</span><span>Identify what is blocking your next revenue level</span></div>
+            <div class="check-item"><span>✓</span><span>Get clarity on your scalable growth system</span></div>
+            <div class="check-item"><span>✓</span><span>Build a business that does not depend only on your daily
+                effort</span></div>
+          </div>
+          <div class="center-cta">
+            <button type="button" class="clarity-cta-btn" onclick="openModal()">Book Your Clarity Call Now
+              <span>→</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =========================================================
+         FINAL CTA SECTION HTML END
+    ========================================================= -->
+  </main>
+
+
+  <!-- =========================================================
+       FOOTER HTML START
+  ========================================================= -->
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 HEAL Growth System™. All rights reserved.</span>
+      <span>Built for premium coaches, healers & consultants.</span>
+    </div>
+  </footer>
+  <!-- =========================================================
+       FOOTER HTML END
+  ========================================================= -->
+
+
+  <!-- =========================================================
+       MODAL FORM HTML START
+  ========================================================= -->
+  <!-- MODAL SHELL -->
+  <div id="kc-modal-shell">
+    <div id="kc-modal-card">
+
+      <!-- Header -->
+      <div id="kc-modal-head">
+        <button id="kc-modal-close" aria-label="Close">✕</button>
+        <p id="kc-modal-sub">
+          Please fill in some basic details
+        </p>
+      </div>
+
+      <!-- FORM -->
+      <div id="kc-modal-body">
+        <form id="kc-clarity-form" novalidate>
+
+          <!-- Name -->
+          <div class="kc-fieldABM" id="field-name">
+            <div class="kc-field-labelABM">Name</div>
+            <input type="text" name="first_name" id="kc-first-name" class="kc-inputABM" placeholder="Enter your name"
+              required />
+            <div class="kc-error-msgABM">Please enter your first name.</div>
+          </div>
+
+          <!-- Email -->
+          <div class="kc-fieldABM" id="field-email">
+            <div class="kc-field-labelABM">Email Address</div>
+            <input type="email" name="email" id="kc-email" class="kc-inputABM" placeholder="Enter your email address"
+              required />
+            <div class="kc-error-msgABM">Please enter a valid email.</div>
+          </div>
+
+          <!-- WhatsApp -->
+          <div class="kc-fieldABM" id="field-whatsapp">
+            <div class="kc-field-labelABM">WhatsApp Number</div>
+            <input type="tel" name="whatsapp" id="kc-whatsapp" class="kc-inputABM"
+              placeholder="Enter your WhatsApp number" maxlength="10" required />
+            <div class="kc-error-msgABM">Please enter a valid 10-digit WhatsApp number.</div>
+          </div>
+
+          <!-- Professional -->
+          <div class="kc-fieldABM" id="field-professional">
+            <div class="kc-field-labelABM">What is your profession?</div>
+
+            <label class="kc-radio-optionABM">
+              <input type="radio" name="professional" value="Healer / Spiritual Practitioner">
+              <span>Healer / Spiritual Practitioner</span>
+            </label>
+
+            <label class="kc-radio-optionABM">
+              <input type="radio" name="professional" value="Coach / Consultant">
+              <span>Coach / Consultant</span>
+            </label>
+
+            <label class="kc-radio-optionABM">
+              <input type="radio" name="professional" value="Therapist / Wellness Expert">
+              <span>Therapist / Wellness Expert</span>
+            </label>
+
+            <label class="kc-radio-optionABM">
+              <input type="radio" name="professional" value="Astrologer / Numerologist / Tarot Reader">
+              <span>Astrologer / Numerologist / Tarot Reader</span>
+            </label>
+
+            <label class="kc-radio-optionABM">
+              <input type="radio" name="professional" value="Other">
+              <span>Other</span>
+            </label>
+
+            <div class="kc-error-msgABM">Please select your profession.</div>
+          </div>
+
+          <!-- Current Monthly Revenue -->
+          <div class="kc-fieldABM" id="field-current-revenue">
+            <div class="kc-field-labelABM">Current monthly revenue</div>
+
+            <label class="kc-radio-optionABM">
+              <input type="radio" name="current_monthly_revenue" value="₹0 - ₹50,000">
+              <span>₹0 - ₹50,000</span>
+            </label>
+
+            <label class="kc-radio-optionABM">
+              <input type="radio" name="current_monthly_revenue" value="₹50,000 - ₹1 Lakh">
+              <span>₹50,000 - ₹1 Lakh</span>
+            </label>
+
+            <label class="kc-radio-optionABM">
+              <input type="radio" name="current_monthly_revenue" value="₹1 Lakh - ₹3 Lakh">
+              <span>₹1 Lakh - ₹3 Lakh</span>
+            </label>
+
+            <label class="kc-radio-optionABM">
+              <input type="radio" name="current_monthly_revenue" value="₹3 Lakh - ₹5 Lakh">
+              <span>₹3 Lakh - ₹5 Lakh</span>
+            </label>
+
+            <label class="kc-radio-optionABM">
+              <input type="radio" name="current_monthly_revenue" value="₹5 Lakh+">
+              <span>₹5 Lakh+</span>
+            </label>
+
+            <div class="kc-error-msgABM">Please select your current monthly revenue.</div>
+          </div>
+
+          <!-- Expected Revenue -->
+          <div class="kc-fieldABM" id="field-expected-revenue">
+            <div class="kc-field-labelABM">Revenue expectation in next 3 months</div>
+
+            <label class="kc-radio-optionABM">
+              <input type="radio" name="expected_revenue" value="₹50,000 / Month">
+              <span>₹50,000 / Month</span>
+            </label>
+
+            <label class="kc-radio-optionABM">
+              <input type="radio" name="expected_revenue" value="₹1 Lakh / Month">
+              <span>₹1 Lakh / Month</span>
+            </label>
+
+            <label class="kc-radio-optionABM">
+              <input type="radio" name="expected_revenue" value="₹2 Lakh / Month">
+              <span>₹2 Lakh / Month</span>
+            </label>
+
+            <label class="kc-radio-optionABM">
+              <input type="radio" name="expected_revenue" value="₹3 Lakh - ₹5 Lakh / Month">
+              <span>₹3 Lakh - ₹5 Lakh / Month</span>
+            </label>
+
+            <label class="kc-radio-optionABM">
+              <input type="radio" name="expected_revenue" value="₹5 Lakh+ / Month">
+              <span>₹5 Lakh+ / Month</span>
+            </label>
+
+            <div class="kc-error-msgABM">Please select your expected revenue.</div>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" id="kc-submit-btn">
+            <div class="kc-btn-innerABM">
+              <div id="kc-btn-spinner" style="display:none;"></div>
+              <span id="kc-btn-label">Proceed To Calendar</span>
+            </div>
+          </button>
+
+          <p id="kc-privacy-note">🔒 Your details are private and never shared.</p>
+
+        </form>
+      </div>
+
+      <!-- SUCCESS -->
+      <div id="kc-success-screen" style="display:none;">
+        <div id="kc-success-icon">
+          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 18l7 7 13-13" stroke="#fdf6ed" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <h2 id="kc-success-title">Details Received!</h2>
+        <p id="kc-success-sub">Redirecting you to schedule your call…</p>
+
+        <div id="kc-redirect-dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <style>
+    .kc-radio-optionABM {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      padding: 12px 14px;
+      margin-top: 10px;
+      border: 1px solid rgba(255, 226, 161, 0.16);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.055);
+      color: #fff7e8;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .kc-radio-optionABM:hover {
+      border-color: rgba(255, 226, 161, 0.36);
+      background: rgba(255, 255, 255, 0.085);
+      transform: translateY(-1px);
+    }
+
+    .kc-radio-optionABM input {
+      accent-color: #d7a84d;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+
+    .kc-radio-optionABM span {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .kc-has-errorABM .kc-radio-optionABM {
+      border-color: rgba(255, 107, 107, 0.65);
+    }
+
+    @media (max-width: 480px) {
+      .kc-radio-optionABM {
+        padding: 11px 12px;
+      }
+
+      .kc-radio-optionABM span {
+        font-size: 13px;
+      }
+    }
+  </style>
+
+  <script>
+    // navbar
+    (function runNavTimerXyz() {
+      var elMinsXyz = document.getElementById('navMinsXyz');
+      var elSecsXyz = document.getElementById('navSecsXyz');
+      var elBlockXyz = document.getElementById('navBlockXyz');
+      var elDigitsXyz = document.getElementById('navDigitsXyz');
+      var elPulseXyz = document.getElementById('navPulseXyz');
+      // ✅ Always create a fresh deadline on every page load — no localStorage
+      var deadlineXyz = Date.now() + 5 * 60 * 1000;
+      function padXyz(n) {
+        return n < 10 ? '0' + n : '' + n;
+      }
+      function expiredXyz() {
+        if (elPulseXyz) elPulseXyz.style.display = 'none';
+        // Trigger modal (same as onclick)
+        if (typeof openModal === "function") {
+          openModal();
+        }
+      }
+      var intervalXyz = setInterval(function () {
+        var remXyz = deadlineXyz - Date.now();
+        if (remXyz <= 0) {
+          clearInterval(intervalXyz);
+          if (elMinsXyz) elMinsXyz.textContent = '00';
+          if (elSecsXyz) elSecsXyz.textContent = '00';
+          expiredXyz();
+          return;
+        }
+        var mXyz = Math.floor(remXyz / 60000);
+        var sXyz = Math.floor((remXyz % 60000) / 1000);
+        if (elMinsXyz) elMinsXyz.textContent = padXyz(mXyz);
+        if (elSecsXyz) elSecsXyz.textContent = padXyz(sXyz);
+      }
+        , 1000);
+    }
+    )();
+
+    /* ══════════════════════════════════════
+            MODAL JAVASCRIPT
+    ══════════════════════════════════════ */
+
+    (function () {
+      'use strict';
+
+      var CAL_LINK = 'https://10xgrowth.flexifunnels.com/aparaajitha-calendar';
+
+      var API_URL = 'https://connect.pabbly.com/webhook-listener/webhook/IjU3NjEwNTZiMDYzNTA0MzM1MjZlNTUzMSI_3D_pc/IjU3NjcwNTZlMDYzMTA0M2M1MjZjNTUzMTUxMzci_pc';
+
+      var shell = document.getElementById('kc-modal-shell');
+      var form = document.getElementById('kc-clarity-form');
+      var closeBtn = document.getElementById('kc-modal-close');
+      var submitBtn = document.getElementById('kc-submit-btn');
+      var spinner = document.getElementById('kc-btn-spinner');
+      var btnLabel = document.getElementById('kc-btn-label');
+      var formScreen = document.getElementById('kc-modal-body');
+      var successScr = document.getElementById('kc-success-screen');
+      var whatsappInput = document.getElementById('kc-whatsapp');
+
+      /* WhatsApp only 10 digits */
+      whatsappInput.addEventListener('input', function () {
+        this.value = this.value.replace(/\D/g, '').slice(0, 10);
+      });
+
+      /* Open modal */
+      document.addEventListener('click', function (e) {
+        if (e.target.closest('.kc-open-modalABM')) {
+          e.preventDefault();
+          shell.classList.add('kc-visibleABM');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+
+      /* Close button */
+      closeBtn.addEventListener('click', function () {
+        shell.classList.remove('kc-visibleABM');
+        document.body.style.overflow = '';
+      });
+
+      /* Click outside modal card to close */
+      shell.addEventListener('click', function (e) {
+        if (e.target === this) {
+          shell.classList.remove('kc-visibleABM');
+          document.body.style.overflow = '';
+        }
+      });
+
+      /* ESC key to close */
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          shell.classList.remove('kc-visibleABM');
+          document.body.style.overflow = '';
+        }
+      });
+
+      function validEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      }
+
+      function setError(fieldId, hasError) {
+        var el = document.getElementById(fieldId);
+
+        if (el) {
+          el.classList.toggle('kc-has-errorABM', hasError);
+        }
+      }
+
+      function getRadioValue(name) {
+        var selected = form.querySelector('input[name="' + name + '"]:checked');
+        return selected ? selected.value : '';
+      }
+
+      function getIndiaDateTime() {
+        var now = new Date();
+
+        var parts = new Intl.DateTimeFormat('en-GB', {
+          timeZone: 'Asia/Kolkata',
+          day: '2-digit',
+          month: '2-digit',
+          year: '2-digit',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
+          hour12: true
+        }).formatToParts(now);
+
+        var map = {};
+
+        parts.forEach(function (part) {
+          if (part.type !== 'literal') {
+            map[part.type] = part.value;
+          }
+        });
+
+        return map.day + '/' + map.month + '/' + map.year + ' ' +
+          map.hour + ':' + map.minute + ':' + map.second + ' ' +
+          map.dayPeriod.toUpperCase();
+      }
+
+      /* Submit */
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        var name = form.first_name.value.trim();
+        var email = form.email.value.trim();
+        var whatsapp = form.whatsapp.value.trim();
+
+        var professional = getRadioValue('professional');
+        var currentRevenue = getRadioValue('current_monthly_revenue');
+        var expectedRevenue = getRadioValue('expected_revenue');
+
+        var valid = true;
+
+        setError('field-name', !name);
+        if (!name) valid = false;
+
+        setError('field-email', !validEmail(email));
+        if (!validEmail(email)) valid = false;
+
+        setError('field-whatsapp', whatsapp.length !== 10);
+        if (whatsapp.length !== 10) valid = false;
+
+        setError('field-professional', !professional);
+        if (!professional) valid = false;
+
+        setError('field-current-revenue', !currentRevenue);
+        if (!currentRevenue) valid = false;
+
+        setError('field-expected-revenue', !expectedRevenue);
+        if (!expectedRevenue) valid = false;
+
+        if (!valid) return;
+
+        var payload = {
+          first_name: name,
+          email: email,
+          whatsapp: whatsapp,
+          professional: professional,
+          current_monthly_revenue: currentRevenue,
+          expected_revenue: expectedRevenue,
+          date_time_india: getIndiaDateTime()
+        };
+
+        /* Loading state */
+        submitBtn.disabled = true;
+        btnLabel.textContent = 'Saving...';
+        btnLabel.style.display = 'inline';
+        spinner.style.display = 'inline-block';
+
+        fetch(API_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        })
+          .catch(function (err) {
+            console.error(err);
+          })
+          .finally(function () {
+            btnLabel.textContent = '✓ Saved! Redirecting...';
+            spinner.style.display = 'none';
+
+            if (formScreen && successScr) {
+              formScreen.style.display = 'none';
+              successScr.style.display = 'block';
+            }
+
+            setTimeout(function () {
+              window.location.href = CAL_LINK;
+            }, 600);
+          });
+      });
+
+    })();
+
+    function openModal() {
+      document.getElementById('kc-modal-shell').classList.add('kc-visibleABM');
+      document.body.style.overflow = 'hidden';
+    }
+  </script>
+  <!-- FORM END HERE -->
+</body>
+
+</html>
