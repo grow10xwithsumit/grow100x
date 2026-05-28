@@ -3,15 +3,34 @@
 
 <head>
   <meta charset="UTF-8" />
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1264759628782506');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1264759628782506&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
     content="Private Scale Strategy Session for coaches, healers and consultants ready to scale with funnels, AI and automation systems." />
-  <title>Private Scale Strategy Session | HEAL Growth System™</title>
-
+  <title>Private Scale Strategy Session | HEAL Growth System™
+  </title>
   <style>
     /* =========================================================
-       GLOBAL VARIABLES CSS START
-    ========================================================= */
+      GLOBAL VARIABLES CSS START
+      ========================================================= */
     :root {
       --black: #030303;
       --black-soft: #0b0a07;
@@ -38,13 +57,11 @@
     }
 
     /* =========================================================
-       GLOBAL VARIABLES CSS END
-    ========================================================= */
-
-
+      GLOBAL VARIABLES CSS END
+      ========================================================= */
     /* =========================================================
-       RESET + BASE CSS START
-    ========================================================= */
+      RESET + BASE CSS START
+      ========================================================= */
     *,
     *::before,
     *::after {
@@ -117,13 +134,11 @@
     }
 
     /* =========================================================
-       RESET + BASE CSS END
-    ========================================================= */
-
-
+      RESET + BASE CSS END
+      ========================================================= */
     /* =========================================================
-       GLOBAL LAYOUT CSS START
-    ========================================================= */
+      GLOBAL LAYOUT CSS START
+      ========================================================= */
     .container {
       width: min(var(--max), calc(100% - 36px));
       margin-inline: auto;
@@ -213,14 +228,64 @@
       max-width: 760px;
     }
 
-    /* =========================================================
-       GLOBAL LAYOUT CSS END
-    ========================================================= */
+    /* ===== Global Layout Responsive CSS Start ===== */
+    @media (max-width: 980px) {
+      .split-grid {
+        grid-template-columns: 1fr;
+      }
 
+      .two-grid,
+      .three-grid,
+      .four-grid {
+        grid-template-columns: 1fr;
+      }
+    }
 
+    @media (max-width: 760px) {
+      .container {
+        width: min(100% - 28px, var(--max));
+      }
+
+      .section {
+        padding: 76px 0;
+      }
+
+      .section-sm {
+        padding: 58px 0;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(var(--max), calc(100% - 28px));
+      }
+
+      .section {
+        padding: 78px 0;
+      }
+
+      .section-sm {
+        padding: 58px 0;
+      }
+
+      .section-head {
+        margin-bottom: 32px;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .container {
+        width: min(100% - 22px, var(--max));
+      }
+    }
+
+    /* ===== Global Layout Responsive CSS End ===== */
     /* =========================================================
-       TYPOGRAPHY + COMMON COMPONENTS CSS START
-    ========================================================= */
+      GLOBAL LAYOUT CSS END
+      ========================================================= */
+    /* =========================================================
+      TYPOGRAPHY + COMMON COMPONENTS CSS START
+      ========================================================= */
     .eyebrow,
     .mini-eyebrow {
       width: fit-content;
@@ -420,94 +485,380 @@
       font-weight: 950;
     }
 
-    /* =========================================================
-       TYPOGRAPHY + COMMON COMPONENTS CSS END
-    ========================================================= */
-
-
-    /* =========================================================
-       SOCIAL PROOF NOTIFICATION CSS START
-    ========================================================= */
-    .csn-card {
-      position: fixed;
-      left: 18px;
-      bottom: 18px;
-      z-index: 60;
-      width: min(328px, calc(100% - 36px));
-      display: grid;
-      grid-template-columns: 46px 1fr;
-      gap: 12px;
-      padding: 14px;
-      border: 1px solid rgba(255, 226, 161, 0.18);
-      border-radius: 22px;
-      background: rgba(7, 6, 4, 0.78);
-      backdrop-filter: blur(20px);
-      box-shadow: 0 24px 70px rgba(0, 0, 0, .42), 0 0 34px rgba(215, 168, 77, .08);
-      transform: translateY(0);
-      animation: toastIn .75s var(--ease) .35s both, toastFloat 4s ease-in-out infinite 1.2s;
+    .small-label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 950;
+      letter-spacing: .12em;
+      text-transform: uppercase;
     }
 
-    .csn-avatar {
-      width: 46px;
-      height: 46px;
-      display: grid;
-      place-items: center;
+    .section-head p,
+    .lead {
+      text-wrap: pretty;
+    }
+
+    .section,
+    .section-sm {
+      border-bottom: 1px solid rgba(255, 226, 161, 0.055);
+    }
+
+    .card,
+    .offer-timer-wrap {
+      box-shadow:
+        0 22px 72px rgba(0, 0, 0, 0.30),
+        inset 0 1px 0 rgba(255, 255, 255, 0.055);
+    }
+
+    .card:hover {
+      box-shadow:
+        0 30px 92px rgba(0, 0, 0, 0.42),
+        0 0 44px rgba(215, 168, 77, 0.11),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
+    /* ===== Typography + Common Components Responsive CSS Start ===== */
+    @media (max-width: 760px) {
+      h1 {
+        font-size: clamp(36px, 11vw, 52px);
+        line-height: .98;
+      }
+
+      h2 {
+        font-size: clamp(30px, 9vw, 42px);
+      }
+
+      p,
+      .lead {
+        font-size: 16px;
+      }
+
+      .clarity-cta-btn,
+      .btn {
+        width: 90%;
+        font-size: 13px;
+        min-height: 54px;
+      }
+
+      .center-cta {
+        margin-top: 46px;
+      }
+    }
+
+    @media (max-width: 430px) {
+
+      .eyebrow,
+      .mini-eyebrow {
+        font-size: 10px;
+        letter-spacing: .1em;
+      }
+
+      .card {
+        border-radius: 23px;
+      }
+    }
+
+    @media (max-width: 415px) {
+
+      .clarity-cta-btn,
+      .btn {
+        width: 95%;
+        font-size: 13px;
+        min-height: 54px;
+      }
+    }
+
+    /* ===== Typography + Common Components Responsive CSS End ===== */
+    /* =========================================================
+      TYPOGRAPHY + COMMON COMPONENTS CSS END
+      ========================================================= */
+    /* =========================================================
+      SOCIAL PROOF NOTIFICATION CSS START
+      ========================================================= */
+    iframe {
+      max-width: 100%;
+    }
+
+    .csn-card {
+      position: fixed;
+      background:
+        radial-gradient(circle at 14% 18%, rgba(37, 99, 235, 0.18) 0%, transparent 34%),
+        radial-gradient(circle at 86% 76%, rgba(201, 169, 110, 0.14) 0%, transparent 34%),
+        linear-gradient(135deg, #0B1020 0%, #111827 48%, #1A1208 100%);
+      border: 1px solid rgba(201, 169, 110, 0.24);
+      padding: 13px 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      box-shadow:
+        0 14px 42px rgba(0, 0, 0, 0.32),
+        0 0 28px rgba(37, 99, 235, 0.10),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+      z-index: 99999;
+      transform: translateX(-360px);
+      opacity: 0;
+      transition:
+        transform 0.55s cubic-bezier(0.34, 1.3, 0.64, 1),
+        opacity 0.4s ease;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        radial-gradient(circle at 14% 18%, rgba(37, 99, 235, 0.18) 0%, transparent 34%),
+        radial-gradient(circle at 86% 76%, rgba(201, 169, 110, 0.14) 0%, transparent 34%),
+        linear-gradient(135deg, #0B1020 0%, #111827 48%, #1A1208 100%);
+      background-size:
+        22px 22px,
+        22px 22px,
+        auto,
+        auto,
+        auto;
+      width: fit-content;
+      max-width: min(92vw, 430px);
+      left: 3.5vw;
       border-radius: 16px;
-      color: #150e03;
-      background: linear-gradient(135deg, #fff2c6, #d7a84d 62%, #8f651f);
-      font-weight: 950;
+      bottom: 2%;
+      backdrop-filter: blur(14px);
+    }
+
+    .csn-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background:
+        linear-gradient(135deg, rgba(201, 169, 110, 0.08), transparent 42%),
+        linear-gradient(315deg, rgba(37, 99, 235, 0.065), transparent 46%);
+      pointer-events: none;
+    }
+
+    .csn-card::after {
+      content: "";
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      top: 0;
+      height: 1px;
+      background:
+        linear-gradient(90deg,
+          transparent,
+          rgba(201, 169, 110, 0.74),
+          rgba(37, 99, 235, 0.34),
+          transparent);
+      pointer-events: none;
+    }
+
+    .centerbigtitle {
+      text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      .csn-card {
+        width: fit-content;
+        left: 3.5vw;
+        border-radius: 14px;
+        bottom: 2%;
+        padding: 12px 14px;
+        gap: 10px;
+      }
+
+      .big-title {
+        font-size: 33px;
+        font-weight: 800;
+        line-height: 1.2;
+        color: var(--text);
+      }
+    }
+
+    .csn-card.csn-show {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    /* ── Avatar ── */
+    .csn-avatar {
+      width: 70px;
+      height: 70px;
+      min-width: 70px;
+      border-radius: 50%;
+      background:
+        linear-gradient(135deg,
+          rgba(201, 169, 110, 0.20),
+          rgba(37, 99, 235, 0.16));
+      border: 2px solid rgba(201, 169, 110, 0.34);
+      color: var(--gold-light, #E8D5B0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      overflow: hidden;
+      box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.22),
+        0 0 24px rgba(201, 169, 110, 0.14);
+      position: relative;
+      z-index: 1;
+    }
+
+    .csn-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+    }
+
+    /* ── Body ── */
+    .csn-body {
+      flex: 1;
+      position: relative;
+      z-index: 1;
+      padding-right: 18px;
+    }
+
+    .filter-section {
+      width: 100%;
+      max-width: 100%;
+      background:
+        linear-gradient(135deg,
+          #0B1020,
+          #112A4E);
     }
 
     .csn-name {
-      color: var(--cream);
       font-size: 14px;
-      font-weight: 900;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.2px;
+      margin: 0 !important;
+      line-height: 1.3;
     }
 
-    .csn-msg,
+    .csn-msg {
+      font-size: 13px;
+      color: var(--gold-light, #E8D5B0);
+      margin: 2px 0 7px;
+      line-height: 1.5;
+    }
+
+    /* ── Tag ── */
+    .csn-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      background:
+        linear-gradient(135deg,
+          rgba(201, 169, 110, 0.16),
+          rgba(37, 99, 235, 0.10));
+      color: var(--gold-light, #E8D5B0);
+      border: 1px solid rgba(201, 169, 110, 0.26);
+      padding: 4px 10px;
+      border-radius: 50px;
+      letter-spacing: 0.4px;
+      box-shadow: 0 0 18px rgba(37, 99, 235, 0.08);
+    }
+
+    /* ── Time ── */
     .csn-time {
-      font-size: 12px;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.72);
+      letter-spacing: 0.3px;
+      margin-bottom: 0px !important;
+    }
+
+    .testimonials-section {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    /* ── Activity Counter ── */
+    .csn-activity {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-radius: 10px;
+      padding: 6px 10px;
+      background:
+        linear-gradient(135deg,
+          rgba(255, 255, 255, 0.045),
+          rgba(37, 99, 235, 0.045));
+      border: 1px solid rgba(201, 169, 110, 0.14);
+    }
+
+    .csn-activity-dot {
+      width: 7px;
+      height: 7px;
+      min-width: 7px;
+      border-radius: 50%;
+      background:
+        linear-gradient(135deg,
+          var(--gold-light, #E8D5B0),
+          var(--gold, #C9A96E));
+      box-shadow:
+        0 0 0 2px rgba(201, 169, 110, 0.18),
+        0 0 14px rgba(201, 169, 110, 0.55);
+      animation: csnPulseXyz 2s infinite;
+      flex-shrink: 0;
+    }
+
+    @keyframes csnPulseXyz {
+
+      0%,
+      100% {
+        box-shadow:
+          0 0 0 2px rgba(201, 169, 110, 0.18),
+          0 0 14px rgba(201, 169, 110, 0.55);
+      }
+
+      50% {
+        box-shadow:
+          0 0 0 6px rgba(37, 99, 235, 0.12),
+          0 0 18px rgba(201, 169, 110, 0.68);
+      }
+    }
+
+    .csn-activity-text {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.66);
       line-height: 1.4;
     }
 
-    .csn-msg strong {
-      color: var(--gold-light);
+    .csn-activity-text strong {
+      color: var(--gold-light, #E8D5B0);
+      font-weight: 800;
     }
 
-    .csn-live {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      margin-top: 6px;
-      padding: 6px 9px;
-      border-radius: 999px;
-      background: rgba(255, 226, 161, 0.06);
-      color: rgba(255, 255, 255, .7);
-      font-size: 11px;
+    /* ── Close Button ── */
+    .csn-close {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      background: none;
+      border: none;
+      color: rgba(255, 255, 255, 0.56);
+      font-size: 18px;
+      cursor: pointer;
+      line-height: 1;
+      padding: 0;
+      transition: color 0.2s, transform 0.2s;
+      z-index: 2;
     }
 
-    .csn-live::before {
-      content: "";
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--gold-light);
-      box-shadow: 0 0 0 2px rgba(255, 226, 161, .12), 0 0 14px rgba(255, 226, 161, .5);
-      animation: dotPulse 1.8s ease-in-out infinite;
+    .csn-close:hover {
+      color: var(--gold-light, #E8D5B0);
+      transform: rotate(90deg);
     }
 
     /* =========================================================
-       SOCIAL PROOF NOTIFICATION CSS END
-    ========================================================= */
-
-
+      SOCIAL PROOF NOTIFICATION CSS END
+      ========================================================= */
     /* =========================================================
-       HEADER / NAVBAR CSS START
-    ========================================================= */
+      HEADER / NAVBAR CSS START
+      ========================================================= */
     /* =========================================================
-   CSS SECTION 13: NAVBAR - WRAPPER
-========================================================= */
-
+      CSS SECTION 13: NAVBAR - WRAPPER
+      ========================================================= */
     .nav-wrapper-xyz-ikjo {
       position: fixed;
       top: 14px;
@@ -526,9 +877,8 @@
     }
 
     /* =========================================================
-   CSS SECTION 14: NAVBAR - INNER GLASS BAR
-========================================================= */
-
+      CSS SECTION 14: NAVBAR - INNER GLASS BAR
+      ========================================================= */
     .nav-inner-xyz-ikjo {
       position: relative;
       width: min(1180px, 100%);
@@ -541,21 +891,17 @@
       border-radius: 999px;
       pointer-events: auto;
       overflow: hidden;
-
       background:
         radial-gradient(circle at 10% 0%, rgba(34, 211, 238, 0.22), transparent 34%),
         radial-gradient(circle at 88% 115%, rgba(251, 113, 133, 0.20), transparent 36%),
         linear-gradient(135deg, rgba(255, 255, 255, 0.105), rgba(255, 255, 255, 0.025)),
         linear-gradient(135deg, rgba(7, 8, 23, 0.96), rgba(22, 17, 47, 0.91) 46%, rgba(13, 20, 48, 0.94));
-
       border: 1px solid rgba(125, 211, 252, 0.26);
-
       box-shadow:
         0 24px 60px rgba(2, 6, 23, 0.52),
         0 0 0 1px rgba(255, 255, 255, 0.045),
         inset 0 1px 0 rgba(255, 255, 255, 0.16),
         inset 0 -1px 0 rgba(34, 211, 238, 0.10);
-
       backdrop-filter: blur(20px) saturate(135%);
       -webkit-backdrop-filter: blur(20px) saturate(135%);
     }
@@ -590,9 +936,8 @@
     }
 
     /* =========================================================
-   CSS SECTION 15: NAVBAR - LOGO
-========================================================= */
-
+      CSS SECTION 15: NAVBAR - LOGO
+      ========================================================= */
     .nav-logo-xyz-ikjo {
       position: relative;
       z-index: 1;
@@ -600,7 +945,6 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-
       font-family: var(--serif, Georgia, serif);
       font-size: 24px;
       font-weight: 900;
@@ -608,12 +952,10 @@
       letter-spacing: -0.4px;
       white-space: nowrap;
       text-align: left;
-
       color: var(--xyz-soft-white);
       text-shadow:
         0 2px 18px rgba(0, 0, 0, 0.46),
         0 0 22px rgba(34, 211, 238, 0.12);
-
       transition:
         transform 0.25s ease,
         opacity 0.25s ease,
@@ -636,9 +978,8 @@
     }
 
     /* =========================================================
-   CSS SECTION 16: NAVBAR - RIGHT SIDE GROUP
-========================================================= */
-
+      CSS SECTION 16: NAVBAR - RIGHT SIDE GROUP
+      ========================================================= */
     .okij-ikjo {
       position: relative;
       z-index: 1;
@@ -650,9 +991,8 @@
     }
 
     /* =========================================================
-   CSS SECTION 17: NAVBAR - TIMER BLOCK
-========================================================= */
-
+      CSS SECTION 17: NAVBAR - TIMER BLOCK
+      ========================================================= */
     .nav-timer-block-xyz-ikjo {
       flex-shrink: 0;
       display: flex;
@@ -662,19 +1002,15 @@
       max-width: 100%;
       padding: 8px 12px 8px 14px;
       border-radius: 999px;
-
       background:
         radial-gradient(circle at 12% 0%, rgba(215, 168, 77, 0.22), transparent 45%),
         linear-gradient(135deg, rgba(255, 226, 161, 0.12), rgba(255, 255, 255, 0.035)),
         linear-gradient(135deg, rgba(11, 10, 7, 0.94), rgba(3, 3, 3, 0.86));
-
       border: 1px solid var(--border);
-
       box-shadow:
         inset 0 1px 0 rgba(255, 226, 161, 0.18),
         0 12px 30px rgba(0, 0, 0, 0.38),
         var(--gold-shadow);
-
       transition:
         transform 0.25s ease,
         border-color 0.25s ease,
@@ -685,12 +1021,10 @@
     .nav-timer-block-xyz-ikjo:hover {
       transform: translateY(-1px);
       border-color: var(--border-strong);
-
       background:
         radial-gradient(circle at 12% 0%, rgba(255, 226, 161, 0.28), transparent 45%),
         linear-gradient(135deg, rgba(255, 226, 161, 0.16), rgba(255, 255, 255, 0.045)),
         linear-gradient(135deg, rgba(20, 16, 8, 0.96), rgba(3, 3, 3, 0.90));
-
       box-shadow:
         inset 0 1px 0 rgba(255, 226, 161, 0.22),
         0 14px 34px rgba(0, 0, 0, 0.48),
@@ -698,18 +1032,15 @@
     }
 
     /* Timer Pulse */
-
     .nav-timer-pulse-xyz-ikjo {
       width: 10px;
       height: 10px;
       flex-shrink: 0;
       border-radius: 50%;
       background: var(--gold-light);
-
       box-shadow:
         0 0 0 5px rgba(215, 168, 77, 0.15),
         0 0 18px rgba(255, 226, 161, 0.95);
-
       animation: pulseAnimXyzIkjo 1.45s ease-in-out infinite;
     }
 
@@ -734,7 +1065,6 @@
     }
 
     /* Timer Label */
-
     .nav-timer-label-xyz-ikjo {
       font-family: var(--sans, Arial, sans-serif);
       font-size: 12px;
@@ -748,7 +1078,6 @@
     }
 
     /* Timer Digits */
-
     .nav-timer-digits-xyz-ikjo {
       display: flex;
       align-items: center;
@@ -756,12 +1085,9 @@
       max-width: 100%;
       padding: 4px 9px;
       border-radius: 999px;
-
       background:
         linear-gradient(180deg, rgba(3, 3, 3, 0.82), rgba(11, 10, 7, 0.58));
-
       border: 1px solid rgba(255, 226, 161, 0.22);
-
       box-shadow:
         inset 0 1px 9px rgba(0, 0, 0, 0.52),
         0 1px 0 rgba(255, 226, 161, 0.10),
@@ -784,7 +1110,6 @@
       text-align: center;
       color: var(--gold-light);
       letter-spacing: 0.3px;
-
       text-shadow:
         0 0 10px rgba(255, 226, 161, 0.44),
         0 0 18px rgba(215, 168, 77, 0.18);
@@ -830,16 +1155,14 @@
       letter-spacing: 1.1px;
       text-transform: uppercase;
       color: var(--gold-light);
-
       text-shadow:
         0 0 12px rgba(255, 226, 161, 0.45),
         0 0 18px rgba(215, 168, 77, 0.20);
     }
 
     /* =========================================================
-   CSS SECTION 18: NAVBAR - CTA BUTTON
-========================================================= */
-
+      CSS SECTION 18: NAVBAR - CTA BUTTON
+      ========================================================= */
     .nav-cta-xyz-ikjo {
       position: relative;
       flex-shrink: 0;
@@ -853,28 +1176,23 @@
       overflow: hidden;
       text-decoration: none;
       white-space: nowrap;
-
       font-family: var(--sans, Arial, sans-serif);
       font-size: 16px;
       font-weight: 950;
       line-height: 1;
       letter-spacing: 0.2px;
       color: var(--black);
-
       background:
         linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 48%, var(--gold-deep) 100%);
-
       box-shadow:
         0 15px 34px rgba(215, 168, 77, 0.30),
         0 12px 34px rgba(143, 101, 31, 0.22),
         inset 0 1px 0 rgba(255, 255, 255, 0.42),
         inset 0 -1px 0 rgba(0, 0, 0, 0.24);
-
       transition:
         transform 0.25s ease,
         box-shadow 0.25s ease,
         filter 0.25s ease;
-
       animation:
         ctaBreathXyzIkjo 2.8s ease-in-out infinite,
         smoothShakeIkjo 2.2s ease-in-out infinite;
@@ -887,13 +1205,11 @@
       left: -80%;
       width: 52%;
       height: 140%;
-
       background:
         linear-gradient(90deg,
           transparent,
           rgba(255, 255, 255, 0.68),
           transparent);
-
       transform: skewX(-22deg);
       transition: left 0.65s ease;
     }
@@ -915,7 +1231,6 @@
     .nav-cta-xyz-ikjo:hover {
       transform: translateY(-2px) scale(1.035);
       filter: brightness(1.08) saturate(1.08);
-
       box-shadow:
         0 20px 46px rgba(215, 168, 77, 0.40),
         0 16px 44px rgba(143, 101, 31, 0.28),
@@ -960,15 +1275,13 @@
     }
 
     /* Page Body Offset */
-
     .page-body-offset-xyz-ikjo {
       padding-top: 92px;
     }
 
     /* =========================================================
-   CSS SECTION 19: RESPONSIVE NAVBAR - TABLET
-========================================================= */
-
+      CSS SECTION 19: RESPONSIVE NAVBAR - TABLET
+      ========================================================= */
     @media (max-width: 900px) {
       .nav-wrapper-xyz-ikjo {
         top: 10px;
@@ -1027,9 +1340,8 @@
     }
 
     /* =========================================================
-   CSS SECTION 20: RESPONSIVE NAVBAR - MOBILE
-========================================================= */
-
+      CSS SECTION 20: RESPONSIVE NAVBAR - MOBILE
+      ========================================================= */
     @media (max-width: 700px) {
       .nav-wrapper-xyz-ikjo {
         top: 8px;
@@ -1043,7 +1355,6 @@
         padding: 11px 10px;
         gap: 10px;
         border-radius: 24px;
-
         background:
           radial-gradient(circle at 50% -15%, rgba(215, 168, 77, 0.24), transparent 36%),
           radial-gradient(circle at 92% 105%, rgba(255, 226, 161, 0.13), transparent 40%),
@@ -1054,7 +1365,7 @@
         width: 100%;
         justify-content: center;
         text-align: center;
-        font-size: 21px;
+        font-size: 18px;
       }
 
       .okij-ikjo {
@@ -1113,9 +1424,8 @@
     }
 
     /* =========================================================
-   CSS SECTION 21: RESPONSIVE NAVBAR - SMALL PHONES
-========================================================= */
-
+      CSS SECTION 21: RESPONSIVE NAVBAR - SMALL PHONES
+      ========================================================= */
     @media (max-width: 380px) {
       .nav-wrapper-xyz-ikjo {
         padding: 0 7px;
@@ -1178,13 +1488,11 @@
     }
 
     /* =========================================================
-   HEADER / NAVBAR CSS END
-========================================================= */
-
-
+      HEADER / NAVBAR CSS END
+      ========================================================= */
     /* =========================================================
-       HERO SECTION CSS START
-    ========================================================= */
+      HERO SECTION CSS START
+      ========================================================= */
     .hero {
       position: relative;
       min-height: calc(100vh - 78px);
@@ -1451,14 +1759,82 @@
       font-weight: 750;
     }
 
-    /* =========================================================
-       HERO SECTION CSS END
-    ========================================================= */
+    /* ===== Hero Section Responsive CSS Start ===== */
+    @media (max-width: 980px) {
+      .hero {
+        min-height: auto;
+        padding: 86px 0 64px;
+        text-align: center;
+      }
 
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
 
+      .hero-copy {
+        max-width: 900px;
+      }
+
+      .hero-visual {
+        min-height: auto;
+        display: grid;
+        gap: 18px;
+      }
+
+      .luxury-card,
+      .floating-chip {
+        position: relative;
+        top: auto;
+        right: auto;
+        left: auto;
+        width: 100%;
+        max-width: 640px;
+        margin-inline: auto;
+      }
+
+      .floating-chip {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .hero {
+        padding: 64px 0 46px;
+        text-align: center;
+      }
+
+      .hero-points {
+        grid-template-columns: 1fr;
+      }
+
+      .panel-top {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .hero {
+        padding-top: 29%;
+        text-align: center;
+      }
+
+      .luxury-card,
+      .floating-chip {
+        border-radius: 23px;
+      }
+
+      .luxury-card {
+        padding: 20px;
+      }
+    }
+
+    /* ===== Hero Section Responsive CSS End ===== */
     /* =========================================================
-       OFFER TIMER CSS START
-    ========================================================= */
+      HERO SECTION CSS END
+      ========================================================= */
+    /* =========================================================
+      OFFER TIMER CSS START
+      ========================================================= */
     .offer-timer-wrap {
       width: min(480px, calc(100% - 36px));
       margin: 38px auto 0;
@@ -1520,14 +1896,30 @@
       animation: blink 1s steps(2) infinite;
     }
 
-    /* =========================================================
-       OFFER TIMER CSS END
-    ========================================================= */
+    /* ===== Offer Timer Responsive CSS Start ===== */
+    @media (max-width: 760px) {
+      .offer-timer-wrap {
+        width: min(100% - 28px, 480px);
+      }
+    }
 
+    @media (max-width: 430px) {
+      .time-box {
+        min-width: 66px;
+      }
 
+      .time-value {
+        font-size: 26px;
+      }
+    }
+
+    /* ===== Offer Timer Responsive CSS End ===== */
     /* =========================================================
-       PAGE SECTION SPECIFIC CSS START
-    ========================================================= */
+      OFFER TIMER CSS END
+      ========================================================= */
+    /* =========================================================
+      TRUST SECTION CSS START
+      ========================================================= */
     .trust-grid {
       display: grid;
       grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -1551,10 +1943,33 @@
       font-weight: 900;
     }
 
-    .problem-note,
-    .system-note,
-    .value-note,
-    .important-note {
+    /* ===== Trust Section Responsive CSS Start ===== */
+    @media (max-width: 1120px) {
+      .trust-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      .trust-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-card {
+        min-height: auto;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    /* ===== Trust Section Responsive CSS End ===== */
+    /* =========================================================
+      TRUST SECTION CSS END
+      ========================================================= */
+    /* =========================================================
+      PROBLEM SECTION CSS START
+      ========================================================= */
+    .problem-note {
       margin-top: 26px;
       padding: 18px;
       display: grid;
@@ -1565,19 +1980,16 @@
       border-radius: 24px;
       background: linear-gradient(145deg, rgba(255, 255, 255, .065), rgba(255, 255, 255, .025)), radial-gradient(circle at 0 0, rgba(255, 226, 161, .1), transparent 44%);
       backdrop-filter: blur(16px);
+      box-shadow:
+        0 22px 72px rgba(0, 0, 0, 0.30),
+        inset 0 1px 0 rgba(255, 255, 255, 0.055);
     }
 
-    .problem-card,
-    .system-card,
-    .qualification-panel,
-    .mentor-card,
-    .final-card {
+    .problem-card {
       padding: clamp(24px, 3vw, 34px);
     }
 
-    .problem-card-top,
-    .panel-top-line,
-    .qualification-panel-top {
+    .problem-card-top {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
@@ -1585,14 +1997,56 @@
       margin-bottom: 22px;
     }
 
-    .small-label {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--gold-light);
-      font-size: 12px;
-      font-weight: 950;
-      letter-spacing: .12em;
-      text-transform: uppercase;
+    /* ===== Problem Section Responsive CSS Start ===== */
+    @media (max-width: 760px) {
+      .problem-card-top {
+        flex-direction: column;
+      }
+
+      .problem-note {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .problem-card {
+        padding: 20px;
+      }
+    }
+
+    /* ===== Problem Section Responsive CSS End ===== */
+    /* =========================================================
+      PROBLEM SECTION CSS END
+      ========================================================= */
+    /* =========================================================
+      SYSTEM ISSUE SECTION CSS START
+      ========================================================= */
+    .system-note {
+      margin-top: 26px;
+      padding: 18px;
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 14px;
+      align-items: flex-start;
+      border: 1px solid rgba(255, 226, 161, 0.16);
+      border-radius: 24px;
+      background: linear-gradient(145deg, rgba(255, 255, 255, .065), rgba(255, 255, 255, .025)), radial-gradient(circle at 0 0, rgba(255, 226, 161, .1), transparent 44%);
+      backdrop-filter: blur(16px);
+      box-shadow:
+        0 22px 72px rgba(0, 0, 0, 0.30),
+        inset 0 1px 0 rgba(255, 255, 255, 0.055);
+    }
+
+    .system-card {
+      padding: clamp(24px, 3vw, 34px);
+    }
+
+    .panel-top-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 22px;
     }
 
     .system-step {
@@ -1606,8 +2060,7 @@
       background: rgba(255, 255, 255, .035);
     }
 
-    .step-num,
-    .heal-letter {
+    .step-num {
       width: 56px;
       height: 56px;
       display: grid;
@@ -1620,6 +2073,30 @@
       font-size: 20px;
     }
 
+    /* ===== System Issue Section Responsive CSS Start ===== */
+    @media (max-width: 760px) {
+      .panel-top-line {
+        flex-direction: column;
+      }
+
+      .system-note {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .system-card {
+        padding: 20px;
+      }
+    }
+
+    /* ===== System Issue Section Responsive CSS End ===== */
+    /* =========================================================
+      SYSTEM ISSUE SECTION CSS END
+      ========================================================= */
+    /* =========================================================
+      FRAMEWORK SECTION CSS START
+      ========================================================= */
     .heal-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1638,6 +2115,19 @@
       margin-bottom: 22px;
     }
 
+    .heal-letter {
+      width: 56px;
+      height: 56px;
+      display: grid;
+      place-items: center;
+      border-radius: 20px;
+      color: #150e03;
+      background: linear-gradient(135deg, #fff1c8, #d7a84d 58%, #9b6c22);
+      box-shadow: 0 14px 34px rgba(215, 168, 77, 0.22);
+      font-weight: 950;
+      font-size: 20px;
+    }
+
     .heal-number {
       color: rgba(255, 226, 161, .34);
       font-size: 30px;
@@ -1645,20 +2135,113 @@
       font-weight: 950;
     }
 
-    .heal-card h3,
-    .testimonial h3 {
+    .heal-card h3 {
       margin-bottom: 12px;
       font-size: 22px;
     }
 
-    .vision-grid,
+    /* ===== Framework Section Responsive CSS Start ===== */
+    @media (max-width: 1120px) {
+      .heal-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      .heal-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .heal-card {
+        min-height: auto;
+      }
+    }
+
+    /* ===== Framework Section Responsive CSS End ===== */
+    /* =========================================================
+      FRAMEWORK SECTION CSS END
+      ========================================================= */
+    /* =========================================================
+      VISION SECTION CSS START
+      ========================================================= */
+    .vision-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .vision-item {
+      min-height: 132px;
+      padding: 20px;
+      display: grid;
+      align-content: center;
+      gap: 12px;
+    }
+
+    /* ===== Vision Section Responsive CSS Start ===== */
+    @media (max-width: 980px) {
+      .vision-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ===== Vision Section Responsive CSS End ===== */
+    /* =========================================================
+      VISION SECTION CSS END
+      ========================================================= */
+    /* =========================================================
+      QUALIFICATION SECTION CSS START
+      ========================================================= */
+    .qualification-panels {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .qualification-panel {
+      padding: clamp(24px, 3vw, 34px);
+    }
+
+    .qualification-panel-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+
+    /* ===== Qualification Section Responsive CSS Start ===== */
+    @media (max-width: 980px) {
+      .qualification-panels {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .qualification-panel-top {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .qualification-panel {
+        padding: 20px;
+      }
+    }
+
+    /* ===== Qualification Section Responsive CSS End ===== */
+    /* =========================================================
+      QUALIFICATION SECTION CSS END
+      ========================================================= */
+    /* =========================================================
+      STRATEGY VALUE SECTION CSS START
+      ========================================================= */
     .value-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 16px;
     }
 
-    .vision-item,
     .value-item {
       min-height: 132px;
       padding: 20px;
@@ -1667,100 +2250,493 @@
       gap: 12px;
     }
 
-    .qualification-panels {
+    .value-note {
+      margin-top: 26px;
+      padding: 18px;
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
+      grid-template-columns: 44px 1fr;
+      gap: 14px;
+      align-items: flex-start;
+      border: 1px solid rgba(255, 226, 161, 0.16);
+      border-radius: 24px;
+      background: linear-gradient(145deg, rgba(255, 255, 255, .065), rgba(255, 255, 255, .025)), radial-gradient(circle at 0 0, rgba(255, 226, 161, .1), transparent 44%);
+      backdrop-filter: blur(16px);
+      box-shadow:
+        0 22px 72px rgba(0, 0, 0, 0.30),
+        inset 0 1px 0 rgba(255, 255, 255, 0.055);
+    }
+
+    /* ===== Strategy Value Section Responsive CSS Start ===== */
+    @media (max-width: 980px) {
+      .value-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .value-note {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ===== Strategy Value Section Responsive CSS End ===== */
+    /* =========================================================
+      STRATEGY VALUE SECTION CSS END
+      ========================================================= */
+    /* =========================================================
+TESTIMONIALS SECTION CSS START
+========================================================= */
+
+    .testimonials-section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .testimonials-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(215, 168, 77, 0.12), transparent 28%),
+        radial-gradient(circle at 85% 70%, rgba(255, 226, 161, 0.08), transparent 30%);
+      pointer-events: none;
+    }
+
+    .testimonials-section .container {
+      position: relative;
+      z-index: 2;
     }
 
     .testimonials-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
+      gap: 22px;
+      margin-top: 42px;
     }
 
-    .testimonial {
-      padding: 24px;
+    .testimonial-card {
+      position: relative;
+      padding: 26px;
+      min-height: 100%;
+      border-radius: 26px;
+      background:
+        linear-gradient(145deg, rgba(255, 241, 200, 0.08), rgba(255, 255, 255, 0.025)),
+        rgba(10, 8, 5, 0.82);
+      border: 1px solid rgba(255, 226, 161, 0.14);
+      box-shadow:
+        0 22px 60px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(14px);
+      transition: all 0.35s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255, 226, 161, 0.32);
+      box-shadow:
+        0 28px 80px rgba(0, 0, 0, 0.48),
+        0 0 30px rgba(215, 168, 77, 0.10);
+    }
+
+    .featured-testimonial {
+      background:
+        linear-gradient(145deg, rgba(215, 168, 77, 0.16), rgba(255, 255, 255, 0.035)),
+        rgba(13, 10, 6, 0.9);
+      border-color: rgba(255, 226, 161, 0.24);
+    }
+
+    .testimonial-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .quote-icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      font-family: Georgia, serif;
+      font-size: 42px;
+      line-height: 1;
+      color: #150e03;
+      background: linear-gradient(135deg, #fff1c8, #d7a84d 60%, #9b6c22);
+      box-shadow: 0 10px 26px rgba(215, 168, 77, 0.22);
     }
 
     .stars {
-      color: var(--gold-light);
-      letter-spacing: .12em;
-      margin-bottom: 18px;
+      color: var(--gold-light, #ffe2a1);
+      letter-spacing: 0.12em;
+      font-size: 14px;
+      font-weight: 900;
+      text-shadow: 0 0 14px rgba(255, 226, 161, 0.25);
     }
 
     .quote {
       color: #ecdcbf;
-      font-size: 17px;
-      font-weight: 700;
-      line-height: 1.65;
+      font-size: 16px;
+      font-weight: 650;
+      line-height: 1.72;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-result {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 12px;
       margin-bottom: 22px;
+      border-radius: 999px;
+      color: var(--gold-light, #ffe2a1);
+      background: rgba(255, 226, 161, 0.08);
+      border: 1px solid rgba(255, 226, 161, 0.14);
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: 0.02em;
     }
 
     .person {
       display: flex;
       align-items: center;
-      gap: 12px;
-      padding-top: 18px;
+      gap: 13px;
+      padding-top: 20px;
       border-top: 1px solid rgba(255, 226, 161, 0.12);
     }
 
-    .person-avatar {
-      width: 42px;
-      height: 42px;
-      display: grid;
-      place-items: center;
-      border-radius: 15px;
-      color: #150e03;
-      background: linear-gradient(135deg, #fff1c8, #d7a84d 58%, #9b6c22);
+    .person-avatar-img {
+      width: 54px;
+      height: 54px;
+      flex: 0 0 54px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 226, 161, 0.48);
+      box-shadow:
+        0 10px 24px rgba(0, 0, 0, 0.35),
+        0 0 0 5px rgba(255, 226, 161, 0.06);
+    }
+
+    .person-info strong {
+      display: block;
+      color: var(--cream, #fff7e6);
+      font-size: 15px;
       font-weight: 950;
+      margin-bottom: 4px;
     }
 
-    .person strong {
+    .person-info span {
       display: block;
-      color: var(--cream);
-      font-weight: 900;
-    }
-
-    .person span {
-      display: block;
-      color: var(--muted-2);
+      color: var(--muted-2, #b8a98d);
       font-size: 13px;
-      font-weight: 700;
+      font-weight: 750;
     }
 
-    .mentor-grid {
-      display: grid;
-      grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
-      gap: 34px;
-      align-items: center;
+    /* ===== Testimonials Section Responsive CSS Start ===== */
+
+    @media (max-width: 980px) {
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .testimonial-card {
+        padding: 24px;
+      }
     }
 
-    .mentor-avatar {
-      min-height: 360px;
-      display: grid;
-      place-items: center;
+    @media (max-width: 560px) {
+      .testimonials-grid {
+        margin-top: 32px;
+      }
+
+      .testimonial-card {
+        padding: 22px 18px;
+        border-radius: 22px;
+      }
+
+      .testimonial-top {
+        margin-bottom: 16px;
+      }
+
+      .quote-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 38px;
+      }
+
+      .stars {
+        font-size: 12px;
+        letter-spacing: 0.08em;
+      }
+
+      .quote {
+        font-size: 15px;
+        line-height: 1.68;
+      }
+
+      .person-avatar-img {
+        width: 50px;
+        height: 50px;
+        flex-basis: 50px;
+      }
+
+      .person-info strong {
+        font-size: 14px;
+      }
+
+      .person-info span {
+        font-size: 12px;
+      }
+    }
+
+    /* ===== Testimonials Section Responsive CSS End ===== */
+
+    /* =========================================================
+TESTIMONIALS SECTION CSS END
+========================================================= */
+    /* =========================================================
+     MENTOR SECTION CSS START
+  ========================================================= */
+
+    .mentor-section {
+      padding: clamp(60px, 7vw, 95px) 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mentor-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 18% 22%, rgba(215, 168, 77, 0.14), transparent 34%),
+        radial-gradient(circle at 82% 72%, rgba(255, 241, 200, 0.08), transparent 34%);
+      pointer-events: none;
+    }
+
+    .mentor-section .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .mentor-head {
       text-align: center;
-      padding: 34px;
+      max-width: 780px;
+      margin: 0 auto 42px;
     }
 
-    .mentor-initials {
-      width: 142px;
-      height: 142px;
+    .mentor-head .eyebrow {
+      color: var(--gold-light);
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    .mentor-head h2 {
+      margin-top: 14px;
+      font-size: clamp(32px, 5vw, 58px);
+      line-height: 1.05;
+    }
+
+    .mentor-head p {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .mentors-grid {
       display: grid;
-      place-items: center;
-      margin-inline: auto;
-      border-radius: 44px;
-      color: #150e03;
-      background: linear-gradient(135deg, #fff1c8, #d7a84d 58%, #9b6c22);
-      box-shadow: 0 26px 80px rgba(215, 168, 77, .28);
-      font-size: 44px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(22px, 3vw, 34px);
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .mentor-profile-card {
+      position: relative;
+      padding: 18px;
+      border-radius: 32px;
+      background:
+        linear-gradient(145deg, rgba(255, 241, 200, 0.11), rgba(255, 255, 255, 0.035)),
+        rgba(10, 10, 10, 0.72);
+      border: 1px solid rgba(255, 226, 161, 0.18);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+      overflow: hidden;
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    .mentor-profile-card::after {
+      content: "";
+      position: absolute;
+      inset: auto 20px 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(215, 168, 77, 0.65), transparent);
+    }
+
+    .mentor-profile-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(215, 168, 77, 0.45);
+      box-shadow: 0 30px 95px rgba(215, 168, 77, 0.16);
+    }
+
+    .mentor-image-wrap {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      border-radius: 26px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 226, 161, 0.12);
+    }
+
+    .mentor-image-wrap img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.45s ease;
+    }
+
+    .mentor-profile-card:hover .mentor-image-wrap img {
+      transform: scale(1.045);
+    }
+
+    .mentor-info {
+      text-align: center;
+      padding: 24px 10px 12px;
+    }
+
+    .mentor-info h3 {
+      margin: 0;
+      font-size: clamp(26px, 3vw, 36px);
+      line-height: 1.1;
+      color: var(--gold-light);
       font-weight: 950;
     }
 
+    .mentor-role {
+      margin-top: 8px;
+      color: #fff1c8;
+      font-weight: 850;
+      font-size: 15px;
+    }
+
+    .mentor-desc {
+      max-width: 390px;
+      margin: 14px auto 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .mentor-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 9px;
+      margin-top: 18px;
+    }
+
+    .mentor-tags span {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 241, 200, 0.08);
+      border: 1px solid rgba(255, 226, 161, 0.14);
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 850;
+    }
+
+    /* ===== Mentor Section Responsive CSS Start ===== */
+
+    @media (max-width: 768px) {
+      .mentors-grid {
+        grid-template-columns: 1fr;
+        max-width: 470px;
+      }
+
+      .mentor-head {
+        margin-bottom: 30px;
+      }
+
+      .mentor-head p {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .mentor-section {
+        padding: 52px 0;
+      }
+
+      .mentor-profile-card {
+        padding: 14px;
+        border-radius: 26px;
+      }
+
+      .mentor-image-wrap {
+        border-radius: 22px;
+      }
+
+      .mentor-info {
+        padding: 20px 8px 10px;
+      }
+
+      .mentor-desc {
+        font-size: 14px;
+      }
+
+      .mentor-tags span {
+        font-size: 11px;
+        padding: 7px 10px;
+      }
+    }
+
+    /* ===== Mentor Section Responsive CSS End ===== */
+
+    /* =========================================================
+     MENTOR SECTION CSS END
+  ========================================================= */
+    /* =========================================================
+      IMPORTANT NOTE SECTION CSS START
+      ========================================================= */
+    .important-note {
+      margin-top: 26px;
+      padding: 18px;
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 14px;
+      align-items: flex-start;
+      border: 1px solid rgba(255, 226, 161, 0.16);
+      border-radius: 24px;
+      background: linear-gradient(145deg, rgba(255, 255, 255, .065), rgba(255, 255, 255, .025)), radial-gradient(circle at 0 0, rgba(255, 226, 161, .1), transparent 44%);
+      backdrop-filter: blur(16px);
+      box-shadow:
+        0 22px 72px rgba(0, 0, 0, 0.30),
+        inset 0 1px 0 rgba(255, 255, 255, 0.055);
+    }
+
+    /* ===== Important Note Section Responsive CSS Start ===== */
+    @media (max-width: 760px) {
+      .important-note {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ===== Important Note Section Responsive CSS End ===== */
+    /* =========================================================
+      IMPORTANT NOTE SECTION CSS END
+      ========================================================= */
+    /* =========================================================
+      FINAL CTA SECTION CSS START
+      ========================================================= */
     .final-card {
       max-width: 980px;
       margin-inline: auto;
+      padding: clamp(24px, 3vw, 34px);
       text-align: center;
     }
 
@@ -1770,38 +2746,387 @@
       text-align: left;
     }
 
-    /* =========================================================
-       PAGE SECTION SPECIFIC CSS END
-    ========================================================= */
-
-
-    /* =========================================================
-       FOOTER CSS START
-    ========================================================= */
-    footer {
-      padding: 34px 0 98px;
-      border-top: 1px solid rgba(255, 226, 161, .12);
-      background: rgba(3, 3, 3, .92);
+    /* ===== Final CTA Section Responsive CSS Start ===== */
+    @media (max-width: 430px) {
+      .final-card {
+        padding: 20px;
+      }
     }
 
-    .footer-inner {
+    /* ===== Final CTA Section Responsive CSS End ===== */
+    /* =========================================================
+      FINAL CTA SECTION CSS END
+      ========================================================= */
+    /* =========================================================
+      MINIMAL LIGHT FOOTER CSS START
+      ========================================================= */
+    .simple-policy-footer,
+    .simple-policy-footer *,
+    .simple-policy-modal,
+    .simple-policy-modal * {
+      box-sizing: border-box;
+    }
+
+    .simple-policy-footer {
+      width: 100%;
+      padding: 10px 10px 10px;
+      background: #ffffff;
+      border-top: 1px solid rgba(133, 145, 163, 0.16);
+      font-family: inherit;
+      background: radial-gradient(circle at 14% 4%, rgba(215, 168, 77, 0.24), transparent 25%), radial-gradient(circle at 86% 11%, rgba(255, 226, 161, 0.12), transparent 27%), radial-gradient(circle at 50% 115%, rgba(143, 101, 31, 0.18), transparent 36%), linear-gradient(180deg, #050402 0%, #0b0905 42%, #030303 100%);
+    }
+
+    .simple-footer-container {
+      width: min(760px, 100%);
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .simple-footer-disclaimer {
+      max-width: 690px;
+      margin: 0 auto 5px;
+    }
+
+    .simple-footer-title {
+      margin: 0 0 18px;
+      color: #8d98a8;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .simple-footer-disclaimer p:last-child {
+      margin: 0;
+      color: #8d98a8;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 1.6;
+      letter-spacing: 0.01em;
+    }
+
+    .simple-footer-copy {
+      margin: 0 0 6px;
+      color: #8994a5;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 1.5;
+      letter-spacing: 0.01em;
+    }
+
+    .simple-footer-links {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      gap: 18px;
-      color: var(--muted-2);
-      font-size: 13px;
-      font-weight: 700;
+      gap: clamp(20px, 4vw, 34px);
+      flex-wrap: wrap;
     }
 
-    /* =========================================================
-       FOOTER CSS END
-    ========================================================= */
+    .simple-footer-links button {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      padding: 0;
+      color: #687386;
+      font-family: inherit;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 1.35;
+      cursor: pointer;
+      transition: color 0.25s ease, transform 0.25s ease;
+    }
 
+    .simple-footer-links button:hover {
+      color: #303847;
+      transform: translateY(-2px);
+    }
 
+    /* ===== Policy Modal CSS Start ===== */
+    .simple-policy-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 999999;
+      display: grid;
+      place-items: center;
+      padding: 18px;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+
+    .simple-policy-modal.active {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .simple-policy-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(20, 26, 36, 0.56);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .simple-policy-box {
+      position: relative;
+      width: min(780px, 100%);
+      max-height: 86vh;
+      overflow: hidden;
+      border-radius: 26px;
+      background: #ffffff;
+      border: 1px solid rgba(133, 145, 163, 0.22);
+      box-shadow: 0 30px 90px rgba(20, 26, 36, 0.22);
+      transform: translateY(14px) scale(0.98);
+      transition: transform 0.25s ease;
+    }
+
+    .simple-policy-modal.active .simple-policy-box {
+      transform: translateY(0) scale(1);
+    }
+
+    .simple-policy-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      z-index: 5;
+      width: 38px;
+      height: 38px;
+      border: 1px solid rgba(133, 145, 163, 0.22);
+      border-radius: 50%;
+      background: #f7f8fb;
+      color: #687386;
+      font-size: 26px;
+      line-height: 1;
+      cursor: pointer;
+      transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+    }
+
+    .simple-policy-close:hover {
+      background: #eef1f6;
+      color: #303847;
+      transform: rotate(90deg);
+    }
+
+    .simple-policy-header {
+      padding: 32px 34px 20px;
+      border-bottom: 1px solid rgba(133, 145, 163, 0.14);
+    }
+
+    .simple-policy-label {
+      margin: 0 0 10px;
+      color: #8d98a8;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .simple-policy-header h2 {
+      margin: 0;
+      padding-right: 46px;
+      color: #303847;
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 600;
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+    }
+
+    .simple-policy-header p {
+      max-width: 620px;
+      margin: 12px 0 0;
+      color: #7c8798;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .simple-policy-tabs {
+      display: flex;
+      gap: 10px;
+      padding: 16px 34px 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .simple-policy-tabs::-webkit-scrollbar {
+      display: none;
+    }
+
+    .simple-policy-tabs button {
+      flex: 0 0 auto;
+      border: 1px solid rgba(133, 145, 163, 0.18);
+      border-radius: 999px;
+      background: #f8f9fb;
+      padding: 10px 15px;
+      color: #7c8798;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    }
+
+    .simple-policy-tabs button.active,
+    .simple-policy-tabs button:hover {
+      background: #eef1f6;
+      border-color: rgba(104, 115, 134, 0.28);
+      color: #303847;
+    }
+
+    .simple-policy-body {
+      max-height: calc(86vh - 190px);
+      overflow-y: auto;
+      padding: 24px 34px 36px;
+    }
+
+    .simple-policy-body::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .simple-policy-body::-webkit-scrollbar-track {
+      background: #f2f4f8;
+    }
+
+    .simple-policy-body::-webkit-scrollbar-thumb {
+      background: #c6ceda;
+      border-radius: 999px;
+    }
+
+    .simple-policy-content {
+      display: none;
+      animation: simplePolicyIn 0.25s ease both;
+    }
+
+    .simple-policy-content.active {
+      display: block;
+    }
+
+    .simple-policy-content h3 {
+      margin: 0 0 14px;
+      color: #303847;
+      font-size: clamp(24px, 3vw, 34px);
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .simple-policy-content h4 {
+      margin: 24px 0 8px;
+      color: #4d586a;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .simple-policy-content p {
+      margin: 0 0 12px;
+      color: #7c8798;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    @keyframes simplePolicyIn {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    body.simple-policy-open {
+      overflow: hidden;
+    }
+
+    /* ===== Policy Modal CSS End ===== */
+    /* ===== Footer Responsive CSS Start ===== */
+    @media (max-width: 640px) {
+      .simple-policy-footer {
+        padding: 10px 10px 10px;
+      }
+
+      .simple-footer-disclaimer {
+        margin-bottom: 34px;
+      }
+
+      .simple-footer-title {
+        font-size: 17px;
+        margin-bottom: 14px;
+      }
+
+      .simple-footer-disclaimer p:last-child {
+        font-size: 8.5px;
+        line-height: 1.65;
+      }
+
+      .simple-footer-copy {
+        font-size: 10.5px;
+        margin-bottom: 22px;
+      }
+
+      .simple-footer-links {
+        gap: 14px 22px;
+      }
+
+      .simple-footer-links button {
+        font-size: 11px;
+      }
+
+      .simple-policy-modal {
+        align-items: end;
+        padding: 10px;
+      }
+
+      .simple-policy-box {
+        width: 100%;
+        max-height: 88vh;
+        border-radius: 24px 24px 18px 18px;
+      }
+
+      .simple-policy-header {
+        padding: 30px 20px 18px;
+      }
+
+      .simple-policy-close {
+        top: 14px;
+        right: 14px;
+        width: 36px;
+        height: 36px;
+      }
+
+      .simple-policy-tabs {
+        padding: 14px 20px 0;
+      }
+
+      .simple-policy-body {
+        max-height: calc(88vh - 190px);
+        padding: 22px 20px 32px;
+      }
+
+      .simple-policy-content p {
+        font-size: 14.5px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .simple-footer-links {
+        gap: 12px;
+      }
+
+      .simple-footer-links button {
+        font-size: 11px;
+      }
+    }
+
+    /* ===== Footer Responsive CSS End ===== */
     /* =========================================================
-       MODAL FORM CSS START
-    ========================================================= */
+      MINIMAL LIGHT FOOTER CSS END
+      ========================================================= */
+    /* =========================================================
+      MODAL FORM CSS START
+      ========================================================= */
     #kc-modal-shell {
       position: fixed;
       inset: 0;
@@ -2022,14 +3347,34 @@
       animation-delay: .3s;
     }
 
-    /* =========================================================
-       MODAL FORM CSS END
-    ========================================================= */
+    /* ===== Modal Form Responsive CSS Start ===== */
+    @media (max-width: 760px) {
+      #kc-modal-head {
+        padding: 34px 20px 22px;
+      }
 
+      #kc-modal-body {
+        padding: 24px 20px 28px;
+      }
 
+      #kc-modal-title {
+        font-size: 26px;
+      }
+    }
+
+    @media (max-width: 430px) {
+      #kc-modal-shell {
+        padding: 12px;
+      }
+    }
+
+    /* ===== Modal Form Responsive CSS End ===== */
     /* =========================================================
-       ANIMATION KEYFRAMES START
-    ========================================================= */
+      MODAL FORM CSS END
+      ========================================================= */
+    /* =========================================================
+      ANIMATION KEYFRAMES START
+      ========================================================= */
     .reveal {
       opacity: 1;
       transform: translateY(28px);
@@ -2192,256 +3537,7 @@
       }
     }
 
-    /* =========================================================
-       ANIMATION KEYFRAMES END
-    ========================================================= */
-
-
-    /* =========================================================
-       RESPONSIVE CSS START
-    ========================================================= */
-    @media (max-width: 1120px) {
-      .trust-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-
-      .heal-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 980px) {
-      .hero {
-        min-height: auto;
-        padding: 86px 0 64px;
-
-        text-align: center;
-      }
-
-      .hero-grid,
-      .split-grid,
-      .mentor-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-copy {
-        max-width: 900px;
-      }
-
-      .hero-visual {
-        min-height: auto;
-        display: grid;
-        gap: 18px;
-      }
-
-      .luxury-card,
-      .floating-chip {
-        position: relative;
-        top: auto;
-        right: auto;
-        left: auto;
-        width: 100%;
-        max-width: 640px;
-        margin-inline: auto;
-      }
-
-      .floating-chip {
-        text-align: center;
-      }
-
-      .two-grid,
-      .three-grid,
-      .four-grid,
-      .vision-grid,
-      .value-grid,
-      .testimonials-grid,
-      .qualification-panels {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 760px) {
-
-      .container,
-      .nav-inner-xyz {
-        width: min(100% - 28px, var(--max));
-      }
-
-      .section {
-        padding: 76px 0;
-      }
-
-      .section-sm {
-        padding: 58px 0;
-      }
-
-      .nav-inner-xyz {
-        min-height: auto;
-        padding: 12px 0;
-      }
-
-      .nav-logo-xyz span {
-        display: none;
-      }
-
-      .nav-actions {
-        gap: 8px;
-      }
-
-      .nav-timer-block-xyz {
-        padding: 8px 10px;
-        gap: 7px;
-      }
-
-      .nav-timer-label-xyz {
-        display: none;
-      }
-
-      .nav-cta-xyz {
-        min-height: 40px;
-        padding: 9px 13px;
-        font-size: 13px;
-      }
-
-      .csn-card {
-        display: none;
-      }
-
-      h1 {
-        font-size: clamp(36px, 11vw, 52px);
-        line-height: .98;
-      }
-
-      h2 {
-        font-size: clamp(30px, 9vw, 42px);
-      }
-
-      p,
-      .lead {
-        font-size: 16px;
-      }
-
-      .hero {
-        padding: 64px 0 46px;
-        text-align: center;
-      }
-
-      .hero-points {
-        grid-template-columns: 1fr;
-      }
-
-      .clarity-cta-btn,
-      .btn {
-        width: 90%;
-        font-size: 13px;
-        min-height: 54px;
-      }
-
-      .center-cta {
-        margin-top: 26px;
-      }
-
-      .trust-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .trust-card {
-        min-height: auto;
-        display: flex;
-        align-items: center;
-      }
-
-      .heal-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .heal-card {
-        min-height: auto;
-      }
-
-      .problem-card-top,
-      .panel-top-line,
-      .qualification-panel-top,
-      .panel-top {
-        flex-direction: column;
-      }
-
-      .problem-note,
-      .system-note,
-      .value-note,
-      .important-note,
-      .calendar-card {
-        grid-template-columns: 1fr;
-      }
-
-      .offer-timer-wrap {
-        width: min(100% - 28px, 480px);
-      }
-
-      .footer-inner {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      #kc-modal-head {
-        padding: 34px 20px 22px;
-      }
-
-      #kc-modal-body {
-        padding: 24px 20px 28px;
-      }
-
-      #kc-modal-title {
-        font-size: 26px;
-      }
-    }
-
-    @media (max-width: 430px) {
-
-      .container,
-      .nav-inner-xyz {
-        width: min(100% - 22px, var(--max));
-      }
-
-      .hero {
-        padding-top: 29%;
-        text-align: center;
-      }
-
-      .eyebrow,
-      .mini-eyebrow {
-        font-size: 10px;
-        letter-spacing: .1em;
-      }
-
-      .time-box {
-        min-width: 66px;
-      }
-
-      .time-value {
-        font-size: 26px;
-      }
-
-      .luxury-card,
-      .floating-chip,
-      .card {
-        border-radius: 23px;
-      }
-
-      .luxury-card,
-      .problem-card,
-      .system-card,
-      .qualification-panel,
-      .mentor-card,
-      .final-card {
-        padding: 20px;
-      }
-
-      #kc-modal-shell {
-        padding: 12px;
-      }
-    }
-
+    /* ===== Reduced Motion CSS Start ===== */
     @media (prefers-reduced-motion: reduce) {
 
       *,
@@ -2459,34 +3555,46 @@
       }
     }
 
+    /* ===== Reduced Motion CSS End ===== */
     /* =========================================================
-       RESPONSIVE CSS END
-    ========================================================= */
+      ANIMATION KEYFRAMES END
+      ========================================================= */
   </style>
 </head>
 
 <body>
   <!-- =========================================================
-       SOCIAL PROOF NOTIFICATION HTML START
-  ========================================================= -->
+SOCIAL PROOF NOTIFICATION HTML START
+========================================================= -->
   <div class="csn-card" id="csnCard" role="status" aria-live="polite">
-    <div class="csn-avatar" id="csnAvatar">JD</div>
+    <div class="csn-avatar" id="csnAvatar">JD
+    </div>
     <div class="csn-body">
-      <p class="csn-name" id="csnName">James D.</p>
-      <p class="csn-msg">booked a <strong>Discovery Call</strong> 🎉</p>
-      <span class="csn-live"><strong id="csnTime">2 minutes ago</strong></span>
+      <div style="display: flex; gap: 10px; align-items: center;">
+        <p class="csn-name" id="csnName">James D.
+        </p>
+        <img style="width: 20px; "
+          src="https://res.cloudinary.com/dtazgnwsf/image/upload/v1776668859/Add_a_heading_qah3dj-removebg-preview_po9bkk.png"
+          alt="">
+      </div>
+      <p class="csn-msg"> booked a
+        <strong>Discovery Call</strong> 🎉
+      </p>
+      <div style="display: flex; gap: 1px;">
+        <p class="csn-time" id="csnTime">2 minutes ago
+        </p>
+        <div class="csn-activity">
+          <div class="csn-activity-dot">
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <!-- =========================================================
-       SOCIAL PROOF NOTIFICATION HTML END
-  ========================================================= -->
-
-
+SOCIAL PROOF NOTIFICATION HTML END
+========================================================= -->
   <!-- =========================================================
-       HEADER HTML START
-  ========================================================= -->
-  <!-- =========================================================
-     HEADER HTML START
+HEADER HTML START
 ========================================================= -->
   <div class="nav-wrapper-xyz-ikjo">
     <div class="nav-inner-xyz-ikjo">
@@ -2495,29 +3603,24 @@
         <span>For Coaches, </span>
         <span>Healers & Consultants</span>
       </div>
-
       <div class="okij-ikjo">
         <!-- Timer block inside nav -->
         <div class="nav-timer-block-xyz-ikjo" id="navBlockXyz-ikjo">
           <span style="text-align: center;" class="nav-timer-label-xyz-ikjo">
             FREE SLOTS CLOSING IN
           </span>
-
           <div class="nav-timer-digits-xyz-ikjo" id="navDigitsXyz-ikjo">
             <div class="nav-timer-unit-xyz-ikjo">
               <span class="nav-timer-num-xyz-ikjo" id="navMinsXyz-ikjo">05</span>
               <span class="nav-timer-unitlbl-xyz-ikjo">Min</span>
             </div>
-
             <span class="nav-timer-colon-xyz-ikjo">:</span>
-
             <div class="nav-timer-unit-xyz-ikjo">
               <span class="nav-timer-num-xyz-ikjo" id="navSecsXyz-ikjo">00</span>
               <span class="nav-timer-unitlbl-xyz-ikjo">Sec</span>
             </div>
           </div>
         </div>
-
         <!-- CTA Button -->
         <button type="button" class="nav-cta-xyz-ikjo" onclick="openModal()">
           Book Now
@@ -2526,21 +3629,17 @@
     </div>
   </div>
   <!-- =========================================================
-     HEADER HTML END
+HEADER HTML END
 ========================================================= -->
-  <!-- =========================================================
-       HEADER HTML END
-  ========================================================= -->
-
-
   <main id="top">
     <!-- =========================================================
-         HERO SECTION HTML START
-    ========================================================= -->
+HERO SECTION HTML START
+========================================================= -->
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <div class="eyebrow">Private Scale Strategy Session</div>
+          <div class="eyebrow">Private Scale Strategy Session
+          </div>
           <h1>
             For Coaches, Healers & Consultants Already Earning
             <span class="gold-text">₹2L+/Month</span>
@@ -2555,62 +3654,90 @@
             or Consultant — this private strategy session is designed to identify exactly what's stopping
             your next breakthrough.
           </p>
-
           <div class="hero-points">
-            <div class="hero-point"><span class="point-icon">◆</span><span>No random strategies.</span></div>
-            <div class="hero-point"><span class="point-icon">◆</span><span>No guesswork.</span></div>
-            <div class="hero-point"><span class="point-icon">◆</span><span>No hustle marketing.</span></div>
-            <div class="hero-point"><span class="point-icon">◆</span><span>Just systems that create predictable
-                growth.</span></div>
+            <div class="hero-point">
+              <span class="point-icon">◆</span>
+              <span>No random strategies.</span>
+            </div>
+            <div class="hero-point">
+              <span class="point-icon">◆</span>
+              <span>No guesswork.</span>
+            </div>
+            <div class="hero-point">
+              <span class="point-icon">◆</span>
+              <span>No hustle marketing.</span>
+            </div>
+            <div class="hero-point">
+              <span class="point-icon">◆</span>
+              <span>Just systems that create predictable
+                growth.</span>
+            </div>
           </div>
-
           <div class="center-cta">
             <button type="button" class="clarity-cta-btn" onclick="openModal()">
               Book Your Clarity Call Now <span>→</span>
             </button>
           </div>
         </div>
-
         <div class="hero-visual reveal">
-          <div class="orb orb-one"></div>
-          <div class="orb orb-two"></div>
-
+          <div class="orb orb-one">
+          </div>
+          <div class="orb orb-two">
+          </div>
           <div class="luxury-card card">
             <div class="scale-panel">
               <div class="panel-top">
                 <div>
-                  <div class="label">Revenue Scale Target</div>
-                  <div class="big-number gold-text">₹15–20L</div>
+                  <div class="label">Revenue Scale Target
+                  </div>
+                  <div class="big-number gold-text">₹15–20L
+                  </div>
                 </div>
-                <div class="mini-badge">Premium Growth</div>
+                <div class="mini-badge">Premium Growth
+                </div>
               </div>
-
               <div class="growth-bars">
                 <div class="bar-row">
-                  <div class="bar-meta"><span>Positioning</span><span>92%</span></div>
-                  <div class="bar"><span style="--bar-width:92%"></span></div>
+                  <div class="bar-meta">
+                    <span>Positioning</span>
+                    <span>92%</span>
+                  </div>
+                  <div class="bar">
+                    <span style="--bar-width:92%"></span>
+                  </div>
                 </div>
                 <div class="bar-row">
-                  <div class="bar-meta"><span>Automation</span><span>87%</span></div>
-                  <div class="bar"><span style="--bar-width:87%"></span></div>
+                  <div class="bar-meta">
+                    <span>Automation</span>
+                    <span>87%</span>
+                  </div>
+                  <div class="bar">
+                    <span style="--bar-width:87%"></span>
+                  </div>
                 </div>
                 <div class="bar-row">
-                  <div class="bar-meta"><span>Client Attraction</span><span>94%</span></div>
-                  <div class="bar"><span style="--bar-width:94%"></span></div>
+                  <div class="bar-meta">
+                    <span>Client Attraction</span>
+                    <span>94%</span>
+                  </div>
+                  <div class="bar">
+                    <span style="--bar-width:94%"></span>
+                  </div>
                 </div>
               </div>
-
               <div class="calendar-card">
-                <div class="icon-box">✦</div>
+                <div class="icon-box">✦
+                </div>
                 <div>
-                  <h4>Private Strategy Session</h4>
+                  <h4>Private Strategy Session
+                  </h4>
                   <p>Identify bottlenecks, revenue leaks, positioning gaps, automation opportunities and your next
-                    90-day growth roadmap.</p>
+                    90-day growth roadmap.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-
           <div class="floating-chip card">
             <strong class="gold-text">600+</strong>
             <span>Businesses consulted with AI, funnels and automation systems</span>
@@ -2619,49 +3746,66 @@
       </div>
     </section>
     <!-- =========================================================
-         HERO SECTION HTML END
-    ========================================================= -->
-
-
+HERO SECTION HTML END
+========================================================= -->
     <!-- =========================================================
-         TRUST SECTION HTML START
-    ========================================================= -->
+TRUST SECTION HTML START
+========================================================= -->
     <section class="section-sm" id="trust">
       <div class="container">
         <div class="section-head center reveal">
-          <div class="eyebrow">Why This Session Is Different</div>
-          <h2>Built On Real Business Experience, <span class="gold-text">Not Random Advice</span></h2>
+          <div class="eyebrow">Why This Session Is Different
+          </div>
+          <h2>Built On Real Business Experience,
+            <span class="gold-text">Not Random Advice</span>
+          </h2>
           <p>A premium strategy session designed around systems, positioning, funnels, automation and scalable growth —
-            without adding more workload.</p>
+            without adding more workload.
+          </p>
         </div>
-
         <div class="trust-grid reveal">
           <div class="trust-card card">
-            <div class="icon-box">✓</div><strong>10+ Years Industry Experience</strong>
+            <div class="icon-box">✓
+            </div>
+            <strong>10+ Years Industry Experience</strong>
           </div>
           <div class="trust-card card">
-            <div class="icon-box">✓</div><strong>600+ Businesses Consulted</strong>
+            <div class="icon-box">✓
+            </div>
+            <strong>600+ Businesses Consulted</strong>
           </div>
           <div class="trust-card card">
-            <div class="icon-box">✓</div><strong>AI + Funnels + Automation Systems</strong>
+            <div class="icon-box">✓
+            </div>
+            <strong>AI + Funnels + Automation Systems</strong>
           </div>
           <div class="trust-card card">
-            <div class="icon-box">✓</div><strong>Scale Without Burnout</strong>
+            <div class="icon-box">✓
+            </div>
+            <strong>Scale Without Burnout</strong>
           </div>
           <div class="trust-card card">
-            <div class="icon-box">✓</div><strong>Premium Positioning Frameworks</strong>
+            <div class="icon-box">✓
+            </div>
+            <strong>Premium Positioning Frameworks</strong>
           </div>
         </div>
-
-        <div class="offer-timer-wrap reveal">
-          <h5>Offer Closing Fast</h5>
+        <div class="offer-timer-wrap reveal" id="trustTimerFiveMinA1">
+          <h5>Offer Closing Fast
+          </h5>
           <div class="premium-timer">
-            <div class="time-box"><span class="time-value js-min">05</span><span class="time-label">Min</span></div>
-            <div class="colon">:</div>
-            <div class="time-box"><span class="time-value js-sec">00</span><span class="time-label">Sec</span></div>
+            <div class="time-box">
+              <span class="time-value trust-timer-min-a1">05</span>
+              <span class="time-label">Min</span>
+            </div>
+            <div class="colon">:
+            </div>
+            <div class="time-box">
+              <span class="time-value trust-timer-sec-a1">00</span>
+              <span class="time-label">Sec</span>
+            </div>
           </div>
         </div>
-
         <div class="center-cta reveal">
           <button type="button" class="clarity-cta-btn" onclick="openModal()">Book Your Clarity Call Now
             <span>→</span></button>
@@ -2669,162 +3813,217 @@
       </div>
     </section>
     <!-- =========================================================
-         TRUST SECTION HTML END
-    ========================================================= -->
-
-
+TRUST SECTION HTML END
+========================================================= -->
     <!-- =========================================================
-         PROBLEM SECTION HTML START
-    ========================================================= -->
+PROBLEM SECTION HTML START
+========================================================= -->
     <section class="section" id="problem">
       <div class="container split-grid">
         <div class="reveal">
-          <div class="eyebrow">The Real Growth Problem</div>
-          <h2 style="margin-top:22px;">You Help Others Transform… <span class="gold-text">But What About Your Own
-              Growth?</span></h2>
+          <div class="eyebrow">The Real Growth Problem
+          </div>
+          <h2 style="margin-top:22px;">You Help Others Transform…
+            <span class="gold-text">But What About Your Own
+              Growth?</span>
+          </h2>
           <p class="lead" style="margin-top:18px;">You've already built expertise, credibility and income. But deep
-            down, something feels off.</p>
-
+            down, something feels off.
+          </p>
           <div class="problem-note">
-            <div class="icon-box">⚡</div>
+            <div class="icon-box">⚡
+            </div>
             <p>The issue is usually not your knowledge. It is the lack of a scalable growth system behind your
-              expertise.</p>
+              expertise.
+            </p>
           </div>
         </div>
-
         <div class="problem-card card reveal">
           <div class="problem-card-top">
             <div>
               <span class="small-label">Common Bottlenecks</span>
-              <h3>These questions keep growth stuck</h3>
+              <h3>These questions keep growth stuck
+              </h3>
             </div>
-            <div class="icon-box">!</div>
+            <div class="icon-box">!
+            </div>
           </div>
-
           <div class="check-list">
-            <div class="cross-item"><span>✕</span><span>“Why am I still stuck despite years of experience?”</span></div>
-            <div class="cross-item"><span>✕</span><span>“Why does revenue go up and down every month?”</span></div>
-            <div class="cross-item"><span>✕</span><span>“Why do I still depend on referrals?”</span></div>
-            <div class="cross-item"><span>✕</span><span>“Why do leads come only when I post consistently?”</span></div>
-            <div class="cross-item"><span>✕</span><span>“Why does growth stop when I stop working?”</span></div>
-            <div class="cross-item"><span>✕</span><span>“Why am I doing more work but not making significantly more
-                money?”</span></div>
+            <div class="cross-item">
+              <span>✕</span>
+              <span>“Why am I still stuck despite years of experience?”</span>
+            </div>
+            <div class="cross-item">
+              <span>✕</span>
+              <span>“Why does revenue go up and down every month?”</span>
+            </div>
+            <div class="cross-item">
+              <span>✕</span>
+              <span>“Why do I still depend on referrals?”</span>
+            </div>
+            <div class="cross-item">
+              <span>✕</span>
+              <span>“Why do leads come only when I post consistently?”</span>
+            </div>
+            <div class="cross-item">
+              <span>✕</span>
+              <span>“Why does growth stop when I stop working?”</span>
+            </div>
+            <div class="cross-item">
+              <span>✕</span>
+              <span>“Why am I doing more work but not making significantly more
+                money?”</span>
+            </div>
           </div>
         </div>
       </div>
-
       <div class="center-cta reveal">
         <button type="button" class="clarity-cta-btn" onclick="openModal()">Book Your Clarity Call Now
           <span>→</span></button>
       </div>
     </section>
     <!-- =========================================================
-         PROBLEM SECTION HTML END
-    ========================================================= -->
-
-
+PROBLEM SECTION HTML END
+========================================================= -->
     <!-- =========================================================
-         SYSTEM ISSUE SECTION HTML START
-    ========================================================= -->
+SYSTEM ISSUE SECTION HTML START
+========================================================= -->
     <section class="section-sm" id="system-issue">
       <div class="container split-grid">
         <div class="system-card card reveal">
           <span class="small-label">The Real Bottleneck</span>
-          <h2>The issue isn't your expertise. <span class="gold-text">The issue is your business system.</span></h2>
+          <h2>The issue isn't your expertise.
+            <span class="gold-text">The issue is your business system.</span>
+          </h2>
           <div class="check-list">
             <div class="system-step">
-              <div class="step-num">01</div>
-              <p><strong style="color:var(--cream);">Expertise gets you results.</strong></p>
+              <div class="step-num">01
+              </div>
+              <p>
+                <strong style="color:var(--cream);">Expertise gets you results.</strong>
+              </p>
             </div>
             <div class="system-step">
-              <div class="step-num">02</div>
-              <p><strong style="color:var(--cream);">Systems help you scale those results.</strong></p>
+              <div class="step-num">02
+              </div>
+              <p>
+                <strong style="color:var(--cream);">Systems help you scale those results.</strong>
+              </p>
             </div>
           </div>
         </div>
-
         <div class="reveal">
-          <div class="eyebrow">What Most Experts Miss</div>
-          <h2 style="margin-top:22px;">Most Experts Don't Need More Skills. They Need A <span class="gold-text">Scalable
-              Growth Machine.</span></h2>
+          <div class="eyebrow">What Most Experts Miss
+          </div>
+          <h2 style="margin-top:22px;">Most Experts Don't Need More Skills. They Need A
+            <span class="gold-text">Scalable
+              Growth Machine.</span>
+          </h2>
           <p class="lead" style="margin-top:18px;">Most healers, coaches and consultants try more Instagram posting,
-            more webinars, more certifications, more content, more random ads and more hustle.</p>
+            more webinars, more certifications, more content, more random ads and more hustle.
+          </p>
           <p style="margin-top:14px;">But none of these solve the real issue: lack of systems. Because scaling doesn't
-            happen from doing more. Scaling happens from building infrastructure.</p>
+            happen from doing more. Scaling happens from building infrastructure.
+          </p>
           <div class="system-note">
-            <div class="icon-box">✦</div>
+            <div class="icon-box">✦
+            </div>
             <p>Your growth needs a backend machine — positioning, funnel, follow-up, automation and predictable client
-              acquisition.</p>
+              acquisition.
+            </p>
           </div>
         </div>
       </div>
-
+      <div class="offer-timer-wrap reveal" id="systemTimerFiveMinB2">
+        <h5>Limited Slots Closing Soon
+        </h5>
+        <div class="premium-timer">
+          <div class="time-box">
+            <span class="time-value system-timer-min-b2">05</span>
+            <span class="time-label">Min</span>
+          </div>
+          <div class="colon">:
+          </div>
+          <div class="time-box">
+            <span class="time-value system-timer-sec-b2">00</span>
+            <span class="time-label">Sec</span>
+          </div>
+        </div>
+      </div>
       <div class="center-cta reveal">
         <button type="button" class="clarity-cta-btn" onclick="openModal()">Book Your Clarity Call Now
           <span>→</span></button>
       </div>
     </section>
     <!-- =========================================================
-         SYSTEM ISSUE SECTION HTML END
-    ========================================================= -->
-
-
+SYSTEM ISSUE SECTION HTML END
+========================================================= -->
     <!-- =========================================================
-         FRAMEWORK SECTION HTML START
-    ========================================================= -->
+FRAMEWORK SECTION HTML START
+========================================================= -->
     <section class="section" id="framework">
       <div class="container">
         <div class="section-head center reveal">
-          <div class="eyebrow">Introducing</div>
-          <h2><span class="gold-text">HEAL Growth System™</span></h2>
+          <div class="eyebrow">Introducing
+          </div>
+          <h2>
+            <span class="gold-text">HEAL Growth System™</span>
+          </h2>
           <p class="lead">A complete growth ecosystem designed specifically for premium experts ready for their next
-            level.</p>
+            level.
+          </p>
           <p>This is NOT another course. This is NOT generic coaching. This is NOT random YouTube strategies. This is a
-            proven growth framework.</p>
+            proven growth framework.
+          </p>
         </div>
-
         <div class="heal-grid reveal">
           <div class="heal-card card">
             <div class="heal-card-top">
-              <div class="heal-letter">H</div><span class="heal-number">01</span>
+              <div class="heal-letter">H
+              </div>
+              <span class="heal-number">01</span>
             </div>
-            <h3>High Ticket Positioning</h3>
+            <h3>High Ticket Positioning
+            </h3>
             <p>Become the obvious premium choice. Stop competing on pricing and attract clients willing to pay premium
-              fees.</p>
+              fees.
+            </p>
           </div>
           <div class="heal-card card">
             <div class="heal-card-top">
-              <div class="heal-letter">E</div><span class="heal-number">02</span>
+              <div class="heal-letter">E
+              </div>
+              <span class="heal-number">02</span>
             </div>
-            <h3>Elite Client Attraction</h3>
+            <h3>Elite Client Attraction
+            </h3>
             <p>Get consistent qualified applications through highly targeted systems. No dependency on referrals. No
-              random lead generation.</p>
+              random lead generation.
+            </p>
           </div>
           <div class="heal-card card">
             <div class="heal-card-top">
-              <div class="heal-letter">A</div><span class="heal-number">03</span>
+              <div class="heal-letter">A
+              </div>
+              <span class="heal-number">03</span>
             </div>
-            <h3>Automated Client Journey</h3>
-            <p>Funnels, follow-ups, bookings and nurturing systems working for you 24×7 — even when you're offline.</p>
+            <h3>Automated Client Journey
+            </h3>
+            <p>Funnels, follow-ups, bookings and nurturing systems working for you 24×7 — even when you're offline.
+            </p>
           </div>
           <div class="heal-card card">
             <div class="heal-card-top">
-              <div class="heal-letter">L</div><span class="heal-number">04</span>
+              <div class="heal-letter">L
+              </div>
+              <span class="heal-number">04</span>
             </div>
-            <h3>Luxury Conversion Framework</h3>
-            <p>Convert premium clients without sounding pushy or salesy, using positioning-led conversations.</p>
+            <h3>Luxury Conversion Framework
+            </h3>
+            <p>Convert premium clients without sounding pushy or salesy, using positioning-led conversations.
+            </p>
           </div>
         </div>
-
-        <div class="offer-timer-wrap reveal">
-          <h5>Offer Closing Fast</h5>
-          <div class="premium-timer">
-            <div class="time-box"><span class="time-value js-min">05</span><span class="time-label">Min</span></div>
-            <div class="colon">:</div>
-            <div class="time-box"><span class="time-value js-sec">00</span><span class="time-label">Sec</span></div>
-          </div>
-        </div>
-
         <div class="center-cta reveal">
           <button type="button" class="clarity-cta-btn" onclick="openModal()">Book Your Clarity Call Now
             <span>→</span></button>
@@ -2832,50 +4031,77 @@
       </div>
     </section>
     <!-- =========================================================
-         FRAMEWORK SECTION HTML END
-    ========================================================= -->
-
-
+FRAMEWORK SECTION HTML END
+========================================================= -->
     <!-- =========================================================
-         VISION SECTION HTML START
-    ========================================================= -->
+VISION SECTION HTML START
+========================================================= -->
     <section class="section-sm" id="vision">
       <div class="container">
         <div class="section-head center reveal">
-          <div class="eyebrow">Imagine This Instead</div>
-          <h2>You stop chasing clients and start operating like a <span class="gold-text">premium business owner.</span>
+          <div class="eyebrow">Imagine This Instead
+          </div>
+          <h2>You stop chasing clients and start operating like a
+            <span class="gold-text">premium business owner.</span>
           </h2>
           <p>A business where trust, applications, bookings and follow-ups happen through a structured growth system —
-            not daily pressure.</p>
+            not daily pressure.
+          </p>
         </div>
-
         <div class="vision-grid reveal">
           <div class="vision-item card">
-            <div class="icon-box">✦</div>
-            <p>You wake up to qualified applications.</p>
+            <div class="icon-box">✦
+            </div>
+            <p>You wake up to qualified applications.
+            </p>
           </div>
           <div class="vision-item card">
-            <div class="icon-box">✦</div>
-            <p>People already trust you before speaking with you.</p>
+            <div class="icon-box">✦
+            </div>
+            <p>People already trust you before speaking with you.
+            </p>
           </div>
           <div class="vision-item card">
-            <div class="icon-box">✦</div>
-            <p>Your calendar fills automatically.</p>
+            <div class="icon-box">✦
+            </div>
+            <p>Your calendar fills automatically.
+            </p>
           </div>
           <div class="vision-item card">
-            <div class="icon-box">✦</div>
-            <p>You confidently charge ₹50K–₹2L+ programs.</p>
+            <div class="icon-box">✦
+            </div>
+            <p>You confidently charge ₹50K–₹2L+ programs.
+            </p>
           </div>
           <div class="vision-item card">
-            <div class="icon-box">✦</div>
-            <p>You stop chasing clients.</p>
+            <div class="icon-box">✦
+            </div>
+            <p>You stop chasing clients.
+            </p>
           </div>
           <div class="vision-item card">
-            <div class="icon-box">✦</div>
-            <p>You work less and impact more people.</p>
+            <div class="icon-box">✦
+            </div>
+            <p>You work less and impact more people.
+            </p>
           </div>
         </div>
-
+        <div class="offer-timer-wrap reveal" id="visionTimerFiveMinC3">
+          <h5>Last Chance to Join
+          </h5>
+          <div class="premium-timer">
+            <div class="time-box">
+              <span class="time-value vision-timer-min-c3">05</span>
+              <span class="time-label">Min</span>
+            </div>
+            <div class="colon">:
+            </div>
+            <div class="time-box">
+              <span class="time-value vision-timer-sec-c3">00</span>
+              <span class="time-label">Sec</span>
+            </div>
+          </div>
+        </div>
         <div class="center-cta reveal">
           <button type="button" class="clarity-cta-btn" onclick="openModal()">Book Your Clarity Call Now
             <span>→</span></button>
@@ -2883,68 +4109,103 @@
       </div>
     </section>
     <!-- =========================================================
-         VISION SECTION HTML END
-    ========================================================= -->
-
-
+VISION SECTION HTML END
+========================================================= -->
     <!-- =========================================================
-         QUALIFICATION SECTION HTML START
-    ========================================================= -->
+QUALIFICATION SECTION HTML START
+========================================================= -->
     <section class="section" id="who">
       <div class="container">
         <div class="section-head center reveal">
-          <div class="eyebrow">Application Fit</div>
-          <h2>This Session Is Only For <span class="gold-text">Serious Growth-Ready Experts</span></h2>
+          <div class="eyebrow">Application Fit
+          </div>
+          <h2>This Session Is Only For
+            <span class="gold-text">Serious Growth-Ready Experts</span>
+          </h2>
           <p>This private session is designed for experts who already have traction and now want a scalable system to
-            reach their next level.</p>
+            reach their next level.
+          </p>
         </div>
-
         <div class="qualification-panels reveal">
           <div class="qualification-panel card">
             <div class="qualification-panel-top">
-              <div class="icon-box">✓</div>
-              <div><span class="small-label">You Are A Fit</span>
-                <h3>This Session Is ONLY For You If:</h3>
+              <div class="icon-box">✓
+              </div>
+              <div>
+                <span class="small-label">You Are A Fit</span>
+                <h3>This Session Is ONLY For You If:
+                </h3>
               </div>
             </div>
             <div class="check-list">
-              <div class="check-item"><span>✓</span><span>You're already earning ₹2L+/month</span></div>
-              <div class="check-item"><span>✓</span><span>You already have paying clients</span></div>
-              <div class="check-item"><span>✓</span><span>You know your expertise creates transformation</span></div>
-              <div class="check-item"><span>✓</span><span>You want predictable systems</span></div>
-              <div class="check-item"><span>✓</span><span>You're serious about scaling</span></div>
-              <div class="check-item"><span>✓</span><span>You're ready for ₹15–20L months</span></div>
-              <div class="check-item"><span>✓</span><span>You're open to investing into growth</span></div>
+              <div class="check-item">
+                <span>✓</span>
+                <span>You're already earning ₹2L+/month</span>
+              </div>
+              <div class="check-item">
+                <span>✓</span>
+                <span>You already have paying clients</span>
+              </div>
+              <div class="check-item">
+                <span>✓</span>
+                <span>You know your expertise creates transformation</span>
+              </div>
+              <div class="check-item">
+                <span>✓</span>
+                <span>You want predictable systems</span>
+              </div>
+              <div class="check-item">
+                <span>✓</span>
+                <span>You're serious about scaling</span>
+              </div>
+              <div class="check-item">
+                <span>✓</span>
+                <span>You're ready for ₹15–20L months</span>
+              </div>
+              <div class="check-item">
+                <span>✓</span>
+                <span>You're open to investing into growth</span>
+              </div>
             </div>
           </div>
-
           <div class="qualification-panel card">
             <div class="qualification-panel-top">
-              <div class="icon-box">✕</div>
-              <div><span class="small-label">You Are Not A Fit</span>
-                <h3>This Is NOT For You If:</h3>
+              <div class="icon-box">✕
+              </div>
+              <div>
+                <span class="small-label">You Are Not A Fit</span>
+                <h3>This Is NOT For You If:
+                </h3>
               </div>
             </div>
             <div class="check-list">
-              <div class="cross-item"><span>✕</span><span>You're a beginner</span></div>
-              <div class="cross-item"><span>✕</span><span>You're looking for free consulting</span></div>
-              <div class="cross-item"><span>✕</span><span>You're still validating your offer</span></div>
-              <div class="cross-item"><span>✕</span><span>You want hacks instead of systems</span></div>
-              <div class="cross-item"><span>✕</span><span>You're not ready to invest into scaling</span></div>
-              <div class="cross-item"><span>✕</span><span>You're looking for overnight results</span></div>
+              <div class="cross-item">
+                <span>✕</span>
+                <span>You're a beginner</span>
+              </div>
+              <div class="cross-item">
+                <span>✕</span>
+                <span>You're looking for free consulting</span>
+              </div>
+              <div class="cross-item">
+                <span>✕</span>
+                <span>You're still validating your offer</span>
+              </div>
+              <div class="cross-item">
+                <span>✕</span>
+                <span>You want hacks instead of systems</span>
+              </div>
+              <div class="cross-item">
+                <span>✕</span>
+                <span>You're not ready to invest into scaling</span>
+              </div>
+              <div class="cross-item">
+                <span>✕</span>
+                <span>You're looking for overnight results</span>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="offer-timer-wrap reveal">
-          <h5>Offer Closing Fast</h5>
-          <div class="premium-timer">
-            <div class="time-box"><span class="time-value js-min">05</span><span class="time-label">Min</span></div>
-            <div class="colon">:</div>
-            <div class="time-box"><span class="time-value js-sec">00</span><span class="time-label">Sec</span></div>
-          </div>
-        </div>
-
         <div class="center-cta reveal">
           <button type="button" class="clarity-cta-btn" onclick="openModal()">Book Your Clarity Call Now
             <span>→</span></button>
@@ -2952,181 +4213,302 @@
       </div>
     </section>
     <!-- =========================================================
-         QUALIFICATION SECTION HTML END
-    ========================================================= -->
-
-
+QUALIFICATION SECTION HTML END
+========================================================= -->
     <!-- =========================================================
-         STRATEGY VALUE SECTION HTML START
-    ========================================================= -->
+STRATEGY VALUE SECTION HTML START
+========================================================= -->
     <section class="section-sm" id="strategy-value">
       <div class="container split-grid">
         <div class="reveal">
-          <div class="eyebrow">Strategy Value</div>
-          <h2 style="margin-top:22px;"><span class="gold-text">₹49,999+</span> Worth of insights during your private
-            strategy session.</h2>
+          <div class="eyebrow">Strategy Value
+          </div>
+          <h2 style="margin-top:22px;">
+            <span class="gold-text">₹49,999+</span> Worth of insights during your private
+            strategy session.
+          </h2>
           <div class="value-note">
-            <div class="icon-box">✦</div>
-            <p>A focused private session to identify what is blocking your next level of growth.</p>
+            <div class="icon-box">✦
+            </div>
+            <p>A focused private session to identify what is blocking your next level of growth.
+            </p>
           </div>
         </div>
-
         <div class="card problem-card reveal">
           <span class="small-label">What We'll Identify During Your Private Strategy Session</span>
-          <h3>We'll Identify:</h3>
+          <h3>We'll Identify:
+          </h3>
           <div class="check-list">
-            <div class="check-item"><span>✓</span><span>Hidden bottlenecks limiting growth</span></div>
-            <div class="check-item"><span>✓</span><span>Revenue leaks costing opportunities</span></div>
-            <div class="check-item"><span>✓</span><span>Premium offer opportunities</span></div>
-            <div class="check-item"><span>✓</span><span>Positioning improvements</span></div>
-            <div class="check-item"><span>✓</span><span>Lead generation gaps</span></div>
-            <div class="check-item"><span>✓</span><span>Client acquisition systems</span></div>
-            <div class="check-item"><span>✓</span><span>Growth roadmap for next 90 days</span></div>
-            <div class="check-item"><span>✓</span><span>AI & automation opportunities</span></div>
+            <div class="check-item">
+              <span>✓</span>
+              <span>Hidden bottlenecks limiting growth</span>
+            </div>
+            <div class="check-item">
+              <span>✓</span>
+              <span>Revenue leaks costing opportunities</span>
+            </div>
+            <div class="check-item">
+              <span>✓</span>
+              <span>Premium offer opportunities</span>
+            </div>
+            <div class="check-item">
+              <span>✓</span>
+              <span>Positioning improvements</span>
+            </div>
+            <div class="check-item">
+              <span>✓</span>
+              <span>Lead generation gaps</span>
+            </div>
+            <div class="check-item">
+              <span>✓</span>
+              <span>Client acquisition systems</span>
+            </div>
+            <div class="check-item">
+              <span>✓</span>
+              <span>Growth roadmap for next 90 days</span>
+            </div>
+            <div class="check-item">
+              <span>✓</span>
+              <span>AI & automation opportunities</span>
+            </div>
           </div>
         </div>
       </div>
-
+      <div class="offer-timer-wrap reveal" id="strategyTimerFiveMinD4">
+        <h5>Enrollment Closing Fast
+        </h5>
+        <div class="premium-timer">
+          <div class="time-box">
+            <span class="time-value strategy-timer-min-d4">05</span>
+            <span class="time-label">Min</span>
+          </div>
+          <div class="colon">:
+          </div>
+          <div class="time-box">
+            <span class="time-value strategy-timer-sec-d4">00</span>
+            <span class="time-label">Sec</span>
+          </div>
+        </div>
+      </div>
       <div class="center-cta reveal">
         <button type="button" class="clarity-cta-btn" onclick="openModal()">Book Your Clarity Call Now
           <span>→</span></button>
       </div>
     </section>
     <!-- =========================================================
-         STRATEGY VALUE SECTION HTML END
-    ========================================================= -->
-
-
+STRATEGY VALUE SECTION HTML END
+========================================================= -->
     <!-- =========================================================
-         TESTIMONIALS SECTION HTML START
-    ========================================================= -->
-    <section class="section" id="results">
+TESTIMONIALS SECTION HTML START
+========================================================= -->
+    <section class="section testimonials-section" id="results">
       <div class="container">
+
         <div class="section-head center reveal">
-          <div class="eyebrow">Real Experts. Real Results.</div>
-          <h2>Premium experts are building <span class="gold-text">predictable growth systems.</span></h2>
-          <p>These experts stopped relying on random growth and started building systems that support consistent client
-            acquisition, follow-up and bookings.</p>
+          <div class="eyebrow">Client Feedback</div>
+
+          <h2>
+            Experts are building
+            <span class="gold-text">predictable growth systems.</span>
+          </h2>
+
+          <p>
+            These experts moved from random referrals and manual follow-ups to a structured system
+            for client acquisition, automation and booked appointments.
+          </p>
         </div>
 
         <div class="testimonials-grid reveal">
-          <div class="testimonial card">
-            <div class="stars">★★★★★</div>
-            <p class="quote">“Earlier I was depending completely on referrals. Within a few months I had a structured
-              system generating qualified appointments regularly.”</p>
-            <div class="person">
-              <div class="person-avatar">W</div>
-              <div><strong>Wellness Coach</strong><span>Qualified appointments system</span></div>
-            </div>
-          </div>
-          <div class="testimonial card">
-            <div class="stars">★★★★★</div>
-            <p class="quote">“I was exhausted managing everything manually. Today my systems run in the background while
-              I focus on clients.”</p>
-            <div class="person">
-              <div class="person-avatar">R</div>
-              <div><strong>Reiki Expert</strong><span>Automation-backed client journey</span></div>
-            </div>
-          </div>
-          <div class="testimonial card">
-            <div class="stars">★★★★★</div>
-            <p class="quote">“My business finally feels predictable instead of stressful.”</p>
-            <div class="person">
-              <div class="person-avatar">C</div>
-              <div><strong>Consultant</strong><span>Predictable growth structure</span></div>
-            </div>
-          </div>
-        </div>
 
-        <div class="offer-timer-wrap reveal">
-          <h5>Offer Closing Fast</h5>
-          <div class="premium-timer">
-            <div class="time-box"><span class="time-value js-min">05</span><span class="time-label">Min</span></div>
-            <div class="colon">:</div>
-            <div class="time-box"><span class="time-value js-sec">00</span><span class="time-label">Sec</span></div>
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+
+            <p class="quote">
+              Earlier, I was fully dependent on referrals. After the funnel and follow-up system was set up,
+              I started getting more serious enquiries and booked calls in a much more organised way.
+            </p>
+
+            <div class="testimonial-result">
+              Qualified Appointment System
+            </div>
+
+            <div class="person">
+              <img class="person-avatar-img"
+                src="https://ik.imagekit.io/yn5cdaemz/Screenshot%202026-05-18%20at%203.14.59%E2%80%AFPM.png?updatedAt=1779097507418"
+                alt="Client profile image">
+
+              <div class="person-info">
+                <strong>Priya Sharma</strong>
+                <span>Wellness Coach</span>
+              </div>
+            </div>
           </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card featured-testimonial">
+
+            <p class="quote">
+              I was managing leads manually on WhatsApp and missing many follow-ups. Now the automation
+              handles reminders, messages and call booking, so my client journey feels much smoother.
+            </p>
+
+            <div class="testimonial-result">
+              WhatsApp Automation Setup
+            </div>
+
+            <div class="person">
+              <img class="person-avatar-img"
+                src="https://ik.imagekit.io/yn5cdaemz/Screenshot%202026-05-18%20at%203.16.05%E2%80%AFPM.png?updatedAt=1779097572688"
+                alt="Client profile image">
+
+              <div class="person-info">
+                <strong>Ritika Mehra</strong>
+                <span>Reiki Expert</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+
+            <p class="quote">
+              Before this, my growth felt confusing and inconsistent. The complete structure helped me
+              understand how to attract leads, follow up properly and convert better through booked calls.
+            </p>
+
+            <div class="testimonial-result">
+              Predictable Growth Structure
+            </div>
+
+            <div class="person">
+              <img class="person-avatar-img"
+                src="https://ik.imagekit.io/yn5cdaemz/Screenshot%202026-05-18%20at%203.16.46%E2%80%AFPM.png?updatedAt=1779097617557"
+                alt="Client profile image">
+
+              <div class="person-info">
+                <strong>Amit Verma</strong>
+                <span>Business Consultant</span>
+              </div>
+            </div>
+          </div>
+
         </div>
 
         <div class="center-cta reveal">
-          <button type="button" class="clarity-cta-btn" onclick="openModal()">Book Your Clarity Call Now
-            <span>→</span></button>
+          <button type="button" class="clarity-cta-btn" onclick="openModal()">
+            Book Your Clarity Call Now
+            <span>→</span>
+          </button>
         </div>
+
       </div>
     </section>
     <!-- =========================================================
-         TESTIMONIALS SECTION HTML END
-    ========================================================= -->
-
+TESTIMONIALS SECTION HTML END
+========================================================= -->
 
     <!-- =========================================================
-         MENTOR SECTION HTML START
-    ========================================================= -->
-    <section class="section-sm" id="mentor">
-      <div class="container mentor-grid">
-        <div class="mentor-avatar card reveal">
-          <div>
-            <div class="mentor-initials">SC</div>
-            <p style="margin-top:18px; color:var(--gold-light); font-weight:900;">10+ Years Experience</p>
-          </div>
+MENTOR SECTION HTML START
+========================================================= -->
+    <section class="mentor-section section-sm" id="mentor">
+      <div class="container">
+
+        <div class="mentor-head reveal">
+          <div class="eyebrow">Meet Your Mentors</div>
+          <h2>
+            Built On Real Business Experience,
+            <span class="gold-text">Not Random Advice</span>
+          </h2>
+          <p>
+            Get guided by mentors who understand premium positioning, funnels, automation and predictable client
+            acquisition systems.
+          </p>
         </div>
 
-        <div class="mentor-card card reveal">
-          <div class="eyebrow">Meet Your Mentor</div>
-          <h2 style="margin-top:22px;">Meet <span class="gold-text">Sumit Singh Chauhan</span></h2>
-          <p class="lead" style="margin-top:18px;">Over the last 10+ years, I’ve worked with coaches, healers and
-            service professionals to build scalable client acquisition systems.</p>
-          <p style="margin-top:14px;">I noticed one thing: most experts don't stay stuck because of lack of skill. They
-            stay stuck because they lack business infrastructure.</p>
-          <p style="margin-top:14px;">That's why we created HEAL Growth System — helping experts stop chasing clients
-            and start building scalable businesses.</p>
-          <div class="check-list">
-            <div class="check-item"><span>✓</span><span>Funnels + Automation Systems</span></div>
-            <div class="check-item"><span>✓</span><span>Premium Positioning Strategy</span></div>
-            <div class="check-item"><span>✓</span><span>Client Acquisition Infrastructure</span></div>
-          </div>
-        </div>
-      </div>
+        <div class="mentors-grid">
 
-      <div class="center-cta reveal">
-        <button type="button" class="clarity-cta-btn" onclick="openModal()">Book Your Clarity Call Now
-          <span>→</span></button>
+          <!-- Mentor 1 -->
+          <div class="mentor-profile-card reveal">
+            <div class="mentor-image-wrap">
+              <img src="https://ik.imagekit.io/yn5cdaemz/hero%20(2).webp?updatedAt=1779700042480" alt="Sumit" />
+            </div>
+
+            <div class="mentor-info">
+              <h3>Sumit</h3>
+              <p class="mentor-role">Business Growth & Automation Mentor</p>
+              <p class="mentor-desc">
+                Sumit helps coaches, healers and consultants build scalable growth systems using funnels, WhatsApp
+                automation, premium positioning and structured client acquisition.
+              </p>
+
+              <div class="mentor-tags">
+                <span>Funnels</span>
+                <span>Automation</span>
+                <span>Premium Positioning</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mentor 2 -->
+          <div class="mentor-profile-card reveal">
+            <div class="mentor-image-wrap">
+              <img src="https://ik.imagekit.io/yn5cdaemz/ChatGPT%20Image%20May%2028,%202026,%2004_13_55%20PM.png"
+                alt="Gaurav" />
+            </div>
+
+            <div class="mentor-info">
+              <h3>Gaurav</h3>
+              <p class="mentor-role">Client Acquisition & Funnel Strategy Mentor</p>
+              <p class="mentor-desc">
+                Gaurav focuses on identifying growth bottlenecks, improving offer clarity and creating systems that help
+                experts attract better leads and book more qualified calls.
+              </p>
+
+              <div class="mentor-tags">
+                <span>Client Attraction</span>
+                <span>Strategy</span>
+                <span>Growth Systems</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </section>
     <!-- =========================================================
-         MENTOR SECTION HTML END
-    ========================================================= -->
-
-
+MENTOR SECTION HTML END
+========================================================= -->
     <!-- =========================================================
-         IMPORTANT NOTE SECTION HTML START
-    ========================================================= -->
+IMPORTANT NOTE SECTION HTML START
+========================================================= -->
     <section class="section-sm" id="important-note">
       <div class="container">
         <div class="final-card card reveal">
-          <div class="eyebrow">Important Before You Apply</div>
-          <h2 style="margin:22px auto 0;">This is a serious growth conversation, <span class="gold-text">not a free
-              consulting session.</span></h2>
+          <div class="eyebrow">Important Before You Apply
+          </div>
+          <h2 style="margin:22px auto 0;">This is a serious growth conversation,
+            <span class="gold-text">not a free
+              consulting session.</span>
+          </h2>
           <p class="lead" style="margin:18px auto 0; max-width:780px;">This is NOT for collecting strategies. It is
-            designed to see whether our systems are the right fit for your next level.</p>
+            designed to see whether our systems are the right fit for your next level.
+          </p>
           <p style="margin:14px auto 0; max-width:780px;">If approved, we'll identify exactly what’s stopping your
-            growth and show you a clear path forward.</p>
+            growth and show you a clear path forward.
+          </p>
           <div class="check-list">
-            <div class="check-item"><span>✓</span><span>For serious experts who are ready to scale with systems</span>
+            <div class="check-item">
+              <span>✓</span>
+              <span>For serious experts who are ready to scale with systems</span>
             </div>
-            <div class="check-item"><span>✓</span><span>Not for people looking for random tips, hacks or free
-                advice</span></div>
+            <div class="check-item">
+              <span>✓</span>
+              <span>Not for people looking for random tips, hacks or free
+                advice</span>
+            </div>
           </div>
         </div>
-
-        <div class="offer-timer-wrap reveal">
-          <h5>Offer Closing Fast</h5>
-          <div class="premium-timer">
-            <div class="time-box"><span class="time-value js-min">05</span><span class="time-label">Min</span></div>
-            <div class="colon">:</div>
-            <div class="time-box"><span class="time-value js-sec">00</span><span class="time-label">Sec</span></div>
-          </div>
-        </div>
-
         <div class="center-cta reveal">
           <button type="button" class="clarity-cta-btn" onclick="openModal()">Book Your Clarity Call Now
             <span>→</span></button>
@@ -3134,61 +4516,243 @@
       </div>
     </section>
     <!-- =========================================================
-         IMPORTANT NOTE SECTION HTML END
-    ========================================================= -->
-
-
+IMPORTANT NOTE SECTION HTML END
+========================================================= -->
     <!-- =========================================================
-         FINAL CTA SECTION HTML START
-    ========================================================= -->
+FINAL CTA SECTION HTML START
+========================================================= -->
     <section class="section-sm" id="final-cta">
       <div class="container">
         <div class="final-card card reveal">
-          <div class="eyebrow">Final Invitation</div>
-          <h2 style="margin:22px auto 0;">Your Expertise Built The Foundation. <span class="gold-text">Now Build The
-              Business That Matches It.</span></h2>
+          <div class="eyebrow">Final Invitation
+          </div>
+          <h2 style="margin:22px auto 0;">Your Expertise Built The Foundation.
+            <span class="gold-text">Now Build The
+              Business That Matches It.</span>
+          </h2>
           <p class="lead" style="margin:18px auto 0; max-width:760px;">Stop operating like a self-employed expert. Start
-            building a business designed to scale.</p>
+            building a business designed to scale.
+          </p>
           <div class="check-list">
-            <div class="check-item"><span>✓</span><span>Identify what is blocking your next revenue level</span></div>
-            <div class="check-item"><span>✓</span><span>Get clarity on your scalable growth system</span></div>
-            <div class="check-item"><span>✓</span><span>Build a business that does not depend only on your daily
-                effort</span></div>
+            <div class="check-item">
+              <span>✓</span>
+              <span>Identify what is blocking your next revenue level</span>
+            </div>
+            <div class="check-item">
+              <span>✓</span>
+              <span>Get clarity on your scalable growth system</span>
+            </div>
+            <div class="check-item">
+              <span>✓</span>
+              <span>Build a business that does not depend only on your daily
+                effort</span>
+            </div>
+          </div>
+          <div class="offer-timer-wrap reveal" id="finalTimerFiveMinF6">
+            <h5>Limited Slots Closing Soon
+            </h5>
+            <div class="premium-timer">
+              <div class="time-box">
+                <span class="time-value final-timer-min-f6">05</span>
+                <span class="time-label">Min</span>
+              </div>
+              <div class="colon">:
+              </div>
+              <div class="time-box">
+                <span class="time-value final-timer-sec-f6">00</span>
+                <span class="time-label">Sec</span>
+              </div>
+            </div>
           </div>
           <div class="center-cta">
-            <button type="button" class="clarity-cta-btn" onclick="openModal()">Book Your Clarity Call Now
+            <button style="font-size: 11px;" type="button" class="clarity-cta-btn" onclick="openModal()">Book Your
+              Clarity Call Now
               <span>→</span></button>
           </div>
         </div>
       </div>
     </section>
     <!-- =========================================================
-         FINAL CTA SECTION HTML END
-    ========================================================= -->
+FINAL CTA SECTION HTML END
+========================================================= -->
   </main>
-
-
   <!-- =========================================================
-       FOOTER HTML START
-  ========================================================= -->
-  <footer>
-    <div class="container footer-inner">
-      <span>© 2026 HEAL Growth System™. All rights reserved.</span>
-      <span>Built for premium coaches, healers & consultants.</span>
+FOOTER + POLICY POPUP HTML START
+========================================================= -->
+  <footer class="simple-policy-footer">
+    <div class="simple-footer-container">
+      <div class="simple-footer-disclaimer">
+        <p>
+          Disclaimer:Any sales figures or results stated above are our personal results
+          or those of our most exceptional clients. Please understand our
+          results are not typical, we're not implying you'll duplicate them.
+          We're using these references for example purposes only. Your
+          results will vary and depend on many factors including but not
+          limited to your background, experience, and work ethic. All
+          business entails risk as well as massive and consistent effort and
+          action.
+        </p>
+      </div>
+      <p class="simple-footer-copy">
+        © 2026 Sumit Singh Chauhan. All rights reserved.
+      </p>
+      <div class="simple-footer-links" aria-label="Footer policy links">
+        <button type="button" data-policy="privacy">Privacy Policy</button>
+        <button type="button" data-policy="terms">Terms & Conditions</button>
+        <button type="button" data-policy="refund">Refund Policy</button>
+      </div>
     </div>
   </footer>
+  <!-- POLICY POPUP START -->
+  <div class="simple-policy-modal" id="simplePolicyModal" aria-hidden="true">
+    <div class="simple-policy-backdrop" data-policy-close>
+    </div>
+    <div class="simple-policy-box" role="dialog" aria-modal="true" aria-labelledby="simplePolicyTitle">
+      <button class="simple-policy-close" type="button" data-policy-close aria-label="Close popup">
+        ×
+      </button>
+      <div class="simple-policy-header">
+        <p class="simple-policy-label">Official Policy
+        </p>
+        <h2 id="simplePolicyTitle">Privacy Policy
+        </h2>
+        <p>Please review the selected policy details before using this website, submitting forms, booking calls, or
+          purchasing services.
+        </p>
+      </div>
+      <div class="simple-policy-tabs">
+        <button type="button" class="active" data-policy-tab="privacy">Privacy Policy</button>
+        <button type="button" data-policy-tab="terms">Terms & Conditions</button>
+        <button type="button" data-policy-tab="refund">Refund Policy</button>
+      </div>
+      <div class="simple-policy-body">
+        <!-- Privacy Policy -->
+        <article class="simple-policy-content active" data-policy-content="privacy">
+          <h3>Privacy Policy
+          </h3>
+          <p>
+            We respect your privacy and are committed to protecting the personal information you share with us.
+          </p>
+          <h4>Information We Collect
+          </h4>
+          <p>
+            We may collect your name, phone number, email address, business details, booking details, and information
+            submitted through forms or calendar bookings.
+          </p>
+          <h4>How We Use Your Information
+          </h4>
+          <p>
+            Your information may be used to contact you, schedule consultation calls, provide service updates, share
+            business guidance, and improve our services.
+          </p>
+          <h4>Data Sharing
+          </h4>
+          <p>
+            We do not sell your personal data. Your information may only be shared with trusted tools or service
+            providers required for communication, scheduling, automation, or business operations.
+          </p>
+          <h4>Communication
+          </h4>
+          <p>
+            By submitting your details, you agree to receive relevant communication through phone, email, WhatsApp, or
+            other professional channels related to your inquiry.
+          </p>
+          <h4>Data Security
+          </h4>
+          <p>
+            We take reasonable steps to keep your information secure. However, no digital system can be guaranteed to be
+            completely secure.
+          </p>
+        </article>
+        <!-- Terms -->
+        <article class="simple-policy-content" data-policy-content="terms">
+          <h3>Terms & Conditions
+          </h3>
+          <p>
+            By using this website, pages, booking forms, or services, you agree to the following terms and conditions.
+          </p>
+          <h4>Service Scope
+          </h4>
+          <p>
+            We provide digital growth support, funnel strategy, automation setup, landing page support, booking system
+            setup, and related business assistance.
+          </p>
+          <h4>No Guaranteed Results
+          </h4>
+          <p>
+            We do not guarantee specific revenue, leads, sales, bookings, or business results. Results depend on your
+            offer, audience, pricing, communication, market conditions, follow-up, and execution.
+          </p>
+          <h4>Client Responsibility
+          </h4>
+          <p>
+            Clients are responsible for providing accurate details, required assets, access permissions, approvals, and
+            timely feedback needed to complete the agreed work.
+          </p>
+          <h4>Third-Party Tools
+          </h4>
+          <p>
+            We may use third-party platforms such as landing page builders, automation tools, calendar tools, WhatsApp
+            API providers, email tools, analytics platforms, and ad platforms. Their individual policies may apply.
+          </p>
+          <h4>Content & Compliance
+          </h4>
+          <p>
+            Clients are responsible for ensuring that their claims, offers, testimonials, advertising statements, and
+            business content follow applicable platform policies and legal guidelines.
+          </p>
+        </article>
+        <!-- Refund -->
+        <article class="simple-policy-content" data-policy-content="refund">
+          <h3>Refund Policy
+          </h3>
+          <p>
+            This Refund Policy applies to services purchased from us.
+          </p>
+          <h4>Service-Based Work
+          </h4>
+          <p>
+            Since our services involve strategy, consultation, planning, technical setup, automation work, landing page
+            work, and execution time, payments are generally non-refundable once the work has started.
+          </p>
+          <h4>No Refund After Setup Begins
+          </h4>
+          <p>
+            Once project planning, consultation, funnel setup, automation setup, technical implementation, or backend
+            work has started, no refund will be provided.
+          </p>
+          <h4>Client Delay
+          </h4>
+          <p>
+            Refunds will not be provided if the project is delayed because the client does not provide required details,
+            access, content, approvals, images, brand assets, or communication on time.
+          </p>
+          <h4>Third-Party Payments
+          </h4>
+          <p>
+            Payments made for third-party tools, software, domains, hosting, API platforms, ad accounts, automation
+            tools, or subscription services are not refundable by us.
+          </p>
+          <h4>Result-Based Refunds
+          </h4>
+          <p>
+            Refunds are not provided based on expected sales, leads, conversions, call bookings, revenue, or campaign
+            performance because these depend on multiple external factors.
+          </p>
+        </article>
+      </div>
+    </div>
+  </div>
+  <!-- POLICY POPUP END -->
   <!-- =========================================================
-       FOOTER HTML END
-  ========================================================= -->
-
-
+FOOTER + POLICY POPUP HTML END
+========================================================= -->
   <!-- =========================================================
-       MODAL FORM HTML START
-  ========================================================= -->
+MODAL FORM HTML START
+========================================================= -->
   <!-- MODAL SHELL -->
   <div id="kc-modal-shell">
     <div id="kc-modal-card">
-
       <!-- Header -->
       <div id="kc-modal-head">
         <button id="kc-modal-close" aria-label="Close">✕</button>
@@ -3196,144 +4760,129 @@
           Please fill in some basic details
         </p>
       </div>
-
       <!-- FORM -->
       <div id="kc-modal-body">
         <form id="kc-clarity-form" novalidate>
-
           <!-- Name -->
           <div class="kc-fieldABM" id="field-name">
-            <div class="kc-field-labelABM">Name</div>
+            <div class="kc-field-labelABM">Name
+            </div>
             <input type="text" name="first_name" id="kc-first-name" class="kc-inputABM" placeholder="Enter your name"
               required />
-            <div class="kc-error-msgABM">Please enter your first name.</div>
+            <div class="kc-error-msgABM">Please enter your first name.
+            </div>
           </div>
-
           <!-- Email -->
           <div class="kc-fieldABM" id="field-email">
-            <div class="kc-field-labelABM">Email Address</div>
+            <div class="kc-field-labelABM">Email Address
+            </div>
             <input type="email" name="email" id="kc-email" class="kc-inputABM" placeholder="Enter your email address"
               required />
-            <div class="kc-error-msgABM">Please enter a valid email.</div>
+            <div class="kc-error-msgABM">Please enter a valid email.
+            </div>
           </div>
-
           <!-- WhatsApp -->
           <div class="kc-fieldABM" id="field-whatsapp">
-            <div class="kc-field-labelABM">WhatsApp Number</div>
+            <div class="kc-field-labelABM">WhatsApp Number
+            </div>
             <input type="tel" name="whatsapp" id="kc-whatsapp" class="kc-inputABM"
               placeholder="Enter your WhatsApp number" maxlength="10" required />
-            <div class="kc-error-msgABM">Please enter a valid 10-digit WhatsApp number.</div>
+            <div class="kc-error-msgABM">Please enter a valid 10-digit WhatsApp number.
+            </div>
           </div>
-
           <!-- Professional -->
           <div class="kc-fieldABM" id="field-professional">
-            <div class="kc-field-labelABM">What is your profession?</div>
-
+            <div class="kc-field-labelABM">What is your profession?
+            </div>
             <label class="kc-radio-optionABM">
               <input type="radio" name="professional" value="Healer / Spiritual Practitioner">
               <span>Healer / Spiritual Practitioner</span>
             </label>
-
             <label class="kc-radio-optionABM">
               <input type="radio" name="professional" value="Coach / Consultant">
               <span>Coach / Consultant</span>
             </label>
-
             <label class="kc-radio-optionABM">
               <input type="radio" name="professional" value="Therapist / Wellness Expert">
               <span>Therapist / Wellness Expert</span>
             </label>
-
             <label class="kc-radio-optionABM">
               <input type="radio" name="professional" value="Astrologer / Numerologist / Tarot Reader">
               <span>Astrologer / Numerologist / Tarot Reader</span>
             </label>
-
             <label class="kc-radio-optionABM">
               <input type="radio" name="professional" value="Other">
               <span>Other</span>
             </label>
-
-            <div class="kc-error-msgABM">Please select your profession.</div>
+            <div class="kc-error-msgABM">Please select your profession.
+            </div>
           </div>
-
           <!-- Current Monthly Revenue -->
           <div class="kc-fieldABM" id="field-current-revenue">
-            <div class="kc-field-labelABM">Current monthly revenue</div>
-
+            <div class="kc-field-labelABM">Current monthly revenue
+            </div>
             <label class="kc-radio-optionABM">
               <input type="radio" name="current_monthly_revenue" value="₹0 - ₹50,000">
               <span>₹0 - ₹50,000</span>
             </label>
-
             <label class="kc-radio-optionABM">
               <input type="radio" name="current_monthly_revenue" value="₹50,000 - ₹1 Lakh">
               <span>₹50,000 - ₹1 Lakh</span>
             </label>
-
             <label class="kc-radio-optionABM">
               <input type="radio" name="current_monthly_revenue" value="₹1 Lakh - ₹3 Lakh">
               <span>₹1 Lakh - ₹3 Lakh</span>
             </label>
-
             <label class="kc-radio-optionABM">
               <input type="radio" name="current_monthly_revenue" value="₹3 Lakh - ₹5 Lakh">
               <span>₹3 Lakh - ₹5 Lakh</span>
             </label>
-
             <label class="kc-radio-optionABM">
               <input type="radio" name="current_monthly_revenue" value="₹5 Lakh+">
               <span>₹5 Lakh+</span>
             </label>
-
-            <div class="kc-error-msgABM">Please select your current monthly revenue.</div>
+            <div class="kc-error-msgABM">Please select your current monthly revenue.
+            </div>
           </div>
-
           <!-- Expected Revenue -->
           <div class="kc-fieldABM" id="field-expected-revenue">
-            <div class="kc-field-labelABM">Revenue expectation in next 3 months</div>
-
+            <div class="kc-field-labelABM">Revenue expectation in next 3 months
+            </div>
             <label class="kc-radio-optionABM">
               <input type="radio" name="expected_revenue" value="₹50,000 / Month">
               <span>₹50,000 / Month</span>
             </label>
-
             <label class="kc-radio-optionABM">
               <input type="radio" name="expected_revenue" value="₹1 Lakh / Month">
               <span>₹1 Lakh / Month</span>
             </label>
-
             <label class="kc-radio-optionABM">
               <input type="radio" name="expected_revenue" value="₹2 Lakh / Month">
               <span>₹2 Lakh / Month</span>
             </label>
-
             <label class="kc-radio-optionABM">
               <input type="radio" name="expected_revenue" value="₹3 Lakh - ₹5 Lakh / Month">
               <span>₹3 Lakh - ₹5 Lakh / Month</span>
             </label>
-
             <label class="kc-radio-optionABM">
               <input type="radio" name="expected_revenue" value="₹5 Lakh+ / Month">
               <span>₹5 Lakh+ / Month</span>
             </label>
-
-            <div class="kc-error-msgABM">Please select your expected revenue.</div>
+            <div class="kc-error-msgABM">Please select your expected revenue.
+            </div>
           </div>
-
           <!-- Submit -->
           <button type="submit" id="kc-submit-btn">
             <div class="kc-btn-innerABM">
-              <div id="kc-btn-spinner" style="display:none;"></div>
+              <div id="kc-btn-spinner" style="display:none;">
+              </div>
               <span id="kc-btn-label">Proceed To Calendar</span>
             </div>
           </button>
-
-          <p id="kc-privacy-note">🔒 Your details are private and never shared.</p>
-
+          <p id="kc-privacy-note">🔒 Your details are private and never shared.
+          </p>
         </form>
       </div>
-
       <!-- SUCCESS -->
       <div id="kc-success-screen" style="display:none;">
         <div id="kc-success-icon">
@@ -3342,19 +4891,227 @@
               stroke-linejoin="round" />
           </svg>
         </div>
-
-        <h2 id="kc-success-title">Details Received!</h2>
-        <p id="kc-success-sub">Redirecting you to schedule your call…</p>
-
+        <h2 id="kc-success-title">Details Received!
+        </h2>
+        <p id="kc-success-sub">Redirecting you to schedule your call…
+        </p>
         <div id="kc-redirect-dots">
           <span></span>
           <span></span>
           <span></span>
         </div>
       </div>
-
     </div>
   </div>
+
+  <!-- =========================================================
+  ISOLATED MULTI TIMER JAVASCRIPT START
+  Every timer has its own wrapper/classes/selectors.
+  This prevents one timer from overwriting or stopping another timer.
+  ========================================================= -->
+  <script>
+    (function isolatedMultiTimerDebugCorrected() {
+      "use strict";
+
+      /* =========================================================
+         TIMER GLOBAL SETTINGS START
+      ========================================================= */
+
+      const TIMER_DURATION_SECONDS = 5 * 60; // 5 minutes
+
+      /*
+        true  = timer restarts after reaching 00:00
+        false = timer stops at 00:00
+      */
+      const RESTART_WHEN_FINISHED = true;
+
+      /*
+        true  = show console warnings if any timer HTML is missing
+        false = hide warnings
+      */
+      const DEBUG_TIMER = true;
+
+      /*
+        Unique namespace so no other timer JS can overwrite this timer
+      */
+      const TIMER_NAMESPACE = "__pscSafeIsolatedTimers_vFinal";
+
+      /* =========================================================
+         TIMER GLOBAL SETTINGS END
+      ========================================================= */
+
+
+      /* =========================================================
+         TIMER CONFIGURATION START
+      ========================================================= */
+
+      const timers = [
+        {
+          name: "headerNavTimerXyzIkjo",
+          wrapper: "#navBlockXyz-ikjo",
+          minutes: "#navMinsXyz-ikjo",
+          seconds: "#navSecsXyz-ikjo",
+          duration: TIMER_DURATION_SECONDS
+        },
+        {
+          name: "trustTimerFiveMinA1",
+          wrapper: "#trustTimerFiveMinA1",
+          minutes: ".trust-timer-min-a1",
+          seconds: ".trust-timer-sec-a1",
+          duration: TIMER_DURATION_SECONDS
+        },
+        {
+          name: "systemTimerFiveMinB2",
+          wrapper: "#systemTimerFiveMinB2",
+          minutes: ".system-timer-min-b2",
+          seconds: ".system-timer-sec-b2",
+          duration: TIMER_DURATION_SECONDS
+        },
+        {
+          name: "visionTimerFiveMinC3",
+          wrapper: "#visionTimerFiveMinC3",
+          minutes: ".vision-timer-min-c3",
+          seconds: ".vision-timer-sec-c3",
+          duration: TIMER_DURATION_SECONDS
+        },
+        {
+          name: "strategyTimerFiveMinD4",
+          wrapper: "#strategyTimerFiveMinD4",
+          minutes: ".strategy-timer-min-d4",
+          seconds: ".strategy-timer-sec-d4",
+          duration: TIMER_DURATION_SECONDS
+        },
+        {
+          name: "mentorTimerFiveMinE5",
+          wrapper: "#mentorTimerFiveMinE5",
+          minutes: ".mentor-timer-min-e5",
+          seconds: ".mentor-timer-sec-e5",
+          duration: TIMER_DURATION_SECONDS
+        },
+        {
+          name: "finalTimerFiveMinF6",
+          wrapper: "#finalTimerFiveMinF6",
+          minutes: ".final-timer-min-f6",
+          seconds: ".final-timer-sec-f6",
+          duration: TIMER_DURATION_SECONDS
+        }
+      ];
+
+      /* =========================================================
+         TIMER CONFIGURATION END
+      ========================================================= */
+
+
+      /* =========================================================
+         TIMER CORE FUNCTIONS START
+      ========================================================= */
+
+      window[TIMER_NAMESPACE] = window[TIMER_NAMESPACE] || {};
+
+      function debugWarn(message, timerConfig) {
+        if (!DEBUG_TIMER) return;
+        console.warn("[Timer Debug]", message, timerConfig);
+      }
+
+      function formatTwoDigits(value) {
+        return String(Math.max(0, value)).padStart(2, "0");
+      }
+
+      function renderTimer(minuteEl, secondEl, remainingSeconds) {
+        const safeRemainingSeconds = Math.max(0, remainingSeconds);
+
+        const minutes = Math.floor(safeRemainingSeconds / 60);
+        const seconds = safeRemainingSeconds % 60;
+
+        minuteEl.textContent = formatTwoDigits(minutes);
+        secondEl.textContent = formatTwoDigits(seconds);
+      }
+
+      function clearExistingTimer(timerName) {
+        if (window[TIMER_NAMESPACE][timerName]) {
+          clearInterval(window[TIMER_NAMESPACE][timerName]);
+          delete window[TIMER_NAMESPACE][timerName];
+        }
+      }
+
+      function startSingleTimer(timerConfig) {
+        const wrapperEl = document.querySelector(timerConfig.wrapper);
+
+        if (!wrapperEl) {
+          debugWarn("Timer wrapper not found", timerConfig);
+          return;
+        }
+
+        const minuteEl = wrapperEl.querySelector(timerConfig.minutes);
+        const secondEl = wrapperEl.querySelector(timerConfig.seconds);
+
+        if (!minuteEl) {
+          debugWarn("Minute element not found inside wrapper", timerConfig);
+          return;
+        }
+
+        if (!secondEl) {
+          debugWarn("Second element not found inside wrapper", timerConfig);
+          return;
+        }
+
+        clearExistingTimer(timerConfig.name);
+
+        let endTime = Date.now() + timerConfig.duration * 1000;
+
+        function updateTimer() {
+          let remainingSeconds = Math.ceil((endTime - Date.now()) / 1000);
+
+          if (remainingSeconds <= 0) {
+            renderTimer(minuteEl, secondEl, 0);
+
+            if (RESTART_WHEN_FINISHED) {
+              endTime = Date.now() + timerConfig.duration * 1000;
+              return;
+            }
+
+            clearExistingTimer(timerConfig.name);
+            return;
+          }
+
+          renderTimer(minuteEl, secondEl, remainingSeconds);
+        }
+
+        updateTimer();
+
+        window[TIMER_NAMESPACE][timerConfig.name] = setInterval(updateTimer, 1000);
+      }
+
+      function startAllTimers() {
+        timers.forEach(function (timerConfig) {
+          startSingleTimer(timerConfig);
+        });
+      }
+
+      /* =========================================================
+         TIMER CORE FUNCTIONS END
+      ========================================================= */
+
+
+      /* =========================================================
+         TIMER INIT START
+      ========================================================= */
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", startAllTimers, { once: true });
+      } else {
+        startAllTimers();
+      }
+
+      /* =========================================================
+         TIMER INIT END
+      ========================================================= */
+
+    })();
+  </script>
+  <!-- =========================================================
+  ISOLATED MULTI TIMER JAVASCRIPT END
+  ========================================================= -->
 
   <style>
     .kc-radio-optionABM {
@@ -3404,12 +5161,183 @@
       }
     }
   </style>
-
   <script>
+    /* =========================================================
+ FOOTER POLICY POPUP JS START
+========================================================= */
+    /* =========================================================
+ MINIMAL LIGHT FOOTER JS START
+========================================================= */
+    (function () {
+      const modal = document.getElementById("simplePolicyModal");
+      const modalTitle = document.getElementById("simplePolicyTitle");
+      const openButtons = document.querySelectorAll("[data-policy]");
+      const closeButtons = document.querySelectorAll("[data-policy-close]");
+      const tabs = document.querySelectorAll("[data-policy-tab]");
+      const contents = document.querySelectorAll("[data-policy-content]");
+      const policyTitles = {
+        privacy: "Privacy Policy",
+        terms: "Terms & Conditions",
+        refund: "Refund Policy"
+      };
+      function activatePolicy(policy) {
+        if (!policyTitles[policy]) return;
+        modalTitle.textContent = policyTitles[policy];
+        tabs.forEach((tab) => {
+          tab.classList.toggle("active", tab.dataset.policyTab === policy);
+        }
+        );
+        contents.forEach((content) => {
+          content.classList.toggle("active", content.dataset.policyContent === policy);
+        }
+        );
+      }
+      function openPolicy(policy) {
+        activatePolicy(policy);
+        modal.classList.add("active");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("simple-policy-open");
+      }
+      function closePolicy() {
+        modal.classList.remove("active");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("simple-policy-open");
+      }
+      openButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          openPolicy(button.dataset.policy);
+        }
+        );
+      }
+      );
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          activatePolicy(tab.dataset.policyTab);
+        }
+        );
+      }
+      );
+      closeButtons.forEach((button) => {
+        button.addEventListener("click", closePolicy);
+      }
+      );
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && modal.classList.contains("active")) {
+          closePolicy();
+        }
+      }
+      );
+    }
+    )();
+    /* =========================================================
+     MINIMAL LIGHT FOOTER JS END
+  ========================================================= */
+    /* =========================================================
+     FOOTER POLICY POPUP JS END
+  ========================================================= */
+    (function () {
+      /* ---- CUSTOMIZE THESE ---- */
+      var NAMES = [
+        {
+          name: "Ananya Gupta", init: "AG", img: "https://res.cloudinary.com/dieerc37h/image/upload/v1776072160/c20920d9ad792075b47cde51fbb69603c1a4d189c43c7ca07f3cbc6fac43cad2_kvxqum.png"
+        }
+        ,
+        {
+          name: "Rohan Kapoor", init: "RK", img: "https://res.cloudinary.com/dieerc37h/image/upload/v1776072245/836037838a96d66009a9c45aeb98204a017af7830934d27f10d02969538a5502_esqx5h.png"
+        }
+        ,
+        {
+          name: "Priya Sharma", init: "PS", img: "https://res.cloudinary.com/dieerc37h/image/upload/v1775219685/pexels-shovan-datta-3275479-17673528_hopvia.jpg"
+        }
+        ,
+        {
+          name: "Vikram Mehta", init: "VM", img: "https://res.cloudinary.com/dieerc37h/image/upload/v1776072437/ae96713c996ccee7ca923d017ad2da59c9c3e8ac70d75164d027fdf841908128_sdik44.png"
+        }
+        ,
+        {
+          name: "Pooja Mehra", init: "PM", img: "https://res.cloudinary.com/dieerc37h/image/upload/v1775219685/pexels-shootsaga-36623006_vecswf.jpg"
+        }
+        ,
+        {
+          name: "Rahul Sharma", init: "RS", img: "https://res.cloudinary.com/dieerc37h/image/upload/v1776072606/460123433a75af75a33cb1e807a4e785f5f4609c81fc418527a6eab6ae942c9f_tfihdt.png"
+        }
+        ,
+        {
+          name: "Neha Verma", init: "NV", img: "https://res.cloudinary.com/dieerc37h/image/upload/v1776072694/d47e1f0c6715311413411a64f31a4abcbe47c747545f7bff61ed785ad67c55fb_nnk2ky.png"
+        }
+      ];
+      var TIMES = [
+        "18 minutes ago",
+        "47 minutes ago",
+        "2 Hours 30 Minutes ago",
+        "4 Hours ago",
+        "5 Hours ago",
+        "7 Hours ago",
+        "10 Hours ago",
+      ];
+      var STATS = [
+        "<strong>12 people </strong> booked Discovery Call",
+        "<strong>8 </strong> clarity sessions Left",
+        "<strong>7 </strong> clarity sessions Left",
+        "<strong>6 </strong> clarity sessions Left",
+        "<strong>5 </strong> clarity sessions Left",
+        "<strong>4 </strong> clarity sessions Left",
+        "<strong>3 </strong> clarity sessions Left",
+        "<strong>2 </strong> clarity sessions Left",
+        "<strong>1 </strong> clarity sessions Left",
+      ];
+      var FIRST_DELAY = 5000;
+      var VISIBLE_FOR = 2000;
+      var REPEAT_EVERY = 25000;
+      var card = document.getElementById("csnCard");
+      var avEl = document.getElementById("csnAvatar");
+      var nmEl = document.getElementById("csnName");
+      var tmEl = document.getElementById("csnTime");
+      var hideT, loopT;
+      var index = 0;
+      function showNotif() {
+        var pick = NAMES[index];
+        var time = TIMES[index % TIMES.length];
+        var stat = STATS[index % STATS.length];
+        /* ── Render avatar: image if provided, else initials fallback ── */
+        if (pick.img) {
+          var img = new Image();
+          img.src = pick.img;
+          img.alt = pick.name;
+          /* On load error, fall back to initials */
+          img.onerror = function () {
+            avEl.innerHTML = pick.init;
+          };
+          avEl.innerHTML = "";
+          avEl.appendChild(img);
+        }
+        else {
+          avEl.textContent = pick.init;
+        }
+        nmEl.textContent = pick.name;
+        tmEl.textContent = time;
+        card.classList.add("csn-show");
+        clearTimeout(hideT);
+        hideT = setTimeout(hideNotif, VISIBLE_FOR);
+        index++;
+        if (index >= NAMES.length) {
+          index = 0;
+        }
+      }
+      function hideNotif() {
+        card.classList.remove("csn-show");
+      }
+      setTimeout(function () {
+        showNotif();
+        loopT = setInterval(showNotif, REPEAT_EVERY);
+      }
+        , FIRST_DELAY);
+    }
+    )();
     // navbar
     (function runNavTimerXyz() {
-      var elMinsXyz = document.getElementById('navMinsXyz');
-      var elSecsXyz = document.getElementById('navSecsXyz');
+      var elMinsXyz = document.getElementById('navMinsXyz-ikjo');
+      var elSecsXyz = document.getElementById('navSecsXyz-ikjo');
       var elBlockXyz = document.getElementById('navBlockXyz');
       var elDigitsXyz = document.getElementById('navDigitsXyz');
       var elPulseXyz = document.getElementById('navPulseXyz');
@@ -3442,18 +5370,13 @@
         , 1000);
     }
     )();
-
     /* ══════════════════════════════════════
-            MODAL JAVASCRIPT
-    ══════════════════════════════════════ */
-
+          MODAL JAVASCRIPT
+  ══════════════════════════════════════ */
     (function () {
       'use strict';
-
-      var CAL_LINK = 'https://10xgrowth.flexifunnels.com/aparaajitha-calendar';
-
+      var CAL_LINK = 'https://10xgrowth.flexifunnels.com/calendar';
       var API_URL = 'https://connect.pabbly.com/webhook-listener/webhook/IjU3NjEwNTZiMDYzNTA0MzM1MjZlNTUzMSI_3D_pc/IjU3NjcwNTZlMDYzMTA0M2M1MjZjNTUzMTUxMzci_pc';
-
       var shell = document.getElementById('kc-modal-shell');
       var form = document.getElementById('kc-clarity-form');
       var closeBtn = document.getElementById('kc-modal-close');
@@ -3463,12 +5386,11 @@
       var formScreen = document.getElementById('kc-modal-body');
       var successScr = document.getElementById('kc-success-screen');
       var whatsappInput = document.getElementById('kc-whatsapp');
-
       /* WhatsApp only 10 digits */
       whatsappInput.addEventListener('input', function () {
         this.value = this.value.replace(/\D/g, '').slice(0, 10);
-      });
-
+      }
+      );
       /* Open modal */
       document.addEventListener('click', function (e) {
         if (e.target.closest('.kc-open-modalABM')) {
@@ -3476,50 +5398,45 @@
           shell.classList.add('kc-visibleABM');
           document.body.style.overflow = 'hidden';
         }
-      });
-
+      }
+      );
       /* Close button */
       closeBtn.addEventListener('click', function () {
         shell.classList.remove('kc-visibleABM');
         document.body.style.overflow = '';
-      });
-
+      }
+      );
       /* Click outside modal card to close */
       shell.addEventListener('click', function (e) {
         if (e.target === this) {
           shell.classList.remove('kc-visibleABM');
           document.body.style.overflow = '';
         }
-      });
-
+      }
+      );
       /* ESC key to close */
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {
           shell.classList.remove('kc-visibleABM');
           document.body.style.overflow = '';
         }
-      });
-
+      }
+      );
       function validEmail(email) {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
       }
-
       function setError(fieldId, hasError) {
         var el = document.getElementById(fieldId);
-
         if (el) {
           el.classList.toggle('kc-has-errorABM', hasError);
         }
       }
-
       function getRadioValue(name) {
         var selected = form.querySelector('input[name="' + name + '"]:checked');
         return selected ? selected.value : '';
       }
-
       function getIndiaDateTime() {
         var now = new Date();
-
         var parts = new Intl.DateTimeFormat('en-GB', {
           timeZone: 'Asia/Kolkata',
           day: '2-digit',
@@ -3529,55 +5446,43 @@
           minute: '2-digit',
           second: '2-digit',
           hour12: true
-        }).formatToParts(now);
-
-        var map = {};
-
+        }
+        ).formatToParts(now);
+        var map = {
+        };
         parts.forEach(function (part) {
           if (part.type !== 'literal') {
             map[part.type] = part.value;
           }
-        });
-
+        }
+        );
         return map.day + '/' + map.month + '/' + map.year + ' ' +
           map.hour + ':' + map.minute + ':' + map.second + ' ' +
           map.dayPeriod.toUpperCase();
       }
-
       /* Submit */
       form.addEventListener('submit', function (e) {
         e.preventDefault();
-
         var name = form.first_name.value.trim();
         var email = form.email.value.trim();
         var whatsapp = form.whatsapp.value.trim();
-
         var professional = getRadioValue('professional');
         var currentRevenue = getRadioValue('current_monthly_revenue');
         var expectedRevenue = getRadioValue('expected_revenue');
-
         var valid = true;
-
         setError('field-name', !name);
         if (!name) valid = false;
-
         setError('field-email', !validEmail(email));
         if (!validEmail(email)) valid = false;
-
         setError('field-whatsapp', whatsapp.length !== 10);
         if (whatsapp.length !== 10) valid = false;
-
         setError('field-professional', !professional);
         if (!professional) valid = false;
-
         setError('field-current-revenue', !currentRevenue);
         if (!currentRevenue) valid = false;
-
         setError('field-expected-revenue', !expectedRevenue);
         if (!expectedRevenue) valid = false;
-
         if (!valid) return;
-
         var payload = {
           first_name: name,
           email: email,
@@ -3587,46 +5492,49 @@
           expected_revenue: expectedRevenue,
           date_time_india: getIndiaDateTime()
         };
-
         /* Loading state */
         submitBtn.disabled = true;
         btnLabel.textContent = 'Saving...';
         btnLabel.style.display = 'inline';
         spinner.style.display = 'inline-block';
-
         fetch(API_URL, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
-          },
+          }
+          ,
           body: JSON.stringify(payload)
-        })
+        }
+        )
           .catch(function (err) {
             console.error(err);
-          })
+          }
+          )
           .finally(function () {
             btnLabel.textContent = '✓ Saved! Redirecting...';
             spinner.style.display = 'none';
-
             if (formScreen && successScr) {
               formScreen.style.display = 'none';
               successScr.style.display = 'block';
             }
-
             setTimeout(function () {
               window.location.href = CAL_LINK;
-            }, 600);
-          });
-      });
-
-    })();
-
+            }
+              , 600);
+          }
+          );
+      }
+      );
+    }
+    )();
     function openModal() {
       document.getElementById('kc-modal-shell').classList.add('kc-visibleABM');
       document.body.style.overflow = 'hidden';
     }
   </script>
-  <!-- FORM END HERE -->
+  <!-- =========================================================
+MODAL FORM HTML END
+========================================================= -->
 </body>
 
 </html>
